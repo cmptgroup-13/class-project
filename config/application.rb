@@ -21,6 +21,15 @@ module Workspace
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-    config.active_record.raise_in_transactional_callbacks = true
+  ActionMailer::Base.smtp_settings = {
+      :address    => 'smtp.gmail.com',
+      :domian     => 'mail.google.com',
+      :port       => 587,
+      :user_name  => "group13public@gmail.com", #ENV['GMAIL_USERNAME'],
+      :password   => "276group13", #ENV['GMAIL_PASSWORD'],
+      :enable_starttls_auto => true
+    
+  
+  }
   end
 end
