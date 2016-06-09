@@ -7,18 +7,23 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if user_signed_in? %>
+  <% if current_user && current_user.admin == true %>
+    <p>Hello, Admin: <%= current_user.name %> - <%= link_to "Sign_out", destroy_user_session_path, :method => 'delete' %></p>
+   <br>
+  
+  <% end %>
+  
+  
+  
+  
+  <%else if user_signed_in? && current_user.admin == false %>
     
-    <p>Hello, <%= current_user.name %> - <%= link_to "Sign_out", destroy_user_session_path, :method => 'delete' %></p>
+    <p>Hello, User: <%= current_user.name %> - <%= link_to "Sign_out", destroy_user_session_path, :method => 'delete' %></p>
     <br>
   
   <% end %>
     
-  <% if admin_signed_in? %>
-    <p>Hello, <%= current_admin.name %> -* <%= link_to "Sign_out", destroy_admin_session_path, :method => 'delete' %></p>
-   <br>
-  
-  <% end %> 
+   
   
   
   
