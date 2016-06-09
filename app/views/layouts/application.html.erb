@@ -7,22 +7,34 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if user_signed_in? %>
-    
-    <p>Hello, <%= current_user.name %> - <%= link_to "Sign_out", destroy_user_session_path, :method => 'delete' %></p>
-    <br>
+
+  <nav class= "navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <%= link_to 'UrineLuck', '#', class: 'navbar-brand' %>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to 'Home' %></li>
+          <% if !logged_in? %>
+            <li><%= link_to 'Login in', login_path %></li>
+          <% else %>
+            <li><%= link_to 'Profile', profile_path %></li>
+            <li><%= link_to 'Log out', logout_path, method: :delete %></li>
+            <% end %>
+        </ul>
+      </div>
+    </div>
+  </nav>
   
-  <% end %>
-    
-  <% if admin_signed_in? %>
-    <p>Hello, <%= current_admin.name %> -* <%= link_to "Sign_out", destroy_admin_session_path, :method => 'delete' %></p>
-   <br>
+  <div class="container"> 
   
-  <% end %> 
-  
-  
-  
-<%= yield %>
+    <% flash.each do |type, message| %>
+      <div class= "alert alert-<%= type %>"><%= message %></div>
+    <% end %>
+    <%= yield %>
+  </div>
+
 
 </body>
 </html>
