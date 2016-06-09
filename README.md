@@ -1,9 +1,4 @@
-Project by,
-Dallan Bhatti
-Alex Nguyen
-Dawson Perron
-Dylan Wang
-Yolanda Yao
+Project by: Dallan Bhatti, Alex Nguyen, Dawson Perron, Dylan Wang, Yolanda Yao
 
 UrineLuck
 
