@@ -1,0 +1,35 @@
+<div class="row">
+    <div class="col-md-6 col md-offset-3">
+        <h1>Profile</h1>
+        <% if current_user.role == "admin" %>
+        
+        <% @user.each do |user| %>
+
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <td><%= user.name %></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><%= user.email %></td>
+            </tr>
+        </table>
+        <% end %>
+
+          
+        <% else %>
+        <% user = current_user %>
+        <table class="table">
+            <tr>
+                <th>Name</th>
+                <td><%= user.name %></td>
+            </tr>
+            <tr>
+                <th>Email</th>
+                <td><%= user.email %></td>
+            </tr>
+        </table>
+        <% end %> 
+    </div>
+</div>
