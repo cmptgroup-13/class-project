@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+
   root to: 'sessions#new'
   get 'home', to: 'users#index'
   get 'profile', to: 'users#show'
