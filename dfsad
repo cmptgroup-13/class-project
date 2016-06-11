@@ -1,0 +1,137 @@
+[33mcommit ad2d77e0569e295d9c76141f634fbd3d056a2896[m
+Author: Dallan Bhatti <dbhatti@sfu.ca>
+Date:   Thu Jun 9 08:58:15 2016 +0000
+
+    enabled regular user and admin user differentiation
+
+[33mcommit 1d25fe79af2f7af81c6257e7e8340bfc86ba67b2[m
+Author: Dallan Bhatti <dbhatti@sfu.ca>
+Date:   Thu Jun 9 07:50:27 2016 +0000
+
+    first try at making a differentiation between user and admin
+
+[33mcommit 265613f3052ca8eb07adf95aa6147e4cef8c8b45[m
+Author: Dallan Bhatti <dbhatti@sfu.ca>
+Date:   Wed Jun 8 21:50:20 2016 +0000
+
+    this is the first marginally working edition of the login I followed the steps of Stuk.io Codecast video
+
+[33mcommit 5130dcf59ec2e4a84c9b1642d7ce99d4eb9e3316[m
+Merge: 4f4c3d8 94541da
+Author: cmptgroup-13 <group13public@gmail.com>
+Date:   Thu Jun 2 22:06:34 2016 -0700
+
+    Merge pull request #5 from cmptgroup-13/master
+    
+    Merge pull request #4 from cmptgroup-13/dallanbranch
+
+[33mcommit 4f4c3d87fc04d32d85df7fe991117d7b6dc059ff[m
+Author: dallanb <dbhatti@sfu.ca>
+Date:   Fri Jun 3 05:01:33 2016 +0000
+
+    editted readme not final version
+
+[33mcommit 94541da96f64b9033e68bec305ecdb1b89a42c9f[m
+Merge: 830606c 48ec887
+Author: dallanb <dbhatti@sfu.ca>
+Date:   Sun May 29 16:09:36 2016 -0700
+
+    Merge pull request #4 from cmptgroup-13/dallanbranch
+    
+    ...
+
+[33mcommit 48ec887b8d595768e2091fd305804f3f996b90e1[m
+Author: dallanb <dbhatti@sfu.ca>
+Date:   Sun May 29 23:06:30 2016 +0000
+
+    ...
+
+[33mcommit 830606c5e0bb0d702dcc1fca2c8624ff694148c9[m
+Merge: d6ca16a 05c9e5e
+Author: cmptgroup-13 <group13public@gmail.com>
+Date:   Sun May 29 15:54:08 2016 -0700
+
+    Merge pull request #3 from cmptgroup-13/dallanbranch
+    
+    Dallanbranch
+
+[33mcommit 05c9e5e7b73b45a3b44623f32b510e943e18595f[m
+Merge: 11145c7 d6ca16a
+Author: cmptgroup-13 <group13public@gmail.com>
+Date:   Sun May 29 15:51:02 2016 -0700
+
+    Merge pull request #2 from cmptgroup-13/master
+    
+    Merge pull request #1 from cmptgroup-13/dallanbranch
+
+[33mcommit 11145c769f0d829a1d8b4281335998a9a84f298f[m
+Author: dallanb <dbhatti@sfu.ca>
+Date:   Sun May 29 22:49:37 2016 +0000
+
+    branch commit
+
+[33mcommit d6ca16acf117ef4791339c7efc27bd8efad67d62[m
+Merge: 2a29a94 3cf860b
+Author: cmptgroup-13 <group13public@gmail.com>
+Date:   Sun May 29 15:47:58 2016 -0700
+
+    Merge pull request #1 from cmptgroup-13/dallanbranch
+    
+    Dallanbranch
+
+[33mcommit 3cf860b84399994b4f3309cb64099ff3f0674705[m
+Author: dallanb <dbhatti@sfu.ca>
+Date:   Sun May 29 22:44:35 2016 +0000
+
+    bruh
+
+[33mcommit ea3d3c4f7952601d1dffef2d8c04a029d1b26f94[m
+Merge: d20871a d9fb1b7
+Author: dallanb <dbhatti@sfu.ca>
+Date:   Sun May 29 22:40:14 2016 +0000
+
+    readme change
+
+[33mcommit d20871ae099ab833db0ee13942a14ed357e12069[m
+Merge: ac971d9 2a29a94
+Author: dallanb <dbhatti@sfu.ca>
+Date:   Sun May 29 22:33:36 2016 +0000
+
+    ...
+
+[33mcommit ac971d9b1a0ae0d3ff41641be000e880d4d2389f[m
+Author: dallanb <dbhatti@sfu.ca>
+Date:   Sun May 29 22:32:40 2016 +0000
+
+    ...
+
+[33mcommit d9fb1b7e64b719c3853da7791b0fbcf3c258111b[m
+Merge: 34c8fd3 2a29a94
+Author: dallanb <dbhatti@sfu.ca>
+Date:   Sun May 29 22:27:20 2016 +0000
+
+    edited readme
+
+[33mcommit 34c8fd33005d7e6fe1b4cb27bc14acea137a775e[m
+Author: dallanb <dbhatti@sfu.ca>
+Date:   Sun May 29 22:22:31 2016 +0000
+
+    edited readme
+
+[33mcommit 7e559c78f910f16560aab561b6b13e5fcc653734[m
+Author: dallanb <dbhatti@sfu.ca>
+Date:   Sun May 29 22:00:13 2016 +0000
+
+    this is the first commit
+
+[33mcommit ab3eec1c1f19bf69dc7623c24f9a6fcc59426ecb[m
+Author: dallanb <dbhatti@sfu.ca>
+Date:   Sun May 29 21:56:40 2016 +0000
+
+    First Commit
+
+[33mcommit 2a29a94df2a51ee01ce936183ff695d56187ea99[m
+Author: cmptgroup-13 <group13public@gmail.com>
+Date:   Sun May 29 14:33:22 2016 -0700
+
+    Initial commit
