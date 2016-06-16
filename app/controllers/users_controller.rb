@@ -1,14 +1,17 @@
 class UsersController < ApplicationController
+
+
   def new
     @user = User.new
   end
 
   def show
-    @user = current_user
-    @userb = User.all
+ 
+    @user = User.all
   end
 
   def index
+    @user = User.all
   end
 
   def create
@@ -25,9 +28,12 @@ class UsersController < ApplicationController
 
 
   def edit
+
   end
 
+
   def update
+
   end
 
   def destroy
@@ -38,4 +44,7 @@ class UsersController < ApplicationController
       params.require(:user).permit(:name, :email, :password,
                                    :password_confirmation, :role)
     end
+    
+
 end
+
