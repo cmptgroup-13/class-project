@@ -10,9 +10,7 @@ gem 'jbuilder',     '2.2.3'
 gem 'bootstrap-sass'
 gem 'bcrypt'
 gem 'sdoc',         '0.4.0', group: :doc
-gem 'bootstrap-sass'
 gem 'autoprefixer-rails'
-gem 'bcrypt'
 gem "responders"
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
