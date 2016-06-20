@@ -20,13 +20,12 @@
       <%= f.password_field :password_confirmation, class: 'form-control' %>
       
       <%= label_tag :gender %></br>
-       
+
        <%= f.radio_button :role, 'male' %>
        <%= f.label :role, 'Male' %>
-
        <%= f.radio_button :role, 'female' %>
-      <%= f.label :role, 'Female' %>      
-
+       <%= f.label :role, 'Female' %>      
+      
       <%= f.submit "Create my account", class: "btn btn-primary" %>
     <% end %>
   </div>
