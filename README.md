@@ -46,15 +46,16 @@ Bob is a male who attends Simon Fraser University as a computer science student.
 ## User Stories
 
 #### Story 1: Logging in
-Logging is important as it prevents non users from accessing the app and potentially ruining the experience for signed up members. It also helps user (male or female or admin) maintain their own personal account and allow them to have personalized interactions with UrineLuck. Display login page upon entering the web app through routing. 
+
+Logging is important as it prevents non-users from accessing the app and potentially ruining the experience for signed up members. It also helps user (male or female or admin) maintain their own personal account and allow them to have personalized interactions with UrineLuck. Display login page upon entering the web app through routing. 
 
 In the database each member who has signed up has there information stored, which includes name, email, password, and role. Given that a recognized email and password are entered in the correct fields, when “log in” is clicked the user should be logged in. The system will check if these fields match those which are stored in the database from signup.
 
-Given that an unrecognized email and/or password is entered in the fields, when “log in” is clicked no one should be logged in and an error message should be given. This error message will be displayed in a red box about the form stating “Invalid email/password combination”. Also if the users’ login in invalid they will be not be redirected to any other page, instead they will remain on the login page. The error message should not clear the screen until the user has visited another page or they are successfully logged in. 
+Given that an unrecognized email and/or password is entered in the fields, when “log in” is clicked no one should be logged in and an error message should be given. This error message will be displayed in a red box about the form stating “Invalid email/password combination”. Also if the users’ login is invalid they will be not be redirected to any other page, instead they will remain on the login page. The error message should not clear the screen until the user has visited another page or they are successfully logged in. 
 
-It is not necessary to re-enter in name when logging in because User names may be repeated but we will not allow repeat emails for obvious reasons. It is also not necessary to include role again as it is stored with the Users information at signup and has no importance in the context of simply logging in.
+It is not necessary to re-enter your name when logging in because names may be repeated but we will not allow repeat emails for obvious reasons. It is also not necessary to include role again as it is stored with the Users information at signup and has no importance in the context of simply logging in.
 
-Upon login given that I have logged in as a user (male or female), when I click “log in” a notification should tell me that I have successfully logged in. Given that I have logged in as an administrator, when I click “log in” a notification should tell me that I have successfully logged in as an administrator.
+Upon logging in, given that I have logged in as a user (male or female), when I click “log in” a notification should tell me that I have successfully logged in. Given that I have logged in as an administrator, when I click “log in” a notification should tell me that I have successfully logged in as an administrator.
 
 User is given the option to log out which will guide them back to the login page.
 
@@ -66,26 +67,26 @@ As a user of UrineLuck signing up is important because it allows UrineLuck to ex
 
 Given that I want to sign up, when I click “sign up” I should be taken to a form with my needed credentials. Or I will have the ability from the login page to be asked if I am a new user and would like to sign up for the app.
 
-On the form itself it will feature the necessary fields which are Name, Email, Password, Password Confirmation and Role. Name and Email are to help distinguish between the users and in the future will allow the app to email user if information is lost, password reset is needed, email users of UrineLuck promotions/newsletter. Password and Password Confirmation are highly necessary because the user will keep their account secured using their own personally created encrypted password. The Password conformation is vital because often in creating accounts you miss type the password the first time and forever are unable to login. Also the password field will display black bullets instead of the characters themselves to help maintain privacy. Finally while creating the app the user will be given the option of identifying themselves as a male or female. Admin’s will be created by system engineers through the console. 
+On the form itself it will feature the necessary fields which are 'Name', 'Email', 'Password', 'Password Confirmation' and 'Role'. Name and Email are to help distinguish between the users and in the future will allow the app to email users if information is lost, a password reset is needed, or to email users of UrineLuck promotions/newsletter. Password and Password Confirmation are highly necessary because the user will keep their account secured using their own personally created encrypted password. The Password conformation is vital because often in creating accounts you miss type the password the first time and forever are unable to log in. Also the password field will display black bullets instead of the characters themselves to help maintain privacy. The user will be given the option of identifying themselves as a male or female. Admin’s will be created by system engineers through the console. 
 
 Given that all the fields have correct info, when I click “sign up” an account should be created with those credentials. The credentials will successfully be stored in the database for later access by other functions. The user will be routed to the profile page.
 
 Given that the fields have inappropriate info, when I click “sign up” an account should not be created and an error should be displayed saying what fields are incorrect. This error will display how many errors the user has made in creation of their account. Error messages that are displayed include “Name can’t be blank”, “Role can’t be blank” and “Password is too short” among many others. The fields specifically themselves should include Names of any type (we don’t judge), Email’s with proper email formatting and Passwords that are at least 6 characters long.
 
 Upon signing up when the user clicks “create my account” a notification should tell user that they have successfully signed up. 
-Testing will be done to see if name is present what happens, password is present what happens, password is minimum length what happens, if user is assign admin what happens, is role is unassigned what happens, if email format is incorrect what happens, if email is not unique what happens, if an invalid form is submitted, if passwords are not matching and if name is missing.
+Testing will be done to see if it works when all fields are filled out. However, we will also test for when the user does not properly fill in the fields. Including but not limited to, if 'password' has a length too short what happens, if 'user' is assigned admin what happens, if 'role' is left unassigned what happens, if 'email' format is incorrect what happens, if 'email' is not unique what happens, if an invalid 'form' is submitted, if 'password' fields are not matching, and if 'name' is missing.
 
 #### Story 3: Profile
-As a user it is important that I can see my information is displayed accordingly to my account. Initially what I want to see displayed as a regular user (male or female) is my Name, Email and Role. This will help me identify my information later as the app progresses and you would like to use your account to add bathrooms, make a review and/or display your name on the leaderboard. 
+As a user it is important that I can see my information is displayed accordingly to my account. Initially, what I want to see displayed as a regular user (regardless of gender) is my Name, Email and Role. This will help me identify my information later as the app progresses and you would like to use your account to add bathrooms, make a review and/or display your name on the leaderboard. 
 
-If user is an admin than they will be able to see all other users that have created an account in their personal profile page. They’re credentials will be bolded to help distinguish between other regular accounts. In future iterations these admin users will be able to delete regular users from this screen and will also be able to promote regular users to admins from this screen.
+If user is an admin than they will be able to see all other users that have created an account in their personal profile page. Their credentials will be bolded to help distinguish between other regular accounts. In future iterations these admin users will be able to delete regular users from this screen and will also be able to promote regular users to admins from this screen.
 
-It is also important that the admins information is bolded as they may wish to see their account details to access the app features which were specified earlier.
+It is also important that the admin's information is bolded as they may wish to see their account details to access the app features which were specified earlier.
 
 Testing will be used to check if proper info is displayed for the regular user account and to see if proper info is displayed for the admin user account.
 
 #### Story 4: Editing Users
-As the developer of UrineLuck, it is important to ensure the confidentiality of user information and improve user experience. In future iterations, Admin account and regular user account will be distinguished to make sure only admins can review, edit or delete user information, and users’ accounts won’t be accidentally deleted or edited by some random person.
+As the developer of UrineLuck, it is important to ensure the confidentiality of user information and improve user experience. In future iterations, Admin account and regular user account will be distinguished to make sure only admins can review, edit or delete user information, and users' accounts won’t be accidentally deleted or edited by some random person.
 
 As the user of UrineLuck, I wish I will be able to edit my own profile such as name, email and password. Letting users change and update their profile is important because user information may change over time. For example, users’ emails should be always up to date as they need email to reset password. In future iterations, users will be given the option to edit their own profile when logging in.
 
@@ -120,3 +121,9 @@ Testing will be done to ensure only admins can be able to edit their own info an
 ·As a user I want to upload pictures of my bathroom for other users to look at. (3)
 
 ·As a user I want to leave comments about the bathrooms so that other users can be more informed. (3)
+
+### Planned Layout
+
+ https://invis.io/P97OUZK84
+ 
+ Password is: group13
