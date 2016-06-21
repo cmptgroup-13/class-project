@@ -1,6 +1,6 @@
 Project by: Dallan Bhatti, Alex Nguyen, Dawson Perron, Dylan Wang, Yolanda Yao
 
--UrineLuck-
+# UrineLuck
 
 
 
@@ -11,13 +11,13 @@ If time permits we may attempt to develop the app for mobile devices and also ad
 We will have two types of users Admin and Normal users. Normal users can request to add bathrooms and also report bathrooms (although these reports will likely stay hidden). Admin users will be able to add bathrooms and also remove them (Admins will be able to see reports). We are also considering adding genders to each type of user. 
 
 
--Competitive Analysis
+## Competitive Analysis
 
 ·SitorSquat: As described by the app, “SitOrSquat by Charmin can help you find public restrooms near you or where you’re planning to travel. Install SitOrSquat and search, view, rate and add public restrooms to help you, your family and others enjoy the go, on the go” (https://itunes.apple.com/ca/app/sitorsquat-restroom-finder/id511855507?mt=8).
 
 ·Flushd: As described by the app, “The Bathroom. A hallowed yet infrequently talked about room of critical and daily importance to the lives of every human being inhabiting the non-3rd world. A room where it is safe to be at our worst. Where acts that would normally be embarrassing or humiliating by societal standards are welcomed and encouraged. A place where some of us seek refuge in an otherwise over-stimulated daily existence in order to seek some peace, tranquility and well…relief. We all hope that we walk out of the bathroom feeling a little bit better then when we walked in. We at Flushd feel that we should not take this transformation for granted. Our goal is to shine a bright light into the world of bathrooms to help increase the quality of the bathroom experience globally” (https://itunes.apple.com/ca/app/flushd/id691150346?mt=8).
 
--Why our app beats the competition
+## Why our app beats the competition
 
 · Neither of these apps are very popular in Canada
 
@@ -28,13 +28,13 @@ We will have two types of users Admin and Normal users. Normal users can request
 · Our app will provide a unique experience when you find your bathroom and are still using the app. (Games, bathroom facts, etc.)
 
 
--Customers
+## Customers
 
 ·Sally (Customer 1): Sally is a female who lives an active life, working in Vancouver. Her work involves her to do a lot of driving and making quick stops. Due to the nature of her job she often finds herself in a pickle when it comes to looking for a public bathroom during the day in her immediate area. On top of this struggle Sally knows that if she does find a bathroom, there is a decent chance it is dimly lit, the door doesn’t lock on the stall, and the toilet paper is out. She needs a better way to find clean bathrooms in her area, where she can be confident these are sanitary and well maintained.
 ·Bob (Customer 2): Bob is a male who attends Simon Fraser University as a computer science student. Bob has been mentally and physically scarred from 3 years of usage of the men’s CSIL bathroom. As much as he loves the moist atmosphere combined with the fish market smell, Bob wants change! Bob has always dreamed of the day he could venture out and find a different bathroom at SFU that doesn’t require a post-use daily hepatitis shot. If only he had a web app that could help him locate a bathroom which suits his needs.
 
 
--User Stories
+## User Stories
 
 ·Story 1: Logging in
 Logging is important as it prevents non users from accessing the app and potentially ruining the experience for signed up members. It also helps user (male or female or admin) maintain their own personal account and allow them to have personalized interactions with UrineLuck. Display login page upon entering the web app through routing. 
@@ -70,7 +70,7 @@ Testing will be done to ensure only admins can be able to edit their own info an
 
 
 
--PLANNED FOR FUTURE ITERATIONS
+## PLANNED FOR FUTURE ITERATIONS
 
 ·As an administrator I want the same abilities as a user. (1/2)
 
