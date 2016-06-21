@@ -18,9 +18,13 @@ We will have two types of users Admin and Normal users. Normal users can request
 ·Flushd: As described by the app, “The Bathroom. A hallowed yet infrequently talked about room of critical and daily importance to the lives of every human being inhabiting the non-3rd world. A room where it is safe to be at our worst. Where acts that would normally be embarrassing or humiliating by societal standards are welcomed and encouraged. A place where some of us seek refuge in an otherwise over-stimulated daily existence in order to seek some peace, tranquility and well…relief. We all hope that we walk out of the bathroom feeling a little bit better then when we walked in. We at Flushd feel that we should not take this transformation for granted. Our goal is to shine a bright light into the world of bathrooms to help increase the quality of the bathroom experience globally” (https://itunes.apple.com/ca/app/flushd/id691150346?mt=8).
 
 -Why our app beats the competition
+
 · Neither of these apps are very popular in Canada
+
 · Neither of these apps have a very large university presence
+
 · Neither of apps give the user of a Yelp type review where users can fully describe their experience
+
 · Our app will provide a unique experience when you find your bathroom and are still using the app. (Games, bathroom facts, etc.)
 
 
@@ -71,14 +75,23 @@ Testing will be done to ensure only admins can be able to edit their own info an
 ·As an administrator I want the same abilities as a user. (1/2)
 
 ·As a user I want to find public bathrooms nearby. (2)
+
 ·As a user I want to find the address of a bathroom. (2)
+
 ·As an administrator I want to be able to ban certain users. (2)
+
 ·As an administrator I want to modify/remove inappropriate entries. (2)
+
 ·As a user I want to upload my bathroom so that other users can find it. (2)
+
 ·As an administrator I want to be able to look at every registered user. (2)
 
 ·As a user I want to find the bathroom on a map. (3)
+
 ·As a user I want to be able to rate different bathrooms. (3)
+
 ·As a user I want to be able to search for different bathrooms. (3)
+
 ·As a user I want to upload pictures of my bathroom for other users to look at. (3)
+
 ·As a user I want to leave comments about the bathrooms so that other users can be more informed. (3)
