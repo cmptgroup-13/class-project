@@ -14,6 +14,8 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                             role: "male"}
     end
     assert_template 'users/show'
+    assert is_logged_in?
+    assert_not flash.empty?
   end
   
   test "invalid signup information no role" do
@@ -26,6 +28,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                             role: ""}
     end
     assert_template 'users/new'
+    assert flash.empty?
   end
   
   test "invalid signup information no password" do
@@ -38,6 +41,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                             role: "male"}
     end
     assert_template 'users/new'
+    assert flash.empty?
   end
   
   test "invalid signup information mismatching password and password confirm" do
@@ -50,6 +54,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                             role: "male"}
     end
     assert_template 'users/new'
+    assert flash.empty?
   end
   
   test "invalid signup information no email" do
@@ -62,6 +67,7 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                             role: "male"}
     end
     assert_template 'users/new'
+    assert flash.empty?
   end
 
   test "invalid signup information no name" do
@@ -74,5 +80,6 @@ class UsersSignupTest < ActionDispatch::IntegrationTest
                                             role: "male"}
     end
     assert_template 'users/new'
+    assert flash.empty?
   end
 end

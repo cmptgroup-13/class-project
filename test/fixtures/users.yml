@@ -1,1 +1,11 @@
-#empty
+csil:
+  name: CSIL Bathroom
+  email: smells@sfu.ca
+  password_digest: <%= User.digest('dallan') %>
+  role: male
+  
+dallan:
+  name: Dallan Bhatti
+  email: dbhatti@sfu.ca
+  password_digest: <%= User.digest('dallan') %>
+  role: admin
