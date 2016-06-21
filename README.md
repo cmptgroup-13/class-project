@@ -86,7 +86,9 @@ Testing will be used to check if proper info is displayed for the regular user a
 
 #### Story 4: Editing Users
 As the developer of UrineLuck, it is important to ensure the confidentiality of user information and improve user experience. In future iterations, Admin account and regular user account will be distinguished to make sure only admins can review, edit or delete user information, and users’ accounts won’t be accidentally deleted or edited by some random person.
+
 As the user of UrineLuck, I wish I will be able to edit my own profile such as name, email and password. Letting users change and update their profile is important because user information may change over time. For example, users’ emails should be always up to date as they need email to reset password. In future iterations, users will be given the option to edit their own profile when logging in.
+
 Testing will be done to ensure only admins can be able to edit their own info and regular users can be able to edit their own information.
 
 
