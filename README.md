@@ -124,6 +124,4 @@ Testing will be done to ensure only admins can be able to edit their own info an
 
 ### Planned Layout
 
- https://invis.io/P97OUZK84
- 
- Password is: group13
+github.com/cmptgroup-13/class-project/tree/master/Draft_For_Site_Design
