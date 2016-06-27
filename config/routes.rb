@@ -27,4 +27,6 @@ Rails.application.routes.draw do
   get 'home', to: 'users#index'
   get 'profile', to: 'users#show'
   resources :users
+
+  get 'showmap' => 'map#bigpicture'
 end
