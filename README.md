@@ -125,3 +125,10 @@ Testing will be done to ensure only admins can be able to edit their own info an
 ### Planned Layout
 
 github.com/cmptgroup-13/class-project/tree/master/Draft_For_Site_Design
+
+
+
+
+
+    <!--  <% flash.each do |message_type, message| %>-->
+    <!--    <div class="alert alert-<%= message_type %>"><%= message %></div>-->
