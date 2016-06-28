@@ -31,7 +31,7 @@ Rails.application.routes.draw do
   
   # get 'signup'  => 'users#new'
   # get    'login'   => 'sessions#new'
-  # post   'login'   => 'sessions#create'
+   post   'login'   => 'main#index'
   # delete 'logout'  => 'sessions#destroy'
   get 'home', to: 'main#index'
   # get 'profile', to: 'users#show'
