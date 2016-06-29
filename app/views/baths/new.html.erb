@@ -1,28 +1,30 @@
-<h2> Bathroom Add</h2>
+  <h2> Bathroom Add</h2>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3 well">
   
   <%= form_for (@baths) do |f| %>
 
-      <div class="field">
-        <%= f.label :address %><br />
-        <%= f.text_field :address, autofocus: true %>
+ 
+    
+    <div class="field">  
+      <%= f.label :country, "Country" %>
+      <%= select_tag :country, options_for_select(countries_list) %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :province, "Province/State" %><br />
+        <%= select_tag :province, options_for_select(us_states) %>
     </div>
     
     <div class="field">
         <%= f.label :city %><br />
         <%= f.text_field :city, autofocus: true %>
-    </div>  
-  
+    </div> 
+
     <div class="field">
-        <%= f.label :province %><br />
-        <%= f.text_field :province, autofocus: true %>
-    </div>
-    
-    <div class="field">  
-      <%= f.label :country, "Country" %>
-      <%= f.country_select :country, priority_countries: ["CA", "US"] %>
+        <%= f.label :address %><br />
+        <%= f.text_field :address, autofocus: true %>
     </div>
     
     <div class="field">

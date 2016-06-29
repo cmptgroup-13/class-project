@@ -4,13 +4,14 @@ class BathsController < ApplicationController
   end
     
   def create
-    @baths = Bath.new(bathroom_params)
-    if @baths.save
+    @baths = Bath.new(bath_params)
+      if @baths.save
       flash[:success] = "Successfully submitted"
         redirect_to @baths
-    else
+      else
       render 'new'
-    end
+      end
+    
   end
  
  
@@ -24,10 +25,20 @@ class BathsController < ApplicationController
   end  
     
   private
+  
+  
     
-  def bathroom_params
-    params.require(:bath).permit(:address, :city, :province,
+  def bath_params
+    params.require(:bath).permit(:city, :address, :province,
                                    :country, :hours, :rating)
-  end    
+  end 
+  
+  def current_bath
+    @current_baths ||= Bath.find_by(id: session[:bath_id])
+  end
+  
+  def count_state_match?
+    current_baths.country == "CAN"
+  end
 end
 

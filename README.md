@@ -181,3 +181,55 @@ github.com/cmptgroup-13/class-project/tree/master/Draft_For_Site_Design
     
   <%= f.submit "Create my bathroom", class: "btn btn-primary" %>
   <% end %>
+  
+  
+  
+  
+  
+  
+  <h2> Bathroom Add</h2>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 well">
+  
+  <%= form_for (@baths) do |f| %>
+
+ 
+    
+    <div class="field">  
+      <%= f.label :country, "Country" %>
+      <%= f.select_tag :country, options_for_select(countries_list) %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :province, "Province/State" %><br />
+        <%= f.select_tag :province, options_for_select(us_states) %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :city %><br />
+        <%= f.text_field :city, autofocus: true %>
+    </div> 
+
+    <div class="field">
+        <%= f.label :address %><br />
+        <%= f.text_field :address, autofocus: true %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :hours %><br />
+        <%= f.time_field :hours, autofocus: true %>
+    </div>
+
+    <div class="field">
+        <%= f.label :rating %><br />
+        <%= f.number_field :rating, autofocus: true %>
+    </div>
+    
+  <%= f.submit "Create my bathroom", class: "btn btn-primary" %>
+
+  
+  
+<% end %>
+  </div>
+</div>
