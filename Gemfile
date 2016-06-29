@@ -10,9 +10,20 @@ gem 'jbuilder',     '2.2.3'
 gem 'bootstrap-sass'
 gem 'bcrypt'
 gem 'devise'
+
 gem 'sdoc',         '0.4.0', group: :doc
 gem 'autoprefixer-rails'
 gem "responders"
+
+if ENV['DEBUG_LOCAL']
+  gem 'country_select', path: '../country_select'
+else
+  gem 'country_select', github: 'stefanpenner/country_select'
+end
+
+gem 'simple_form'
+gem 'formtastic'
+
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
   gem 'byebug',      '3.4.0'

@@ -132,3 +132,52 @@ github.com/cmptgroup-13/class-project/tree/master/Draft_For_Site_Design
 
     <!--  <% flash.each do |message_type, message| %>-->
     <!--    <div class="alert alert-<%= message_type %>"><%= message %></div>-->
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <%= form_for (@baths) do |f| %>
+    <div class="field">
+        <%= f.label :address %><br />
+        <%= f.text_field :address, autofocus: true %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :city %><br />
+        <%= f.text_field :city, autofocus: true %>
+    </div>  
+  
+    <div class="field">
+        <%= f.label :province %><br />
+        <%= f.text_field :province, autofocus: true %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :country %><br />
+        <%= f.text_field :country, autofocus: true %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :hours %><br />
+        <%= f.time_field :hours, autofocus: true %>
+    </div>
+
+    <div class="field">
+        <%= f.label :rating %><br />
+        <%= f.number_field :rating, autofocus: true %>
+    </div>
+    
+  <%= f.submit "Create my bathroom", class: "btn btn-primary" %>
+  <% end %>

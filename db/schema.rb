@@ -11,7 +11,29 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160628194211) do
+ActiveRecord::Schema.define(version: 20160628231059) do
+
+  create_table "bathroomdata", force: :cascade do |t|
+    t.string   "address"
+    t.string   "city"
+    t.string   "province"
+    t.string   "country"
+    t.time     "hours"
+    t.integer  "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "baths", force: :cascade do |t|
+    t.string   "address"
+    t.string   "city"
+    t.string   "province"
+    t.string   "country"
+    t.time     "hours"
+    t.integer  "rating"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
