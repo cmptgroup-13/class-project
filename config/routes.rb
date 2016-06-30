@@ -18,6 +18,9 @@ Rails.application.routes.draw do
   resources :postsrake
   resources :baths
   devise_for :users, controllers: { registrations: "registrations" }
+  match 'users/:id' => 'main#destroy', :via => :delete, :as => :admin_destroy_user
+
+
   get 'showmap' => 'map#bigpicture'
   
    post   'login'   => 'main#index'

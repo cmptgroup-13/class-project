@@ -7,6 +7,14 @@ class MainController < ApplicationController
     @user = User.all
   end
 
+  def destroy
+    @user = User.find(params[:id])
+
+
+    if @user.destroy
+        redirect_to profile_path, notice: "User deleted."
+    end
+  end
 
   private
 

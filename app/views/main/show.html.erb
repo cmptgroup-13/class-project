@@ -32,6 +32,10 @@
                 <th><b>Role</b></th>
                 <td><b><%= user.role %></b></td>
             </tr>
+            
+            <tr>
+                <td><%= link_to 'Destroy', admin_destroy_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
         </table>
         <% else %>
         <table class="table">
@@ -46,6 +50,10 @@
             <tr>
                 <th>Role</th>
                 <td><%= user.role %></td>
+            </tr>
+            
+            <tr>
+                <td><%= link_to 'Destroy', admin_destroy_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
         </table>
         <% end %>
