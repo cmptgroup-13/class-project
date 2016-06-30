@@ -1,28 +1,61 @@
-<h1>These are the bathrooms you have added</h1>
-
-<div class="row">
-    <div class="col-md-6 col md-offset-3">
-        <% for bath in  @baths do%>
-                <table class="table">
-                    <tr>
-                        <th><b>Address</b></th>
-                        <td><b><%= bath.address %></b></td>
-                    </tr>
-                    <tr>
-                        <th><b>City</b></th>
-                        <td><b><%= bath.city %></b></td>
-                    </tr>
-                    <tr>
-                        <th><b>Rating</b></th>
-                        <td><b><%= bath.rating %></b></td>
-                    </tr>
-
-                
-                    <tr>
-                        <th><%= link_to "Destroy", bath, method: :delete, data: { confirm: "You sure?" } %></th>
-                    </tr>
-                </table>
-        <% end %>
-        
+<% if current_user.role == "female" || current_user.role == "male" %>
+    <h1>These are the bathrooms you have added</h1>
+    
+    <div class="row">
+        <div class="col-md-6 col md-offset-3">
+            
+            <% for bath in  @baths do%>
+                    <table class="table">
+                        <tr>
+                            <th><b>Address</b></th>
+                            <td><b><%= bath.address %></b></td>
+                        </tr>
+                        <tr>
+                            <th><b>City</b></th>
+                            <td><b><%= bath.city %></b></td>
+                        </tr>
+                        <tr>
+                            <th><b>Rating</b></th>
+                            <td><b><%= bath.rating %></b></td>
+                        </tr>
+    
+                    
+                    </table>
+            <% end %>
+            
+        </div>
     </div>
-</div>
+    
+    
+<% elsif current_user.role == "admin" %>
+    <h1>These are the bathrooms in the database</h1>
+    
+    <div class="row">
+        <div class="col-md-6 col md-offset-3">
+            
+            <% for bath in  @baths do%>
+                    <table class="table">
+                        <tr>
+                            <th><b>Address</b></th>
+                            <td><b><%= bath.address %></b></td>
+                        </tr>
+                        <tr>
+                            <th><b>City</b></th>
+                            <td><b><%= bath.city %></b></td>
+                        </tr>
+                        <tr>
+                            <th><b>Rating</b></th>
+                            <td><b><%= bath.rating %></b></td>
+                        </tr>
+    
+                    
+                        <tr>
+                            <th><%= link_to "Destroy", bath, method: :delete, data: { confirm: "You sure?" } %></th>
+                        </tr>
+                    </table>
+            <% end %>
+            
+        </div>
+    </div>
+    
+<% end %>
