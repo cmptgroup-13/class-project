@@ -24,6 +24,10 @@ class BathsController < ApplicationController
     @baths = Bath.all
   end  
     
+  def destroy
+    Bath.find(params[:id]).destroy
+    redirect_to newbath_path, notice: "Bathroom Deleted"
+  end
   private
   
   

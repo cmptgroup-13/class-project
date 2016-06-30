@@ -16,7 +16,13 @@
                         <th><b>Rating</b></th>
                         <td><b><%= bath.rating %></b></td>
                     </tr>
+
+                
+                    <tr>
+                        <th><%= link_to "Destroy", bath, method: :delete, data: { confirm: "You sure?" } %></th>
+                    </tr>
                 </table>
         <% end %>
+        
     </div>
 </div>
