@@ -15,14 +15,15 @@ gem 'sdoc',         '0.4.0', group: :doc
 gem 'autoprefixer-rails'
 gem "responders"
 
-if ENV['DEBUG_LOCAL']
-  gem 'country_select', path: '../country_select'
-else
-  gem 'country_select', github: 'stefanpenner/country_select'
-end
+# if ENV['DEBUG_LOCAL']
+#   gem 'country_select', path: '../country_select'
+# else
+#   gem 'country_select', github: 'stefanpenner/country_select'
+# end
 
 gem 'simple_form'
 gem 'formtastic'
+gem 'geocoder'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
