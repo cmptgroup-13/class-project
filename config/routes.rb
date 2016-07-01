@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   match 'users/:id' => 'main#destroy', :via => :delete, :as => :admin_destroy_user
 
 
-  get 'showmap' => 'map#bigpicture'
+  get 'showmap' => 'map#index'
   
    post   'login'   => 'main#index'
   get 'home', to: 'main#index'
