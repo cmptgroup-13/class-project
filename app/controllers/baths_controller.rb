@@ -4,7 +4,8 @@ class BathsController < ApplicationController
   end
     
   def create
-    @baths = Bath.new(bath_params)
+    
+    @baths = current_user.baths.new(bath_params)
       if @baths.save
       flash[:success] = "Successfully submitted"
         redirect_to @baths
@@ -20,8 +21,12 @@ class BathsController < ApplicationController
   end
 
   def show
- 
-    @baths = Bath.all
+    
+    if(current_user.role == "admin")
+      @baths = Bath.all
+    else
+      @baths = current_user.baths.find(params[:user])
+    end
   end  
     
   def destroy

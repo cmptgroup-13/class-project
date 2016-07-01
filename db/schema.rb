@@ -20,9 +20,12 @@ ActiveRecord::Schema.define(version: 20160628231059) do
     t.string   "country"
     t.time     "hours"
     t.integer  "rating"
+    t.integer  "user_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
+
+  add_index "baths", ["user_id", "created_at"], name: "index_baths_on_user_id_and_created_at"
 
   create_table "posts", force: :cascade do |t|
     t.string   "title"
