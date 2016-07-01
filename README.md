@@ -233,3 +233,38 @@ github.com/cmptgroup-13/class-project/tree/master/Draft_For_Site_Design
 <% end %>
   </div>
 </div>
+
+
+
+
+
+
+class MapController < ApplicationController
+  def index
+    @baths = Bath.all
+    @hash = Gmaps4rails.build_markers(@baths) do |bath, marker|
+    marker.lat bath.latitude
+    marker.lng bath.longitude
+    end
+  end
+end
+
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD4MhM4eZ3aFFZMEZr34-YyswW6MjvqU6E"></script>
+<script>
+function initialize() {
+  var mapProp = {
+    center:new google.maps.LatLng( 49.255,-123.09 ),
+    zoom:12,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
+}
+
+markers = handler.addMarkers(<%=raw @hash.to_json %>);
+google.maps.event.addDomListener(window, 'load', initialize);
+</script>
+
+
+
+<div id="googleMap" style="	width:1200px; height:500px; border-type:solid; border-width: 5px;"> </div>
