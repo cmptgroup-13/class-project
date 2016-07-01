@@ -8,7 +8,10 @@ class CreateBaths < ActiveRecord::Migration
       t.time :hours
       t.integer :rating
       t.references :user, foreign_key: true
-
+      t.text :smell
+      t.text :wait_time
+      t.text :comfort
+      
 
       t.timestamps null: false
     end

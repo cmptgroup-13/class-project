@@ -29,11 +29,11 @@
     
 <% elsif current_user.role == "admin" %>
     <h1>These are the bathrooms in the database</h1>
-    
+    <% for bath in  @baths do%>
     <div class="row">
         <div class="col-md-6 col md-offset-3">
             
-            <% for bath in  @baths do%>
+            
                     <table class="table">
                         <tr>
                             <th><b>Address</b></th>
@@ -63,9 +63,35 @@
                             <th><%= link_to "Destroy", bath, method: :delete, data: { confirm: "You sure?" } %></th>
                         </tr>
                     </table>
-            <% end %>
+            
             
         </div>
     </div>
+    
+
+    
+    
+    <% end %>
+    
+    
+    <!--<div class="row">-->
+    <!--<div class="small-2 large-2 columns">-->
+    <!--<%= imdb_style_rating_for bath, current_user%>-->
+    <!--</div>-->
+    <!--<br>-->
+    <!--<div class="small-2 large-4 columns">-->
+    <!--<% if current_user %>-->
+    <!--  Visual Effects: <%= rating_for bath, "smell" %>-->
+    <!--  <br>-->
+    <!--  Original Score: <%= rating_for bath, "wait_time" %>-->
+    <!--  <br>-->
+    <!--  Director: <%= rating_for bath, "comfort" %>-->
+    
+    <!--<% end %>-->
+    <!--</div>-->
+    <!--</div>-->
+    
+    
+
     
 <% end %>

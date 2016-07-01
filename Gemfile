@@ -25,6 +25,7 @@ gem 'simple_form'
 gem 'formtastic'
 gem 'geocoder'
 gem 'gmaps4rails'
+gem 'ratyrate'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
