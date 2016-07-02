@@ -25,7 +25,7 @@ class BathsController < ApplicationController
     if(current_user.role == "admin")
       @baths = Bath.all
     else
-      @baths = current_user.baths.find(params[:user])
+      @baths = current_user.baths
     end
   end  
     
@@ -39,7 +39,7 @@ class BathsController < ApplicationController
     
   def bath_params
     params.require(:bath).permit(:city, :address, :province,
-                                   :country, :hours, :rating, :latitude, :longitude)
+                                   :country, :hours, :rating, :latitude, :longitude, :latitude, :longitude)
   end 
   
   def current_bath
