@@ -39,7 +39,7 @@ class BathsController < ApplicationController
     
   def bath_params
     params.require(:bath).permit(:city, :address, :province,
-                                   :country, :hours, :rating, :latitude, :longitude, :latitude, :longitude)
+                                   :country, :rating, :latitude, :longitude, :latitude, :longitude)
   end 
   
   def current_bath
