@@ -7,17 +7,20 @@
   <%= csrf_meta_tags %>
 
 </head>
+
+<%= render 'layouts/header' %>
+
+
 <body style="	width:100%;height:100%;  ">
 
-    <%= render 'layouts/header' %>
     <!--<div class="holdme">-->
     <% if user_signed_in? %>
-      
+
       <p>Hello, <%= current_user.name %> - <%= link_to "Sign_out", destroy_user_session_path, :method => 'delete' %></p>
       <br>
-    
+
     <% end %>
-      
+
 
 
     <p class="notice"><%= notice %></p>

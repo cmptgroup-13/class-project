@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- 
+
  /*
 @import "bootstrap-sprockets";
 @import "bootstrap";
@@ -23,9 +23,11 @@
   text-align: center;
 }
 
+/*
 .myNavBackground{
   background-color: #202020;
 }
+*/
 
 .myNavElementsLeftRight{
   float: left;
