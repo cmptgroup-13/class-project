@@ -13,6 +13,78 @@
  *= require_tree .
  *= require_self
  */
- 
+
+ /*
 @import "bootstrap-sprockets";
 @import "bootstrap";
+*/
+
+.jumbotron{
+  text-align: center;
+}
+
+/*
+.myNavBackground{
+  background-color: #202020;
+}
+*/
+
+.myNavElementsLeftRight{
+  float: left;
+  margin: 0px 0px 0px 10px;
+}
+.myNavElementsLeftRight a {
+  color: #808080;
+  font-size: 95%;
+  font-style: italic;
+}
+.myNavElementsLeftRight a:hover:not(.active) {
+    color: #F8F8F8;
+  font-size: 95%;
+  font-style: italic;
+  background-color: #202020;
+}
+
+
+
+.myNavElementsLeft{
+  float: left;
+  margin: 0px 0px 0px 10px;
+}
+.myNavElementsLeft a {
+  color: #F8F8F8;
+  font-size: 125%;
+  text-decoration: none;
+}
+.myNavElementsLeft a:hover:not(.active) {
+    color: #F8F8F8;
+    font-size: 125%;
+    background-color: #202020;
+}
+
+
+
+.myNavElementsRight{
+  float: right;
+  margin: 0px 10px 0px 5px;
+  color: #E0E0E0;
+}
+.myNavElementsRight a {
+    display: block;
+    color: #E0E0E0;
+    text-align: center;
+    text-decoration: none;
+}
+.myNavElementsRight a:hover:not(.active) {
+    color: #505050;
+    background-color: #202020;
+}
+
+
+.myNav{
+  list-style-type: none;
+  padding: 15px 0px 35px 0px;
+  margin: 0px 0px 0px 0px;
+  background-color: #202020;
+  width: 100%;
+}
