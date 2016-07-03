@@ -268,3 +268,8 @@ google.maps.event.addDomListener(window, 'load', initialize);
 
 
 <div id="googleMap" style="	width:1200px; height:500px; border-type:solid; border-width: 5px;"> </div>
+
+
+
+
+country and province dont get written into the database

@@ -9,12 +9,12 @@
     
     <div class="field">  
       <%= f.label :country, "Country" %>
-      <%= select_tag :country, options_for_select(countries_list) %>
+      <%= select_tag "country", options_for_select(countries_list) %>
     </div>
     
     <div class="field">
         <%= f.label :province, "Province/State" %><br />
-        <%= select_tag :province, options_for_select(us_states) %>
+        <%= select_tag "province", options_for_select(us_states) %>
     </div>
     
     <div class="field">

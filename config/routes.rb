@@ -27,5 +27,7 @@ Rails.application.routes.draw do
   post   'login'   => 'main#index'
   get 'home', to: 'main#index'
   get 'users/:id/baths' => 'users#baths', :as => :user_posts
+  get 'newreview', to: 'baths#newreview'
+  get 'showreview', to: 'baths#showreview'
   
 end

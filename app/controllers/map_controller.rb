@@ -15,8 +15,7 @@ class MapController < ApplicationController
 
   end
   
-  
-  
+
   private
   
   def colorfind
@@ -28,4 +27,10 @@ class MapController < ApplicationController
     end
     
   end
+  
+  def gmaps4rails_marker_picture
+  {
+    "rich_marker" =>  "<div class='my-marker'>It works!<img height='30' width='30' src='urinelucklogo.png'/></div>"
+  }
+end
 end

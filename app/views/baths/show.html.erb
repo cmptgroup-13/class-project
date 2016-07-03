@@ -18,8 +18,10 @@
                             <th><b>Rating</b></th>
                             <td><b><%= bath.rating %></b></td>
                         </tr>
-    
                     
+                        <tr>
+                            <th><%= link_to "Read the Reviews", newreview_path %></th>
+                        </tr>
                     </table>
             <% end %>
             
@@ -57,8 +59,16 @@
                             <th><b>Latitude</b></th>
                             <td><b><%= bath.latitude %></b></td>
                         </tr>
-    
-                    
+
+                        <tr>
+                            <th><%= link_to "Read the Reviews", showreview_path %></th>
+                        </tr>
+ 
+                         <tr>
+                            <th><%= link_to "Leave A Review", newreview_path %></th>
+                        </tr>
+                        
+                        
                         <tr>
                             <th><%= link_to "Destroy", bath, method: :delete, data: { confirm: "You sure?" } %></th>
                         </tr>
