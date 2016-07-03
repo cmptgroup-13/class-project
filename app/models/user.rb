@@ -5,6 +5,6 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
          
   has_many :baths
-
+  has_many :reviews
   ratyrate_rater
 end

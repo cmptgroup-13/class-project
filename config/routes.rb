@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+
   post '/rate' => 'rater#create', :as => 'rate'
   get 'baths/new'
 
@@ -16,7 +18,7 @@ Rails.application.routes.draw do
   get 'profile', to: 'main#show'
   root 'main#index'
   resources :postsrake
-  resources :baths
+
   devise_for :users, controllers: { registrations: "registrations" }
   match 'users/:id' => 'main#destroy', :via => :delete, :as => :admin_destroy_user
 
@@ -26,9 +28,13 @@ Rails.application.routes.draw do
   post   'login'   => 'main#index'
   get 'home', to: 'main#index'
   get 'users/:id/baths' => 'users#baths', :as => :user_posts
-  # get 'newreview', to: 'baths#newreview'
-  get 'showreview', to: 'baths#showreview'
-  get '/baths/newreview/:id' => 'baths#newreview', :as => :newreview
+  resources :baths do
+    resources :reviews
+  end
+  
+  # # get 'newreview', to: 'baths#newreview'
+  # get 'showreview', to: 'baths#showreview'
+  # get '/reviews/new/:id' => 'reviews#new', :as => :newreview
   
   # clean this file up by seeing which "get"'s can be replaced with their equavilant rake routes name
   
