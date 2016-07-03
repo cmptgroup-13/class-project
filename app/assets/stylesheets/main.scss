@@ -2,11 +2,42 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.jumbotron{
+  right:50%;
+  text-align:left
+}
+
+.MyMiddle0{
+  padding: 10px 0px 5px 0px;
+  margin: 25px 50px 5px 50px;
+  text-align: center;
+  background-color: #303030;
+
+}
+
+.MyMiddle1{
+  color: #F8F8F8;
+  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+  text-align: center;
+  font-size: 5;
+}
+.MyMiddle2{
+  color: #F8F8F8;
+  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  font-style: italic;
+  font-size: 40;
+  background-color: #303030;
+}
+
 #slides{
+  margin: 0px 50px 5px 50px;
 	position: relative;
-	height: 150px;
+	height: 300px;
+  width: 492px;
 	padding: 0px;
-	margin: 0px;
+  background-color: #303030;
 	list-style-type: none;
 }
 
@@ -14,10 +45,12 @@
 	position: absolute;
 	left: 0px;
 	top: 0px;
-	width: 100%;
-	height: 100%;
+	width: 99%;
+	height: 99%;
 	opacity: 0;
 	z-index: 1;
+  background-color: #303030;
+
 
 	-webkit-transition: opacity 1s;
 	-moz-transition: opacity 1s;
@@ -39,24 +72,19 @@ just for appearance; change whatever you want
 
 .slide{
 	font-size: 40px;
-	padding: 40px;
+	padding: 1px;
 	box-sizing: border-box;
-	background: #333;
+	background: #303030;
 	color: #fff;
 }
 
 .slide:nth-of-type(1){
-	background: red;
 }
 .slide:nth-of-type(2){
-	background: orange;
 }
 .slide:nth-of-type(3){
-	background: green;
 }
 .slide:nth-of-type(4){
-	background: blue;
 }
 .slide:nth-of-type(5){
-	background: purple;
 }

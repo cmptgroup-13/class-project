@@ -19,9 +19,6 @@
 @import "bootstrap";
 */
 
-.jumbotron{
-  text-align: center;
-}
 
 /*
 .myNavBackground{
@@ -30,61 +27,99 @@
 */
 
 .myNavElementsLeftRight{
-  float: left;
-  margin: 0px 0px 0px 10px;
+  float: right;
+  padding: 15px 15px 15px 15px;
+  color: #202020;
+  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #B0B0B0;
+  background-color: #F8F8F8;
 }
 .myNavElementsLeftRight a {
-  color: #808080;
-  font-size: 95%;
-  font-style: italic;
+  display: block;
+  color: #202020;
+  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: lighter;
+  background-color: #F8F8F8;
 }
 .myNavElementsLeftRight a:hover:not(.active) {
-    color: #F8F8F8;
-  font-size: 95%;
-  font-style: italic;
-  background-color: #202020;
+  color: #202020;
+  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  background-color: #F8F8F8;
 }
-
 
 
 .myNavElementsLeft{
-  float: left;
-  margin: 0px 0px 0px 10px;
+  text-align: center;
+  margin: 0px 0px 0px 0px;
+  background-color: #FFFFFF;
 }
 .myNavElementsLeft a {
-  color: #F8F8F8;
+  color: #080808;
+  text-shadow: -1px 0 #F8F8F8, 0 1px #F8F8F8, 1px 0 #F8F8F8, 0 -1px #F8F8F8;
   font-size: 125%;
   text-decoration: none;
 }
 .myNavElementsLeft a:hover:not(.active) {
-    color: #F8F8F8;
+    color: #080808;
+    text-shadow: -1px 0 #F8F8F8, 0 1px #F8F8F8, 1px 0 #F8F8F8, 0 -1px #F8F8F8;
     font-size: 125%;
-    background-color: #202020;
+    background-color: #FFFFFF;
 }
 
+h1{
+ font-family: Impact;
+ font-size: 90px;
+ font-weight: 500;
+ background-color: #FFFFFF;
+ padding: 0px 0px 10px 0px;
+ border-style: solid;
+ border-color: #FFFFFF;
+ border-width: 2px;
+ border-bottom: solid #686868 ;
+ margin: 0px 0px 0px 0px;
+}
 
 
 .myNavElementsRight{
-  float: right;
-  margin: 0px 10px 0px 5px;
-  color: #E0E0E0;
+  float: left;
+  padding: 15px 15px 15px 15px;
+  color: #202020;
+  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #B0B0B0;
+  background-color: #F8F8F8;
 }
 .myNavElementsRight a {
     display: block;
-    color: #E0E0E0;
-    text-align: center;
+    color: #202020;
+    text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
     text-decoration: none;
+    font-size: 15px;
+    background-color: #F8F8F8;
 }
 .myNavElementsRight a:hover:not(.active) {
-    color: #505050;
-    background-color: #202020;
+    color: #202020;
+    text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    background-color: #F8F8F8;
 }
 
 
 .myNav{
   list-style-type: none;
-  padding: 15px 0px 35px 0px;
-  margin: 0px 0px 0px 0px;
-  background-color: #202020;
-  width: 100%;
+  padding: 0px 0px 52px 0px;
+  margin: 0px 50px 0px 50px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #B0B0B0;
+  background-color: #E8E8E8 	;
+  margin-top: -1px;
 }
