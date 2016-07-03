@@ -6,8 +6,8 @@ class ReviewsController < ApplicationController
 
   def create
     @bath = current_user.baths.find_by_id(params[:bath_id])
-    @review = current_user.reviews.build(review_params)
-    # @bath.reviews = @review
+    @review = @bath.reviews.build(review_params)
+    @review.user_id = current_user.id
     @review.save
     redirect_to showbath_path
   end
