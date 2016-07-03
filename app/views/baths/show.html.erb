@@ -18,10 +18,20 @@
                             <th><b>Rating</b></th>
                             <td><b><%= bath.rating %></b></td>
                         </tr>
+                        
+                        <tr>
+                            <th><b>Bath ID</b></th>
+                            <td><b><%= bath.id %></b></td>
+                        </tr>                        
                     
                         <tr>
-                            <th><%= link_to "Read the Reviews", newreview_path %></th>
+                            <th><%= link_to "Read the Reviews", showreview_path %></th>
                         </tr>
+                        
+                        <tr>
+                            <th><%= link_to "Leave A Review", newreview_path(bath.id) %></th>
+                        </tr>
+                        
                     </table>
             <% end %>
             

@@ -11,6 +11,7 @@ class CreateBaths < ActiveRecord::Migration
       t.text :smell
       t.text :wait_time
       t.text :comfort
+      t.text :review
       
 
       t.timestamps null: false

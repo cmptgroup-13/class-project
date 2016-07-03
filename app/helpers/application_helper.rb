@@ -14,5 +14,9 @@ module ApplicationHelper
         flash_type.to_s
     end
   end
+  
+  def current_bath
+    @current_bath ||= current_user.baths.find_by_id([:bath_id])
+  end
 
 end

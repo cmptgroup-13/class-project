@@ -1,10 +1,10 @@
 class BathsController < ApplicationController
+  before_action :authenticate_user!
+  
   def new
     @baths = Bath.new
   end
-  
-  def newreview
-  end
+
     
   def create
     
@@ -36,6 +36,12 @@ class BathsController < ApplicationController
   def showreview
   end
   
+  def newreview
+    # @bath = Bath.find_by(id: session[:bath_id])
+    @bath = current_user.baths.find_by_id(params[:id])
+    @review = @bath.rating
+  end
+  
   def destroy
     Bath.find(params[:id]).destroy
     redirect_to newbath_path, notice: "Bathroom Deleted"
@@ -49,9 +55,7 @@ class BathsController < ApplicationController
                                    :country, :rating, :latitude, :longitude, :latitude, :longitude)
   end 
   
-  def current_bath
-    @current_baths ||= Bath.find_by(id: session[:bath_id])
-  end
+
   
   def count_state_match?
     current_baths.country == "CAN"

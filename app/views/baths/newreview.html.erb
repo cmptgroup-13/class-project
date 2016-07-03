@@ -1,0 +1,20 @@
+<h2> Review Add</h2>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 well">
+  
+  <%= form_for (@review) do |f| %>
+
+ 
+    
+    <div class="field">  
+      <%= f.label :review, "Review" %>
+      <%= text_area_tag "review", size: "24x6" %>
+    </div>
+  <%= f.submit "Create my review", class: "btn btn-primary" %>
+
+  
+  
+<% end %>
+  </div>
+</div>
