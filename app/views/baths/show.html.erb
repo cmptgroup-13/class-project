@@ -24,12 +24,9 @@
                             <td><b><%= bath.id %></b></td>
                         </tr>                        
                     
+
                         <tr>
-                            <th><%= link_to "Read the Reviews", showreview_path %></th>
-                        </tr>
-                        
-                        <tr>
-                            <th><%= link_to "Leave A Review", newreview_path(bath.id) %></th>
+                            <th><%= link_to "Leave A Review", new_bath_review_path(bath, @user) %></th>
                         </tr>
                         
                     </table>
@@ -41,7 +38,7 @@
     
 <% elsif current_user.role == "admin" %>
     <h1>These are the bathrooms in the database</h1>
-    <% for bath in  @baths do%>
+    <% @baths.each do |bath| %>
     <div class="row">
         <div class="col-md-6 col md-offset-3">
             
@@ -70,13 +67,7 @@
                             <td><b><%= bath.latitude %></b></td>
                         </tr>
 
-                        <tr>
-                            <th><%= link_to "Read the Reviews", showreview_path %></th>
-                        </tr>
- 
-                         <tr>
-                            <th><%= link_to "Leave A Review", newreview_path %></th>
-                        </tr>
+
                         
                         
                         <tr>
@@ -93,25 +84,7 @@
     
     <% end %>
     
-    
-    <!--<div class="row">-->
-    <!--<div class="small-2 large-2 columns">-->
-    <!--<%= imdb_style_rating_for bath, current_user%>-->
-    <!--</div>-->
-    <!--<br>-->
-    <!--<div class="small-2 large-4 columns">-->
-    <!--<% if current_user %>-->
-    <!--  Visual Effects: <%= rating_for bath, "smell" %>-->
-    <!--  <br>-->
-    <!--  Original Score: <%= rating_for bath, "wait_time" %>-->
-    <!--  <br>-->
-    <!--  Director: <%= rating_for bath, "comfort" %>-->
-    
-    <!--<% end %>-->
-    <!--</div>-->
-    <!--</div>-->
-    
-    
+
 
     
 <% end %>
