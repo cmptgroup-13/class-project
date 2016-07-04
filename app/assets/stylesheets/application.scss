@@ -123,3 +123,34 @@ h1{
   background-color: #E8E8E8 	;
   margin-top: -1px;
 }
+
+
+
+.TopRight{
+  list-style-type: none;
+  padding: 0px 0px 52px 0px;
+  margin: 0px 50px 0px 50px;
+
+  background-color: #FFFFFF 	;
+  margin-top: -1px;
+}
+
+
+.TopRightElements{
+  float: right;
+  padding: 15px 15px 15px 15px;
+  color: #202020;
+  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FFFFFF;
+  border-right: solid #686868 ;
+  background-color: #FFFFFF;
+}
+
+.TopRightElementsSpecial{
+  float: right;
+  padding: 15px 15px 15px 15px;
+  color: #202020;
+  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+}
