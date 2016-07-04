@@ -23,10 +23,13 @@
                             <th><b>Bath ID</b></th>
                             <td><b><%= bath.id %></b></td>
                         </tr>                        
-                    
 
                         <tr>
-                            <th><%= link_to "Leave A Review", new_bath_review_path(bath, @user) %></th>
+                            <th><%= link_to "Leave A Review", new_bath_review_path(bath) %></th>
+                        </tr>
+                        
+                        <tr>
+                             <th><%= link_to "Show Reviews", bath_review_path(bath, current_user) %></th>
                         </tr>
                         
                     </table>
@@ -67,6 +70,14 @@
                             <td><b><%= bath.latitude %></b></td>
                         </tr>
 
+                        
+                        <tr>
+                            <th><%= link_to "Leave A Review", new_bath_review_path(bath) %></th>
+                        </tr>
+                        
+                        <tr>
+                             <th><%= link_to "Show Reviews", bath_review_path(bath, current_user) %></th>
+                        </tr>
 
                         
                         
