@@ -21,7 +21,7 @@ module Workspace
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
-  ActionMailer::Base.smtp_settings = {
+  config.action_mailer.smtp_settings = {
       :address    => 'smtp.gmail.com',
       :domian     => 'mail.google.com',
       :port       => 587,
