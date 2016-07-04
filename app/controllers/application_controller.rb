@@ -11,8 +11,12 @@ class ApplicationController < ActionController::Base
     new_user_session_path
   end
   
-
+  protected
   
+   def configure_permitted_parameters
+
+    devise_parameter_sanitizer.for(:update) { |u| u.permit(:name, :role, :password, :current_password, :password_confirmation, :email) }
+   end
   
   
 
