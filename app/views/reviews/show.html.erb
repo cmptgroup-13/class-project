@@ -1,2 +1,15 @@
-<h1>Reviews#show</h1>
-<p>Find me in app/views/reviews/show.html.erb</p>
+<h1>Reviews for <%= current_bath.address %></h1>
+
+    <div class="row">
+        <div class="col-md-6 col md-offset-3">
+            
+            <% @reviews.each do |review| %>
+                
+                <table class="table">
+                        <tr>
+                            <th><b><%= User.find_by_id(review.user_id).name %> </b> </th>
+                            <td><%= review.post %></td>
+                        </tr>
+                </table>
+                
+            <% end %>

@@ -15,8 +15,8 @@ module ApplicationHelper
     end
   end
   
-  # def current_bath
-  #   @current_bath ||= current_user.baths.find_by_id([:bath_id])
-  # end
+  def current_bath
+    @current_bath ||= current_user.baths.find_by_id(params[:bath_id])
+  end
 
 end

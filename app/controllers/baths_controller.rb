@@ -25,23 +25,20 @@ class BathsController < ApplicationController
 
   def show
     
-    if(current_user.role == "admin")
+    # if(current_user.role == "admin")
       @baths = Bath.all
-    else
-      @baths = current_user.baths
-    end
+    # else
+    #   @baths = current_user.baths
+
+    # end
+    
   end  
     
     
   def showreview
   end
   
-  def newreview
-    # @bath = Bath.find_by(id: session[:bath_id])
-    @bath = current_user.baths.find_by_id(params[:id])
-    @review = @bath.rating
-  end
-  
+
   def destroy
     Bath.find(params[:id]).destroy
     redirect_to newbath_path, notice: "Bathroom Deleted"
