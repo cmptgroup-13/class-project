@@ -11,6 +11,6 @@ def location
 end
 after_validation :geocode
 
-ratyrate_rateable "smell", "wait_time", "comfort"
+ratyrate_rateable "rating"
 
 end
