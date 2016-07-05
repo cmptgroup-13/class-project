@@ -5,6 +5,7 @@
         <div class="col-md-6 col md-offset-3">
             
             <% @baths.each do |bath| %>
+                    <% if bath.admin_accept == true %>
                     <table class="table">
                         <tr>
                             <th><b>Address</b></th>
@@ -33,6 +34,7 @@
                         </tr>
                         
                     </table>
+                    <% end %>
             <% end %>
             
         </div>
@@ -42,6 +44,7 @@
 <% elsif current_user.role == "admin" %>
     <h1>These are the bathrooms in the database</h1>
     <% @baths.each do |bath| %>
+    <% if bath.admin_accept == true %>
     <div class="row">
         <div class="col-md-6 col md-offset-3">
             
@@ -89,7 +92,7 @@
             
         </div>
     </div>
-    
+    <% end %>
 
     
     

@@ -34,6 +34,7 @@ Rails.application.routes.draw do
     resources :reviews
   end
 
+  get 'accept' => 'baths#adminaccept'
   # # get 'newreview', to: 'baths#newreview'
   # get 'showreview', to: 'baths#showreview'
   # get '/reviews/new/:id' => 'reviews#new', :as => :newreview

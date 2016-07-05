@@ -29,9 +29,10 @@ ActiveRecord::Schema.define(version: 20160703193129) do
     t.string   "country"
     t.time     "hours"
     t.integer  "rating"
+    t.boolean  "admin_accept"
     t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
     t.float    "latitude"
     t.float    "longitude"
   end

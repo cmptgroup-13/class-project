@@ -7,14 +7,19 @@ class BathsController < ApplicationController
 
     
   def create
-    
     @baths = current_user.baths.new(bath_params)
-      if @baths.save
+    if current_user.role == "admin"
+      @baths.admin_accept = true
+    else
+      # get rid of this and always set admin_accept to false
+      @baths.admin_accept = false
+    end
+    if @baths.save
       flash[:success] = "Successfully submitted"
-        redirect_to @baths
-      else
+      redirect_to @baths
+    else
       render 'new'
-      end
+    end
     
   end
  
@@ -35,7 +40,8 @@ class BathsController < ApplicationController
   end  
     
     
-  def showreview
+  def adminaccept
+    @baths = Bath.all
   end
   
 
@@ -49,7 +55,7 @@ class BathsController < ApplicationController
     
   def bath_params
     params.require(:bath).permit(:city, :address, :province,
-                                   :country, :rating, :latitude, :longitude, :latitude, :longitude)
+                                   :country, :rating, :latitude, :longitude, :latitude, :longitude, :admin_accept)
   end 
   
 

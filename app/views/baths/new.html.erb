@@ -32,9 +32,12 @@
         <%= f.label :rating %><br />
         <%= f.number_field :rating, autofocus: true %>
     </div>
-    
-  <%= f.submit "Create my bathroom", class: "btn btn-primary" %>
-
+  
+  <% if current_user=="admin" %>  
+    <%= f.submit "Create my bathroom", class: "btn btn-primary" %>
+  <% else %>
+    <%= f.submit "Send bathroom request", class: "btn btn-primary" %>
+  <% end %>
   
   
 <% end %>
