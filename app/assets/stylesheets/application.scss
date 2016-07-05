@@ -26,38 +26,22 @@
 }
 */
 
-.myNavElementsLeftRight{
-  float: right;
-  padding: 15px 15px 15px 15px;
-  color: #202020;
-  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #B0B0B0;
-  background-color: #F8F8F8;
-}
-.myNavElementsLeftRight a {
-  display: block;
-  color: #202020;
-  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
-  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: lighter;
-  background-color: #F8F8F8;
-}
-.myNavElementsLeftRight a:hover:not(.active) {
-  color: #202020;
-  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
-  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
-  background-color: #F8F8F8;
-}
+
+
+
 
 
 .myNavElementsLeft{
-  text-align: center;
-  margin: 0px 0px 0px 0px;
+  margin: 40px 0px 10px 0px;
   background-color: #FFFFFF;
+  font-family: Impact;
+  font-size: 128px;
+  font-weight: 500;
+  background-color: #FFFFFF;
+  padding: 0px 0px 10px 0px;
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+
 }
 .myNavElementsLeft a {
   color: #080808;
@@ -72,29 +56,47 @@
     background-color: #FFFFFF;
 }
 
-h1{
- font-family: Impact;
- font-size: 90px;
- font-weight: 500;
- background-color: #FFFFFF;
- padding: 0px 0px 10px 0px;
- border-style: solid;
- border-color: #FFFFFF;
- border-width: 2px;
- border-bottom: solid #686868 ;
- margin: 0px 0px 0px 0px;
-}
 
+
+
+.myNavElementsLeftRight{
+  float: right;
+  padding: 15px 15px 15px 15px;
+  color: #202020;
+  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+  background-color: #F8F8F8;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FFFFFF;
+  border-bottom: solid #E8E8E8 ;
+}
+.myNavElementsLeftRight a {
+  display: block;
+  color: #202020;
+  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 100;
+  background-color: #F8F8F8;
+}
+.myNavElementsLeftRight a:hover:not(.active) {
+  color: #808080;
+  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  background-color: #F8F8F8;
+}
 
 .myNavElementsRight{
   float: left;
   padding: 15px 15px 15px 15px;
   color: #202020;
   text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #B0B0B0;
   background-color: #F8F8F8;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FFFFFF;
+  border-bottom: solid #E8E8E8 ;
 }
 .myNavElementsRight a {
     display: block;
@@ -103,10 +105,11 @@ h1{
     font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
     text-decoration: none;
     font-size: 15px;
+    font-weight: 100;
     background-color: #F8F8F8;
 }
 .myNavElementsRight a:hover:not(.active) {
-    color: #202020;
+    color: #808080;
     text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
     font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
     background-color: #F8F8F8;
@@ -117,22 +120,15 @@ h1{
   list-style-type: none;
   padding: 0px 0px 52px 0px;
   margin: 0px 50px 0px 50px;
-  border-style: solid;
-  border-width: 1px;
-  border-color: #B0B0B0;
-  background-color: #E8E8E8 	;
-  margin-top: -1px;
+  background-color: #F8F8F8 	;
 }
 
 
 
 .TopRight{
   list-style-type: none;
-  padding: 0px 0px 52px 0px;
-  margin: 0px 50px 0px 50px;
-
-  background-color: #FFFFFF 	;
-  margin-top: -1px;
+  margin: 25px 50px 25px 50px;
+  background-color: #FFFFFF;
 }
 
 
@@ -146,11 +142,57 @@ h1{
   border-color: #FFFFFF;
   border-right: solid #686868 ;
   background-color: #FFFFFF;
+  line-height: 5px;
+  font-weight: 100;
 }
+
+
+.TopRightElements a {
+    display: block;
+    color: #202020;
+    text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 100;
+    background-color: #F8F8F8;
+}
+.TopRightElements a:hover:not(.active) {
+    color: #808080;
+    text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    background-color: #F8F8F8;
+}
+
+
+
+
+
 
 .TopRightElementsSpecial{
   float: right;
   padding: 15px 15px 15px 15px;
   color: #202020;
   text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+  line-height: 5px;
+  font-weight: 100;
+
+}
+
+
+.TopRightElementsSpecial a {
+    display: block;
+    color: #202020;
+    text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 100;
+    background-color: #F8F8F8;
+}
+.TopRightElementsSpecial a:hover:not(.active) {
+    color: #808080;
+    text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    background-color: #F8F8F8;
 }
