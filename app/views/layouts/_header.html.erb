@@ -1,34 +1,3 @@
-<!--
-  <nav class= "navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <%= link_to 'UrineLuck', '#', class: 'navbar-brand' %>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-
-          <% if !user_signed_in? %>
-            <li><%= link_to 'Log In', new_user_session_path%></li>
-            <li><%= link_to 'Sign Up', new_user_registration_path %></li>
-
-            <li><%= link_to 'Map', showmap_path %></li>
-
-          <% else %>
-            <li><%= link_to 'Home', home_path %></li>
-            <li><%= link_to 'Profile', profile_path %></li>
-            <li><%= link_to 'Add a Bathroom', newbath_path %></li>
-            <li><%= link_to 'Map', showmap_path %></li>
-
-            <li><%= link_to "Settings", edit_user_registration_path %></li>
-            <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
-            <% end %>
-        </ul>
-      </div>
-    </div>
-  </nav>
--->
-<br>
-
 <ul class="TopRight">
       <!--
           <div class = "myNavElementsLeft"> <li> <%= link_to 'UrineLuck', '#' %>  </li>                  </div>
@@ -51,31 +20,18 @@
 
 
 <div class = "Logo"> <h1> <%= link_to 'UrineLuck', '#' %>  </h1> </div>
-  <ul class="myNav">
-        <!--
-            <div class = "myNavElementsLeft"> <li> <%= link_to 'UrineLuck', '#' %>  </li>                  </div>
-        -->
-
-            <div class= "myNavElementsRight"> <li><%= link_to 'HOME', home_path %></li>                      </div>
-            <div class= "myNavElementsRight"> <li><%= link_to 'PROFILE', profile_path %></li>                </div>
-            <div class= "myNavElementsRight"> <li><%= link_to 'ADD BATHROOM', newbath_path %></li>         </div>
-            <div class= "myNavElementsRight"> <li><%= link_to 'MAP', showmap_path %></li>                    </div>
-            <div class= "myNavElementsRight"> <li><%= link_to "SETTINGS", edit_user_registration_path %></li></div>
-
-            <% if !user_signed_in? %>
+  <div class="nav">
+		   <a class="mid-child" href="#">Home</a>
+		   <a class="mid-child" href="#">Map</a>
+	     <a class="mid-child" href="#">Toilet Info</a>
+	     <a href="#">Contact us</a>
+       <div class="effect"></div>
+       
+       <% if !user_signed_in? %>
             <div class= "myNavElementsLeftRight"> <li><%= link_to 'Log In', new_user_session_path%></li>         </div>
 
             <div class= "myNavElementsLeftRight"> <li><%= link_to 'Sign Up', new_user_registration_path %></li>  </div>
             <% else %>
             <div class= "myNavElementsLeftRight"><li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li></div>
             <% end %>
-  </ul>
-<p> </p>
-<!--
-<p>
-<br>
-<div class = "myNavElementsLeftRight"> <%= link_to 'For Bathroom Connoisseurs', '#' %></div>
-<br>
-<br>
-</p>
--->
+    </div>
