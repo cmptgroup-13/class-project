@@ -22,9 +22,12 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { registrations: "registrations" }
   match 'users/:id' => 'main#destroy', :via => :delete, :as => :admin_destroy_user
 
+  get 'change', to: 'registrations#change'
+
+
 
   get 'showmap' => 'map#index'
-  
+
   post   'login'   => 'main#index'
   get 'home', to: 'main#index'
   get 'users/:id/baths' => 'users#baths', :as => :user_posts
@@ -38,7 +41,7 @@ Rails.application.routes.draw do
   # # get 'newreview', to: 'baths#newreview'
   # get 'showreview', to: 'baths#showreview'
   # get '/reviews/new/:id' => 'reviews#new', :as => :newreview
-  
+
   # clean this file up by seeing which "get"'s can be replaced with their equavilant rake routes name
-  
+
 end
