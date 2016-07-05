@@ -56,19 +56,19 @@
             <div class = "myNavElementsLeft"> <li> <%= link_to 'UrineLuck', '#' %>  </li>                  </div>
         -->
 
-            <div class= "myNavElementsRight"> <li><%= link_to 'HOME', home_path %></li>                      </div>
-            <div class= "myNavElementsRight"> <li><%= link_to 'PROFILE', profile_path %></li>                </div>
-            <div class= "myNavElementsRight"> <li><%= link_to 'ADD BATHROOM', newbath_path %></li>         </div>
-            <div class= "myNavElementsRight"> <li><%= link_to 'MAP', showmap_path %></li>                    </div>
-            <div class= "myNavElementsRight"> <li><%= link_to "SETTINGS", edit_user_registration_path %></li></div>
+        <div class= "myNavElementsRight"> <li><%= link_to 'HOME', home_path %></li>                      </div>
+        <div class= "myNavElementsRight"> <li><%= link_to 'PROFILE', edit_user_registration_path %></li>                </div>
+        <div class= "myNavElementsRight"> <li><%= link_to 'ADD BATHROOM', newbath_path %></li>         </div>
+        <div class= "myNavElementsRight"> <li><%= link_to 'MAP', showmap_path %></li>                    </div>
+        <div class= "myNavElementsRight"> <li><%= link_to "Deleteable", change_path %></li></div>
 
-            <% if !user_signed_in? %>
-            <div class= "myNavElementsLeftRight"> <li><%= link_to 'Log In', new_user_session_path%></li>         </div>
+        <% if !user_signed_in? %>
+        <div class= "myNavElementsLeftRight"> <li><%= link_to 'Log In', new_user_session_path%></li>         </div>
 
-            <div class= "myNavElementsLeftRight"> <li><%= link_to 'Sign Up', new_user_registration_path %></li>  </div>
-            <% else %>
-            <div class= "myNavElementsLeftRight"><li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li></div>
-            <% end %>
+        <div class= "myNavElementsLeftRight"> <li><%= link_to 'Sign Up', new_user_registration_path %></li>  </div>
+        <% else %>
+        <div class= "myNavElementsLeftRight"><li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li></div>
+        <% end %>
   </ul>
 <p> </p>
 <!--
