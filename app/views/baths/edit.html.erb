@@ -3,7 +3,6 @@
 
 <!--this will be a potential problem when our database gets full so make sure you change it-->
 <% @baths.each do |bath| %> 
-    <% if bath.admin_accept == false %>
         <div class="row">
             <div class="col-md-6 col md-offset-3">
             
@@ -41,17 +40,17 @@
                         </tr>
                         
                         <tr>
-                            <th><%= link_to "Approve", bath, method: :create, data: { confirm: "You sure?" } %></th>
-                        </tr>
-                        
-                        <tr>
-                            <th><%= link_to "Destroy", bath, method: :delete, data: { confirm: "You sure?" } %></th>
+                           <td><%= form_for(bath) do |f| %>
+                                <div class="field">
+                                    <%= f.label "Add Bathroom" %> <br />
+                                    <%= f.check_box :admin_accept %> <br />
+                                </div>
+                            <%= f.submit "Submit", class: "button small radius" %>
+                            <% end %></td>
                         </tr>
                     </table>
             
             
             </div>
         </div>
-                
-    <% end %>
 <% end %>

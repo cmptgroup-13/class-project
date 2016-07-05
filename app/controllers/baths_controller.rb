@@ -39,9 +39,21 @@ class BathsController < ApplicationController
     
   end  
     
-    
-  def adminaccept
-    @baths = Bath.all
+  def edit
+    @baths = Bath.where(:admin_accept => false)
+  end
+  
+  def update
+    @baths = Bath.where(:admin_accept => false)
+    @bath = Bath.find(params[:id])
+    if @bath.update_attributes(bath_params)
+    render 'edit'
+    end
+
+  end
+  
+  def requests
+    @baths = Bath.where(:user_id => current_user.id)
   end
   
 
