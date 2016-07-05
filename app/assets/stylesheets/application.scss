@@ -127,7 +127,7 @@
 .myNav{
   list-style-type: none;
   padding: 0px 0px 52px 0px;
-  margin: 0px 50px 0px 50px;
+  margin: 0px 0px 0px 0px;
   background-color: #F8F8F8 	;
 }
 
@@ -135,7 +135,7 @@
 
 .TopRight{
   list-style-type: none;
-  margin: 25px 50px 25px 50px;
+  margin: -20px 0px 20px 0px;
   background-color: #FFFFFF;
 }
 
@@ -161,7 +161,7 @@
     border-color: #FFFFFF;
     border-right: solid #686868 ;
     background-color: #FFFFFF;
-    line-height: 5px;
+    line-height: 2px;
     font-weight: 100;
 }
 .TopRightElements a:hover:not(.active) {
@@ -192,7 +192,7 @@
     font-weight: 100;
     background-color: #FFFFFF;
     background-color: #FFFFFF;
-    line-height: 5px;
+    line-height: 2px;
     font-weight: 100;
 }
 .TopRightElementsSpecial a:hover:not(.active) {
@@ -200,4 +200,10 @@
     text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
     font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
     background-color: #FFFFFF;
+}
+
+
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
 }
