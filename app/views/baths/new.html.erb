@@ -1,0 +1,45 @@
+  <h2> Bathroom Add</h2>
+
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 well">
+  
+  <%= form_for (@baths) do |f| %>
+
+ 
+    
+    <div class="field">  
+      <%= f.label :country, "Country" %>
+      <%= f.select "country", options_for_select(countries_list) %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :province, "Province/State" %><br />
+        <%= f.select "province", options_for_select(us_states) %>
+    </div>
+    
+    <div class="field">
+        <%= f.label :city %><br />
+        <%= f.text_field :city, autofocus: true %>
+    </div> 
+
+    <div class="field">
+        <%= f.label :address %><br />
+        <%= f.text_field :address, autofocus: true %>
+    </div>
+    
+
+    <div class="field">
+        <%= f.label :rating %><br />
+        <%= f.number_field :rating, autofocus: true %>
+    </div>
+  
+  <% if current_user=="admin" %>  
+    <%= f.submit "Create my bathroom", class: "btn btn-primary" %>
+  <% else %>
+    <%= f.submit "Send bathroom request", class: "btn btn-primary" %>
+  <% end %>
+  
+  
+<% end %>
+  </div>
+</div>

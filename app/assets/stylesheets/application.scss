@@ -1,0 +1,209 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+ /*
+@import "bootstrap-sprockets";
+@import "bootstrap";
+*/
+
+
+/*
+.myNavBackground{
+  background-color: #202020;
+  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+
+}
+
+
+*/
+
+
+
+
+
+
+.Logo{
+  margin: 40px 0px 10px 0px;
+  background-color: #FFFFFF;
+  font-family: Impact;
+  font-size: 128px;
+  font-weight: 500;
+  background-color: #FFFFFF;
+  padding: 0px 0px 10px 0px;
+  margin: 0px 0px 0px 0px;
+  text-align: center;
+
+}
+.Logo a {
+  color: #080808;
+  text-shadow: -1px 0 #F8F8F8, 0 1px #F8F8F8, 1px 0 #F8F8F8, 0 -1px #F8F8F8;
+  font-size: 125%;
+  text-decoration: none;
+}
+.Logo a:hover:not(.active) {
+    color: #080808;
+    text-shadow: -1px 0 #F8F8F8, 0 1px #F8F8F8, 1px 0 #F8F8F8, 0 -1px #F8F8F8;
+    font-size: 125%;
+    background-color: #FFFFFF;
+}
+
+
+
+
+.myNavElementsLeftRight{
+  float: right;
+  color: #202020;
+  background-color: #F8F8F8;
+}
+.myNavElementsLeftRight a {
+  padding: 15px 15px 15px 15px;
+  display: block;
+  color: #202020;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 100;
+  background-color: #F8F8F8;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FFFFFF;
+  border-bottom: solid #E8E8E8 ;
+  padding: 15px 15px 15px 15px;
+}
+.myNavElementsLeftRight a:hover:not(.active) {
+  color: #202020;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  background-color: #F8F8F8;
+  border-top: solid #E8E8E8 ;
+  border-bottom: solid #E8E8E8 ;
+}
+
+
+
+.myNavElementsRight{
+  float: left;
+  color: #202020;
+  background-color: #F8F8F8;
+  max-height: 52px;
+}
+.myNavElementsRight a {
+  padding: 15px 15px 15px 15px;
+  display: block;
+  color: #202020;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 100;
+  background-color: #F8F8F8;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #FFFFFF;
+  border-bottom: solid #E8E8E8 ;
+  padding: 15px 15px 15px 15px;
+}
+.myNavElementsRight a:hover:not(.active) {
+  color: #202020;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  background-color: #F8F8F8;
+  border-top: solid #E8E8E8 ;
+  border-bottom: solid #E8E8E8 ;
+}
+
+
+
+.myNav{
+  list-style-type: none;
+  padding: 0px 0px 52px 0px;
+  margin: 0px 0px 0px 0px;
+  background-color: #F8F8F8 	;
+}
+
+
+
+.TopRight{
+  list-style-type: none;
+  margin: -20px 0px 20px 0px;
+  background-color: #FFFFFF;
+}
+
+
+.TopRightElements{
+  float: right;
+  color: #202020;
+}
+
+
+.TopRightElements a {
+    padding: 15px 15px 15px 15px;
+    display: block;
+    color: #202020;
+    text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 100;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    border-right: solid #686868 ;
+    background-color: #FFFFFF;
+    line-height: 2px;
+    font-weight: 100;
+}
+.TopRightElements a:hover:not(.active) {
+    color: #808080;
+    text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    background-color: #FFFFFF;
+}
+
+
+
+
+
+
+.TopRightElementsSpecial{
+  float: right;
+  color: #202020;
+}
+
+.TopRightElementsSpecial a {
+    padding: 15px 15px 15px 15px;
+    display: block;
+    color: #202020;
+    text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 100;
+    background-color: #FFFFFF;
+    background-color: #FFFFFF;
+    line-height: 2px;
+    font-weight: 100;
+}
+.TopRightElementsSpecial a:hover:not(.active) {
+    color: #808080;
+    text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    background-color: #FFFFFF;
+}
+
+
+.row{
+  margin-left: 0px;
+  margin-right: 0px;
+}
