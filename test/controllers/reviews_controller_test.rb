@@ -1,34 +1,16 @@
 require 'test_helper'
 
 class ReviewsControllerTest < ActionController::TestCase
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
 
-  test "should get create" do
-    get :create
-    assert_response :success
-  end
 
-  test "should get delete" do
-    get :delete
-    assert_response :success
+  def setup
+    @user= User.new(name: "Klay Thompson", email: "klay@gmail.com", password: "password", role: "admin") 
+    @bath = Bath.new(address: "111 Wall St", city: "New York", province: "NY", country: "USA", rating: 4, user_id: 1, id: 11)
+    @review = Review.new(post: "Great Bathroom!!!", bath_id: 11, user_id: 1, id: 4)
   end
-
-  test "should get edit" do
-    get :edit
-    assert_response :success
-  end
-
-  test "should get show" do
-    get :show
-    assert_response :success
-  end
-
-  test "should get update" do
-    get :update
-    assert_response :success
-  end
+  
+   test "should be valid" do
+      assert @review.valid? 
+   end
 
 end
