@@ -2,6 +2,62 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/* Motto */
+#motto {
+	width:70%;
+	padding: 0.3rem;
+	margin: auto;
+	background-color: rgba(0, 0, 0, 0.8);
+	text-align: center;
+}
+
+#motto p {
+  margin: 0.3rem 0 0.3rem 0;
+	font-family: Jura;
+	font-size: 1.5rem;
+	text-shadow: none;
+	color: white;
+}
+
+#navbox-container {
+  width: 70%;
+  margin-left: auto;
+	margin-right: auto;
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+}
+
+.navbox {
+  border-style: solid;
+  border-color: #f4f5f0;
+  border-width: 2px;
+  display: inline-block;
+  flex: 1;
+  padding: 3rem;
+  text-align: center;
+  position: relative;
+}
+
+.navbox h3 {
+  color: black;
+  text-shadow: 2px 2px #f4f5f0;
+  margin: none;
+  font-family: play;
+}
+
+.navbox p {
+  color: black;
+  margin: none;
+  font-family: play;
+  text-shadow: 1px 1px 4px #f4f5f0;
+}
+
+.pseudo-container {
+  margin: 2rem;
+  height: 2rem;
+}
+
+/*
 .jumbotron{
   right:50%;
   text-align:left
@@ -70,6 +126,7 @@ non-essential styles:
 just for appearance; change whatever you want
 */
 
+/*
 .slide{
 	font-size: 40px;
 	padding: 1px;
@@ -88,3 +145,4 @@ just for appearance; change whatever you want
 }
 .slide:nth-of-type(5){
 }
+*/

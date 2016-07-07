@@ -88,8 +88,7 @@ body {
 }
 
 .nav a:hover {
-    color: #c6342e;
-    background-color: white;
+    color: rgba(0, 0, 0, 0.2)
 }
 
 .mid-child {
@@ -116,3 +115,35 @@ body {
 .nav a:nth-child(2):hover ~ .effect { left: 34%; }
 .nav a:nth-child(3):hover ~ .effect { left: 58%; }
 .nav a:nth-child(4):hover ~ .effect { left: 82%; }
+
+#footer {
+	margin-left: auto;
+	margin-right: auto;
+	height: 6rem;
+	width: 70%;
+	overflow: hidden;
+	border-top: groove black;
+	border-top-width: 1px;
+}
+
+#footer p {
+	margin-top: 1rem;
+	margin-left: 1rem;
+	font-weight: 70%;
+	font-size: 1rem;
+	display: inline-block;
+}
+
+#footer a {
+	margin-top: 1rem;
+	margin-left: 1rem;
+	font-weight: 70%;
+	font-size: 1rem;
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+}
+
+#footer a:hover {
+	color: rgba(0, 0, 0, 0.2);
+}
