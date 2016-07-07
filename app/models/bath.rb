@@ -26,7 +26,7 @@ validates :province, presence: true
 validates :city, presence: true
 validates :address, presence: true
 validates :rating, presence: true, inclusion: { in: 0..5, :message => "must be between 0-5" }
-validates :latitude, inclusion: { in: 21..84 }
-validates :longitude, inclusion: { in: -177..-53}, :uniqueness => {:scope => :latitude, :message => "and latitude data show this location is already taken"} 
+validates :latitude, inclusion: { in: 21..84 }, presence: false
+validates :longitude, inclusion: { in: -177..-53}, :uniqueness => {:scope => :latitude, :message => "and latitude data show this location is already taken"}, presence: false 
 
 end

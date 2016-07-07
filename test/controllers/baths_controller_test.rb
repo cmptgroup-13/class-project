@@ -1,27 +1,15 @@
 require 'test_helper'
 
 class BathsControllerTest < ActionController::TestCase
-  test "should get new" do
-    get :new
-    assert_response :success
-  end
 
-  test "should get create" do
-    get :create
-    assert_response :success
-  end
-
-  test "should get index" do
-    get :index
-    assert_response :success
-  end
-
-  test "should get show" do
-    get :show
-    assert_response :success
+  def setup
+    @user= User.new(name: "Klay Thompson", email: "klay@gmail.com", password: "password", role: "admin") 
+    # @usera = User.new(name: "Dallans Bhatti", email: "dbhatti2@sfu.ca", password: "password", role: "admin")
+    @bath = Bath.new(address: "111 Wall St", city: "New York", province: "NY", country: "USA", rating: 4, user_id: 1, id: 11)
   end
   
-  # def setup
-  #   @bath = Bath.new(address)
-
+  test "should be valid" do
+    assert @user.valid?
+    assert @bath.valid?
+  end
 end
