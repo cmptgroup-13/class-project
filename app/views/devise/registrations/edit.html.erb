@@ -6,6 +6,9 @@
   <p> THIS IS A TEST1 </p>
   <h2>Edit <%= resource_name.to_s.humanize %></h2>
   <p> THIS IS A TEST2 </p>
+  <% if current_user.role="admin" %>
+    <%= link_to "View Users in Database", profile_path %>
+  <% end %>
   <div class="row">
     <div class="col-md-6 col-md-offset-3 well">
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
