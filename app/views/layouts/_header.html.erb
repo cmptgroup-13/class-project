@@ -1,30 +1,32 @@
-<!--
-  <nav class= "navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-      <div class="navbar-header">
-        <%= link_to 'UrineLuck', '#', class: 'navbar-brand' %>
-      </div>
-      <div class="collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
+<!-- Begin header file -->
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jura" />
 
-          <% if !user_signed_in? %>
-            <li><%= link_to 'Log In', new_user_session_path%></li>
-            <li><%= link_to 'Sign Up', new_user_registration_path %></li>
+<div id="top_banner">
+    <% if !user_signed_in? %>
+        <a href="#">Sign up</a>
+        <p>|</p>
+        <a href="#">Log in</a>
+    <% else %>
+        <a href="#">My Profile</a>
+        <p>|</p>
+        <a href="#">Log out</a>
+    <% end %>
+</div>
 
-            <li><%= link_to 'Map', showmap_path %></li>
+<div id="logo"><%= link_to image_tag('logo.PNG', :size => "163x100") %></div>
 
-          <% else %>
-            <li><%= link_to 'Home', home_path %></li>
-            <li><%= link_to 'Profile', profile_path %></li>
-            <li><%= link_to 'Add a Bathroom', newbath_path %></li>
-            <li><%= link_to 'Map', showmap_path %></li>
-
-            <li><%= link_to "Settings", edit_user_registration_path %></li>
-            <li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li>
-            <% end %>
-        </ul>
-      </div>
+<div class = "nav-container">
+    <div class="nav">
+        <a class="mid-child" href="#">Home</a>
+        <a class="mid-child" href="#">Map</a>
+        <a class="mid-child" href="#">Toilet Info</a>
+        <a href="#">Contact us</a>
+        <div class="effect"></div>
     </div>
+<<<<<<< HEAD
+</div>
+=======
   </nav>
 -->
 
@@ -161,3 +163,4 @@ button::-moz-focus-inner {
 <br>
 </p>
 -->
+>>>>>>> b8cbebfd387027908008c6db9625aec95358c129
