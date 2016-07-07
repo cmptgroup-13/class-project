@@ -4,5 +4,5 @@
 <% if current_user.role == "admin" %>
     <%= link_to "Add Bathroom", createbath_path %> <%= link_to "Show all baths", showbath_path %> <%= link_to "View bathroom requests", accept_path %> 
 <% else %>
-    <%= link_to "Request to Add Bathroom", createbath_path %> <%= link_to "Show all baths", showbath_path %>
+    <%= link_to "Request to Add Bathroom", createbath_path %> <%= link_to "Show all baths", showbath_path %> <%= link_to "Show your bath requests", request_path %>
 <% end %>    
