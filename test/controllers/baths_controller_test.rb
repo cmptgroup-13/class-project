@@ -20,5 +20,8 @@ class BathsControllerTest < ActionController::TestCase
     get :show
     assert_response :success
   end
+  
+  # def setup
+  #   @bath = Bath.new(address)
 
 end

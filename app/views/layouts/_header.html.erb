@@ -121,7 +121,9 @@ button::-moz-focus-inner {
                       <button class="dropbtn"> <%= link_to 'PROFILE', edit_user_registration_path %> </button>
                       <div class="dropdown-content">
                         <%= link_to 'Personal Settings', edit_user_registration_path %>
-                        <%= link_to "Account Settings", change_path %>
+                       <% if current_user.role == "admin" %>
+                           <%= link_to "Show Users", profile_path %>
+                        <% end %>
                       </div>
                     </div>
                     </li>
