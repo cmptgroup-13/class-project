@@ -1,37 +1,27 @@
-<ul class="TopRight">
-      <!--
-          <div class = "myNavElementsLeft"> <li> <%= link_to 'UrineLuck', '#' %>  </li>                  </div>
-      -->
+<!-- Begin header file -->
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jura" />
 
-          <div class= "TopRightElementsSpecial"> <li><%= link_to 'CAREERS', newbath_path %></li>         </div>
-          <div class= "TopRightElements"> <li><%= link_to 'CONTACT US', profile_path %></li>                </div>
-          <div class= "TopRightElements"> <li><%= link_to 'INVESTOR', home_path %></li>                      </div>
-          <div class= "TopRightElements"> <li><%= link_to 'NEWS', showmap_path %></li>                    </div>
+<div id="top_banner">
+    <% if !user_signed_in? %>
+        <a href="#">Sign up</a>
+        <p>|</p>
+        <a href="#">Log in</a>
+    <% else %>
+        <a href="#">My Profile</a>
+        <p>|</p>
+        <a href="#">Log out</a>
+    <% end %>
+</div>
 
-</ul>
+<div id="logo"><%= link_to image_tag('logo.PNG', :size => "163x100") %></div>
 
-
-<br>
-<p></p>
-
-
-
-
-
-
-<div class = "Logo"> <h1> <%= link_to 'UrineLuck', '#' %>  </h1> </div>
-  <div class="nav">
-		   <a class="mid-child" href="#">Home</a>
-		   <a class="mid-child" href="#">Map</a>
-	     <a class="mid-child" href="#">Toilet Info</a>
-	     <a href="#">Contact us</a>
-       <div class="effect"></div>
-       
-       <% if !user_signed_in? %>
-            <div class= "myNavElementsLeftRight"> <li><%= link_to 'Log In', new_user_session_path%></li>         </div>
-
-            <div class= "myNavElementsLeftRight"> <li><%= link_to 'Sign Up', new_user_registration_path %></li>  </div>
-            <% else %>
-            <div class= "myNavElementsLeftRight"><li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li></div>
-            <% end %>
+<div class = "nav-container">
+    <div class="nav">
+        <a class="mid-child" href="#">Home</a>
+        <a class="mid-child" href="#">Map</a>
+        <a class="mid-child" href="#">Toilet Info</a>
+        <a href="#">Contact us</a>
+        <div class="effect"></div>
     </div>
+</div>

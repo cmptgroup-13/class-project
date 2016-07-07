@@ -1,33 +1,17 @@
-<div class="MyMiddle0">
-    <h3 class="MyMiddle1">Bathroom Connoissuer?</h3>
-    <p class="MyMiddle2">You're In Luck!</p>
+<!-- Begin index file -->
+
+<div id="motto">
+    <p>Bathroom Connoissuer? You're In Luck!</p>
 </div>
 
-<ul id="slides">
-	<li class="slide showing">
-       <img src="images/image1.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
-	<li class="slide">
-       <img src="images/image2.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
-	<li class="slide">
-       <img src="images/image3.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
-
-<!--
-	<li class="slide">
-       <img src="landscape.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:right; position:relative; right:45%; text-align:left"> </li>
-	<li class="slide">
-       <img src="landscape.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:right; position:relative; right:45%; text-align:left"> </li>
--->
-</ul>
-
-
-<script>
-var slides = document.querySelectorAll('#slides .slide');
-var currentSlide = 0;
-var slideInterval = setInterval(nextSlide,2000);
-
-function nextSlide(){
-	slides[currentSlide].className = 'slide';
-	currentSlide = (currentSlide+1)%slides.length;
-	slides[currentSlide].className = 'slide showing';
-}
-</script>
+<div id="navbox-container">
+    <div class="navbox">
+        <h3>Find Nearest Toilet</h3><br>
+        <p>Having trouble with your urine? Or plan before something awkward happens? You can search for the nearest toilet or a toilet near any location</p><br>
+        <input style="width:80%" name="ClientSearch" placeholder="Enter a location, address, ..." title="Please enter a place name, address or postcode to find toilets in that area." type="text" value=""></input>
+    </div>
+    <div class="navbox">
+        <h3>Suggest Toilet</h3><br>
+        <p>If you find a toilet which is not in our database, feel free to suggest that toilet simply by clicking the button below. However, you must be signed in before suggesting.</p><br>
+    </div>
+</div>
