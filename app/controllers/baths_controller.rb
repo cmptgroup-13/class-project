@@ -38,6 +38,14 @@ class BathsController < ApplicationController
     # end
     
   end  
+  
+  def showsingle
+     @bath = Bath.find(params[:id])
+     
+
+     
+  end
+
     
   def edit
     @baths = Bath.where(:admin_accept => false)
