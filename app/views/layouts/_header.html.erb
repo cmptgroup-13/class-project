@@ -1,0 +1,27 @@
+<!-- Begin header file -->
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" />
+<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jura" />
+
+<div id="top_banner">
+    <% if !user_signed_in? %>
+        <%= link_to 'Sign Up', new_user_registration_path %>
+        <p>|</p>
+         <%= link_to 'Log In', new_user_session_path%>
+    <% else %>
+        <%= link_to 'Profile', edit_user_registration_path %>
+        <p>|</p>
+        <%= link_to 'Log out', destroy_user_session_path, method: :delete %>
+    <% end %>
+</div>
+
+<div id="logo"><%= link_to image_tag('logo.PNG', :size => "163x100") %></div>
+
+<div class = "nav-container">
+    <div class="nav">
+        <%= link_to 'Home', home_path %>
+        <%= link_to 'Map', showmap_path %>
+        <%= link_to 'Toilet Info', newbath_path %>
+        <a href="#">Contact us</a>
+        <div class="effect"></div>
+    </div>
+  </nav>

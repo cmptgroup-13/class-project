@@ -1,0 +1,118 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+body {
+	font-family: "Unica One";
+    font-size: 1.5em;
+    text-shadow: 0 1px 0 white;
+}
+
+#top_banner {
+	width: 100%;
+	background-color: rgba(0, 0, 0, 1); // change the last one to 1 if want black banner
+    text-align: right;
+}
+
+#top_banner a {
+	display: inline-block;
+	padding: 0.5rem;
+	text-decoration: none;
+	font-family: play;
+	font-weight: lighter;
+	color: white;
+}
+
+#top_banner a:hover {
+	background-color: #333333;
+}
+
+#top_banner p {
+	display: inline-block;
+	font-weight: lighter;
+	color: white;
+}
+
+/* logo */
+#logo {
+    padding: 1.5rem;
+    margin-left: 0 auto;
+    margin-right: 0 auto;
+    text-align: center;
+}
+
+/* Navigation bar */
+.nav-container {
+	width:70%;
+	padding: 0.5rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0;
+	border-top: groove black;
+	border-top-width: 1px;
+}
+
+.nav {
+    text-align: center;
+    overflow: hidden;
+    margin: 0 auto;
+    width: 70%;
+    height: 30px;
+    position: relative;
+}
+
+.nav a {
+    display: block;
+    position: relative;
+    float: left;
+    width: 24%;
+    text-decoration: none;
+    color: #393939;
+    -webkit-transition: .7s;
+    -moz-transition: .7s;
+    -o-transition: .7s;
+    -ms-transition: .7s;
+    transition: .7s;
+}
+
+.nav a:hover {
+    color: #c6342e;
+    background-color: white;
+}
+
+.mid-child {
+    border-right: groove black;
+    border-right-width: 1px;
+}
+
+.nav .effect {
+	width: 120px;
+	height: 2px;
+	bottom: 0;
+	background: #c6342e;
+	box-shadow: 0 1px 0 white; 
+	margin-left:-45px;
+	position: absolute;
+	left: -12.5%;-webkit-transition: 0.7s ease-in-out;
+	-moz-transition: 0.7s ease-in-out;
+	-o-transition: 0.7s ease-in-out;
+	-ms-transition: 0.7s ease-in-out;
+	transition: 0.7s ease-in-out; 
+}
+
+.nav a:nth-child(1):hover ~ .effect { left: 10%; }
+.nav a:nth-child(2):hover ~ .effect { left: 34%; }
+.nav a:nth-child(3):hover ~ .effect { left: 58%; }
+.nav a:nth-child(4):hover ~ .effect { left: 82%; }
