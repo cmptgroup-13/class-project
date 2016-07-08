@@ -1,0 +1,257 @@
+/* Was in: application.scss */
+
+.myNavElementsLeftRight{
+	float: right;
+	color: #202020;
+	background-color: #F8F8F8;
+}
+
+.myNavElementsLeftRight a {
+	padding: 15px 15px 15px 15px;
+	display: block;
+	color: #202020;
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 100;
+	background-color: #F8F8F8;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FFFFFF;
+	border-bottom: solid #E8E8E8 ;
+	padding: 15px 15px 15px 15px;
+}
+
+.myNavElementsLeftRight a:hover:not(.active) {
+	color: #202020;
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	background-color: #F8F8F8;
+	border-top: solid #E8E8E8 ;
+}
+
+.myNavElementsRight{
+	float: left;
+	color: #202020;
+	background-color: #F8F8F8;
+}
+
+.myNavElementsRight a {
+	padding: 15px 15px 15px 15px;
+	display: block;
+	color: #202020;
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	text-align: center;
+	text-decoration: none;
+	font-size: 15px;
+	font-weight: 100;
+	background-color: #F8F8F8;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #FFFFFF;
+	border-bottom: solid #E8E8E8 ;
+	padding: 15px 15px 15px 15px;
+}
+
+.myNavElementsRight a:hover:not(.active) {
+	color: #202020;
+	font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	background-color: #F8F8F8;
+	border-top: solid #E8E8E8 ;
+}
+
+.myNav{
+	list-style-type: none;
+	padding: 0px 0px 52px 0px;
+	margin: 0px 50px 0px 50px;
+	background-color: #F8F8F8;
+}
+
+.TopRight{
+	list-style-type: none;
+	margin: 25px 50px 25px 50px;
+	background-color: #FFFFFF;
+}
+
+.TopRightElements{
+	float: right;
+	color: #202020;
+}
+
+.TopRightElements a {
+    padding: 15px 15px 15px 15px;
+    display: block;
+    color: #202020;
+    text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 100;
+    background-color: #FFFFFF;
+    border-style: solid;
+    border-width: 1px;
+    border-color: #FFFFFF;
+    border-right: solid #686868 ;
+    background-color: #FFFFFF;
+    line-height: 5px;
+    font-weight: 100;
+}
+
+.TopRightElements a:hover:not(.active) {
+    color: #808080;
+    text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    background-color: #FFFFFF;
+}
+
+.TopRightElementsSpecial{
+	float: right;
+	color: #202020;
+}
+
+.TopRightElementsSpecial a {
+    padding: 15px 15px 15px 15px;
+    display: block;
+    color: #202020;
+    text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 100;
+    background-color: #FFFFFF;
+    background-color: #FFFFFF;
+    line-height: 5px;
+    font-weight: 100;
+}
+
+.TopRightElementsSpecial a:hover:not(.active) {
+    color: #808080;
+    text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
+    font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+    background-color: #FFFFFF;
+}
+/* End */
+
+/* Was in: main.scss */
+.jumbotron{
+  right:50%;
+  text-align:left
+}
+
+.MyMiddle0{
+  padding: 10px 0px 5px 0px;
+  margin: 25px 50px 5px 50px;
+  text-align: center;
+  background-color: #303030;
+
+}
+
+.MyMiddle1{
+  color: #F8F8F8;
+  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+  text-align: center;
+  font-size: 5;
+}
+.MyMiddle2{
+  color: #F8F8F8;
+  text-shadow: -1px 0 #282828, 0 1px #282828, 1px 0 #282828, 0 -1px #282828;
+  text-align: center;
+  padding: 0px 0px 0px 0px;
+  font-style: italic;
+  font-size: 40;
+  background-color: #303030;
+}
+
+#slides{
+  margin: 0px 50px 5px 50px;
+	position: relative;
+	height: 300px;
+  width: 492px;
+	padding: 0px;
+  background-color: #303030;
+	list-style-type: none;
+}
+
+.slide{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 99%;
+	height: 99%;
+	opacity: 0;
+	z-index: 1;
+  background-color: #303030;
+
+
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	transition: opacity 1s;
+}
+
+.showing{
+	opacity: 1;
+	z-index: 2;
+}
+
+
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide{
+	font-size: 40px;
+	padding: 1px;
+	box-sizing: border-box;
+	background: #303030;
+	color: #fff;
+}
+
+.slide:nth-of-type(1){
+}
+.slide:nth-of-type(2){
+}
+.slide:nth-of-type(3){
+}
+.slide:nth-of-type(4){
+}
+.slide:nth-of-type(5){
+}
+/* end */
+
+
+
+/* was in: index.html.erb */
+
+<ul id="slides">
+	<li class="slide showing">
+       <img src="images/image1.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
+	<li class="slide">
+       <img src="images/image2.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
+	<li class="slide">
+       <img src="images/image3.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
+
+<!--
+	<li class="slide">
+       <img src="landscape.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:right; position:relative; right:45%; text-align:left"> </li>
+	<li class="slide">
+       <img src="landscape.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:right; position:relative; right:45%; text-align:left"> </li>
+-->
+</ul>
+
+
+<script>
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,2000);
+
+function nextSlide(){
+	slides[currentSlide].className = 'slide';
+	currentSlide = (currentSlide+1)%slides.length;
+	slides[currentSlide].className = 'slide showing';
+}
+</script>
+
+/* end */

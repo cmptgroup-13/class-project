@@ -1,9 +1,25 @@
+ 
+ 
   <h2> Bathroom Add</h2>
+  
+  
+  <%= form_for(@bath) do |f| %>
+  <% if @bath.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@bath.errors.count, "error") %> prohibited this post from being saved:</h2>
+
+      <ul>
+      <% @bath.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3 well">
   
-  <%= form_for (@baths) do |f| %>
+
 
  
     
@@ -23,9 +39,15 @@
     </div> 
 
     <div class="field">
+        <%= f.label :apartment, "Apartment/Suite number if applicable" %><br />
+        <%= f.text_field :apartment, autofocus: true %>
+    </div>
+    
+    <div class="field">
         <%= f.label :address %><br />
         <%= f.text_field :address, autofocus: true %>
     </div>
+    
     
 
     <div class="field">
