@@ -12,17 +12,17 @@ game.States.preload = function(){
 	this.preload = function(){
 
 		//load images into the game
-		game.load.image('background','assets/background.png'); 
-    	game.load.image('road','assets/ground.png'); 
-        game.load.spritesheet('bird','assets/tissue.png',57,42,3); 
-    	game.load.image('btn','assets/start-button.png');  
-    	game.load.spritesheet('pipe','assets/pipes.png',54,320,2); 
-    	game.load.bitmapFont('flappy_font', 'assets/fonts/flappyfont/flappyfont.png', 'assets/fonts/flappyfont/flappyfont.fnt');
+		game.load.image('background','images/background.png'); 
+    	game.load.image('road','images/ground.png'); 
+        game.load.spritesheet('bird','images/tissue.png',57,42,3); 
+    	game.load.image('btn','images/start-button.png');  
+    	game.load.spritesheet('pipe','images/pipes.png',54,320,2); 
+    	game.load.bitmapFont('flappy_font', 'images/fonts/flappyfont/flappyfont.png', 'images/fonts/flappyfont/flappyfont.fnt');
 
-    	game.load.image('ready_text','assets/get-ready.png');
+    	game.load.image('ready_text','images/get-ready.png');
     	//game.load.image('play_tip','assets/instructions.png');
-    	game.load.image('game_over','assets/gameover.png');
-    	game.load.image('score_board','assets/scoreboard.png');
+    	game.load.image('game_over','images/gameover.png');
+    	game.load.image('score_board','images/scoreboard.png');
 	}
     
     //call the plan function
