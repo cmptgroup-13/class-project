@@ -12,18 +12,33 @@
                             <td><b><%= rating_for @bath, "rating", imdb_avg: true %></b></td>
                         </tr>
 
-                        <tr>
-                            <th></b><%= link_to "Leave A Review", new_bath_review_path(@bath) %></th>
-                            <td><b><%= link_to "Show Reviews", bath_review_path(@bath, current_user) %></b></td>
-                        </tr>
-                        
+                            <div class="row">
+        <div class="col-md-6 col md-offset-3">
+            
                         
       </table>
+      </div>
+      </div>
       
       
+      <center>
       <div style='width: 100%;'>
-  <div id="map" style='width: 100%; height: 500px;'></div>
+  <div id="map" style='width: 70%; height: 500px;'></div>
 </div>
+</center>
+<h1>Reviews</h1>
+
+                    <% @bath.reviews.each do |review| %>
+                
+                <table class="table">
+                        <tr>
+                            <th><b><%= User.find_by_id(review.user_id).name %> </b> </th>
+                            <td><%= review.post %></td>
+                        </tr>
+                </table>
+                
+            <% end %>
+        <b><%= link_to "Leave A Review", new_bath_review_path(@bath) %> </b>
 
 <script type="text/javascript">
 
@@ -63,7 +78,7 @@ handler.buildMap({ provider: {zoom: 16, center: myLatLng}, internal: {id: 'map'}
           "lat": <%= @bath.latitude %>,
           "lng": <%= @bath.longitude %>,
           "picture": {
-                    "url": "http://people.mozilla.com/~faaborg/files/shiretoko/firefoxIcon/firefox-32.png",
+                    "url": "http://megaicons.net/static/img/icons_sizes/105/244/32/toilet-paper-icon.png",
                      "width":  32,
                      "height": 32
               
