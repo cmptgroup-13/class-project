@@ -1,3 +1,7 @@
+<script src="//maps.google.com/maps/api/js?v=3.23&key=AIzaSyD4MhM4eZ3aFFZMEZr34-YyswW6MjvqU6E"></script>
+<script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
+<script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
+
 <% if current_user.role == "female" || current_user.role == "male" %>
     <h1>These are the bathrooms you have added</h1>
     
@@ -8,32 +12,24 @@
                     <% if bath.admin_accept == true %>
                     <table class="table">
                         <tr>
-                            <th><b>Address</b></th>
-                            <td><b><%= bath.address %></b></td>
-                        </tr>
-                        <tr>
-                            <th><b>City</b></th>
-                            <td><b><%= bath.city %></b></td>
+                            <th><b>Location</b></th>
+                            <td><b><%= bath.city %>, <%= bath.address %></b></td>
                         </tr>
                         <tr>
                             <th><b>Average Rating</b></th>
                             <td><b><%= rating_for bath, "rating", imdb_avg: true %></b></td>
                         </tr>
-                        
-                        <tr>
-                            <th><b>Bath ID</b></th>
-                            <td><b><%= bath.id %></b></td>
-                        </tr>                        
 
                         <tr>
-                            <th><%= link_to "Leave A Review", new_bath_review_path(bath) %></th>
+                            <th></b><%= link_to "Leave A Review", new_bath_review_path(bath) %></th>
+                            <td><b><%= link_to "View", view_path(bath) %></b></td>                      
                         </tr>
                         
-                        <tr>
-                             <th><%= link_to "Show Reviews", bath_review_path(bath, current_user) %></th>
-                        </tr>
                         
                     </table>
+
+                    
+                    
                     <% end %>
             <% end %>
             
@@ -51,12 +47,8 @@
             
                     <table class="table">
                         <tr>
-                            <th><b>Address</b></th>
-                            <td><b><%= bath.address %></b></td>
-                        </tr>
-                        <tr>
-                            <th><b>City</b></th>
-                            <td><b><%= bath.city %></b></td>
+                            <th><b>Location</b></th>
+                            <td><b><%= bath.city %>, <%= bath.address %></b></td>
                         </tr>
                         <tr>
                             <th><b>Rating</b></th>
@@ -72,22 +64,37 @@
                             <th><b>Latitude</b></th>
                             <td><b><%= bath.latitude %></b></td>
                         </tr>
+                        <tr>
+                            <th><b>Bath ID</b></th>
+                            <td><b><%= bath.id %></b></td>
+                        </tr>      
 
                         
                         <tr>
-                            <th><%= link_to "Leave A Review", new_bath_review_path(bath) %></th>
+                            <th></b><%= link_to "Leave A Review", new_bath_review_path(bath) %></th>
+                            <td><b><%= link_to "View", view_path(bath) %></b></td>                          
                         </tr>
-                        
-                        <tr>
-                             <th><%= link_to "Show Reviews", bath_review_path(bath, current_user) %></th>
-                        </tr>
-
-                        
                         
                         <tr>
                             <th><%= link_to "Destroy", bath, method: :delete, data: { confirm: "You sure?" } %></th>
                         </tr>
                     </table>
+                    
+                    
+                    
+                    
+                    
+                    
+            
+            
+                  
+            
+            
+            
+            
+            
+            
+            
             
             
         </div>
@@ -102,3 +109,4 @@
 
     
 <% end %>
+

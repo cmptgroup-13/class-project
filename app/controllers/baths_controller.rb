@@ -40,6 +40,14 @@ class BathsController < ApplicationController
     # end
     
   end  
+  
+  def showsingle
+     @bath = Bath.find(params[:id])
+     
+
+     
+  end
+
     
   def edit
     @baths = Bath.where(:admin_accept => false)
@@ -64,6 +72,11 @@ class BathsController < ApplicationController
     redirect_to newbath_path, notice: "Bathroom Deleted"
   end
   private
+  
+  # def revdestroy
+  #   Bath.find(params[:id]).reviews.find(params[:id]).destroy
+  #   redirect_to showbath_path, notice: "Review Deleted"
+  # end
   
   
     
