@@ -14,12 +14,12 @@
 
 <div id="logo"><%= link_to image_tag('logo.PNG', :size => "163x100"), home_path %></div>
 
-<div class = "nav-container">
+<div id="nav-container">
     <div class="nav">
-        <%= link_to 'Home', home_path %>
-        <%= link_to 'Map', showmap_path %>
-        <%= link_to 'Toilet Info', newbath_path %>
-        <a href="#">Contact us</a>
+        <%= link_to 'Home', home_path, :class=>"mid-child" %>
+        <%= link_to 'Map', showmap_path, :class=>"mid-child" %>
+        <%= link_to 'Toilet Info', newbath_path, :class=>"mid-child" %>
+        <a href="#">About us</a>
         <div class="effect"></div>
     </div>
 </div>
