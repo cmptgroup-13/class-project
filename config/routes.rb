@@ -40,7 +40,7 @@ Rails.application.routes.draw do
   get 'accept' => 'baths#edit'
   get 'request' => 'baths#requests'
   get 'baths/showsingle/:id' => 'baths#showsingle', :as => :view
- # get 'reviews/new/:id' => 'reviews#new', :as => :gob
+  get 'reviews/new/:id' => 'reviews#new', :as => :gob
   # # get 'newreview', to: 'baths#newreview'
   # get 'showreview', to: 'baths#showreview'
   # get '/reviews/new/:id' => 'reviews#new', :as => :newreview

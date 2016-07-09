@@ -26,6 +26,11 @@ class ReviewsController < ApplicationController
 
   def update
   end
+  
+  # def destroy
+  #   Review.find(params[:id]).destroy
+  #   redirect_to view_path, notice: "Review Deleted"
+  # end
 
 
 private

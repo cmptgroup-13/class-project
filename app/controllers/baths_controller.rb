@@ -73,6 +73,11 @@ class BathsController < ApplicationController
   end
   private
   
+  # def revdestroy
+  #   Bath.find(params[:id]).reviews.find(params[:id]).destroy
+  #   redirect_to showbath_path, notice: "Review Deleted"
+  # end
+  
   
     
   def bath_params
