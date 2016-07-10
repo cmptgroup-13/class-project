@@ -16,6 +16,7 @@ Rails.application.routes.draw do
   get 'showbath' => 'baths#show'
   get 'main/show'
   get 'profile', to: 'main#show'
+  get 'about', to: 'main#aboutus'
   root 'main#index'
   resources :postsrake
 
