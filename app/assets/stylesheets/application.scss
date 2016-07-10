@@ -65,29 +65,34 @@ body {
 }
 
 .nav {
-    text-align: center;
     overflow: hidden;
     margin: 0 auto;
     height: 30px;
     position: relative;
+    text-align: center;
 }
 
-.nav a {
-    display: block;
+.nav li {
+	display: block;
     position: relative;
     float: left;
     width: 24%;
-    text-decoration: none;
-    color: #393939;
     -webkit-transition: .7s;
     -moz-transition: .7s;
     -o-transition: .7s;
     -ms-transition: .7s;
     transition: .7s;
+    vertical-align: top;
 }
 
-.nav a:hover {
-    color: rgba(0, 0, 0, 0.2)
+.nav li a {
+	padding: 0 0 0 0;
+	text-decoration: none;
+	color: #393939;
+}
+
+.nav li:hover {
+    color: rgba(0, 0, 0, 0.2);
 }
 
 .mid-child {
@@ -111,10 +116,10 @@ body {
 	transition: 0.7s ease-in-out; 
 }
 
-.nav a:nth-child(1):hover ~ .effect { left: 10%; }
-.nav a:nth-child(2):hover ~ .effect { left: 34%; }
-.nav a:nth-child(3):hover ~ .effect { left: 58%; }
-.nav a:nth-child(4):hover ~ .effect { left: 82%; }
+.nav li:nth-child(1):hover ~ .effect { left: 10%; }
+.nav li:nth-child(2):hover ~ .effect { left: 34%; }
+.nav li:nth-child(3):hover ~ .effect { left: 58%; }
+.nav li:nth-child(4):hover ~ .effect { left: 82%; }
 
 #footer {
 	margin-left: auto;

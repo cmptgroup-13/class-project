@@ -15,11 +15,18 @@
 <div id="logo"><%= link_to image_tag('logo.PNG', :size => "163x100"), home_path %></div>
 
 <div id="nav-container">
-    <div class="nav">
-        <%= link_to 'Home', home_path, :class=>"mid-child" %>
-        <%= link_to 'Map', showmap_path, :class=>"mid-child" %>
-        <%= link_to 'Toilet Info', newbath_path, :class=>"mid-child" %>
-        <a href="#">About us</a>
+    <ul class="nav">
+        <li><%= link_to 'Home', home_path, :class=>"mid-child" %></li>
+        <li><%= link_to 'Map', showmap_path, :class=>"mid-child" %></li>
+        <li>
+            <%= link_to 'Toilet Info', newbath_path, :class=>"mid-child" %>
+            <!-- <ul>
+                <li><%= link_to 'Add bathroom', newbath_path, :class=>"mid-child" %></li>
+                <li><%= link_to 'Show all bathrooms', newbath_path, :class=>"mid-child" %></li>
+                <li><%= link_to 'View bathroom requests', newbath_path, :class=>"mid-child" %></li>
+            </ul> -->
+        </li>
+        <li><a href="#">About us</a></li>
         <div class="effect"></div>
-    </div>
+    </ul>
 </div>
