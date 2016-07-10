@@ -17,19 +17,24 @@ describe "bathroom new" do
     page.should have_content("Signed in successfully.")
     
     visit "/createbath"
+    page.should have_content("Bathroom Add")
     
     select('Canada', :from=>'Country')  
     select('British Columbia', :from=>'Province/State')
     fill_in "City", :with => "North Vancouver"
-    fill_in "Address", :with => "1701 Riverside Drive"
+    fill_in "Address", :with => "1888 Riverside Drive"
     fill_in "Rating", :with => "5"
 
-    click_button "Send bathroom request"
+    click_button("Create my bathroom")
     
     # we should get redirected to the show bathroom page
     page.should have_content("These are the bathrooms in the database")
     page.should have_content("Riverside Drive")
+    # page.should have_content("1 ident")
     
+   
+    
+    #this number has to match the identity of the last bath created plus 1
     #lets create a review
     visit "/baths/1/reviews/new"
     
@@ -62,9 +67,9 @@ describe "bathroom new" do
     select('Canada', :from=>'Country')  
     select('British Columbia', :from=>'Province/State')
     fill_in "City", :with => "Abbotsford"
-    fill_in "Address", :with => "451 Columbia Street"
+    fill_in "Address", :with => "488 Columbia Street"
     fill_in "Rating", :with => "4"
-    click_button "Send bathroom request"
+    click_button "Create my bathroom"
     
     #again hoping we get redirected to show page
     page.should have_content("Abbotsford")
@@ -90,17 +95,57 @@ describe "bathroom new" do
     select('Canada', :from=>'Country')  
     select('British Columbia', :from=>'Province/State')
     fill_in "City", :with => "Burnaby"
-    fill_in "Address", :with => "881 University Drive"
+    fill_in "Address", :with => "888 University Drive"
     fill_in "Rating", :with => "4"
     click_button "Send bathroom request"
     
-    #since this user is a regular user we should get redirected to request page
-    page.should have_content("Bathrooms that you have requested to add")
-    page.should have_content("Pending")
+    #let add another
+    visit "/newbath"
+    visit "/createbath"
+    select('Canada', :from=>'Country')  
+    select('British Columbia', :from=>'Province/State')
+    fill_in "City", :with => "North Vancouver"
+    fill_in "Address", :with => "1796 Riverside Drive"
+    fill_in "Rating", :with => "4"
+    click_button "Send bathroom request"
+    
     
     #now i will try to add a review as a regular user
+    visit "/baths/1/reviews/new"
+    page.should have_content("Post")
+    fill_in "Post", :with => "this bathroom is gnarly"
+    click_button "Create my review"
     
+    # redirected to specific bathroom page
+    page.should have_content("Average Rating")
+    page.should have_content("Adam")
+    page.should have_content("Rusty")
+    
+    #second lastly lets make a pending approval bathroom into an approved bathroom
+    #logout of regular user
+    visit "/users/sign_out"
+    page.should have_content("Signed out successfully.")
+    
+    #we should also be at the sign in page
+    page.should have_content("Log in")
+    fill_in "Email",    :with => "alindeman@example.com"
+    fill_in "Password", :with => "ilovegrapes"
+    click_button "Log in"
+    
+    #lets now go to accept page
+    visit "/accept"
+    page.should have_content("Hello Admin")
+    page.should have_content("University")
+    check("Accept")
+    click_button "Submit"
+    
+    #now go to show bath page
+    visit "/showbath"
+    page.should have_content("database")
+    page.should have_content("University")
 
+    
+    
     
   end
 end

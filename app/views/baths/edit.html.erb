@@ -42,8 +42,10 @@
                         <tr>
                            <td><%= form_for(bath) do |f| %>
                                 <div class="field">
-                                    <%= f.label "Add Bathroom" %> <br />
-                                    <%= f.check_box :admin_accept %> <br />
+                                 <%= f.label :admin_accept, class: 'checkbox' do %>   
+                                     <%= f.check_box :admin_accept %> 
+                                     Accept
+                                 <% end %>
                                 </div>
                             <%= f.submit "Submit", class: "button small radius" %>
                             <% end %></td>
