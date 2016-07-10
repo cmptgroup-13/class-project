@@ -6,11 +6,16 @@ class UserTest < ActiveSupport::TestCase
   # end
     def setup
     @user = User.new(name: "Example User", email: "user@example.com",
-                     password: "foobar", password_confirmation: "foobar", role: "admin")
-  end
+                     password: "foobar", password_confirmation: "foobar", role: "admin", id: 1)
+    end
 
   test "should be valid" do
     assert @user.valid?
+  end
+  
+  test "name should be of valid length ( <51 characters)" do
+    @user.name="a"*51
+    assert_not @user.valid?
   end
   
   test "name should be present" do
@@ -67,6 +72,12 @@ class UserTest < ActiveSupport::TestCase
     duplicate_user = @user.dup
     @user.save
     assert_not duplicate_user.valid?
+  end
+  
+  test "id must valid and present" do
+    @user.save
+    @user.id = nil
+    assert_not @user.valid? 
   end
 
 

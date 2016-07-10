@@ -10,7 +10,7 @@ class ReviewsController < ApplicationController
     @review = @bath.reviews.build(review_params)
     @review.user_id = current_user.id
     @review.save
-    redirect_to showbath_path
+    redirect_to view_path(@bath)
   end
 
   def delete

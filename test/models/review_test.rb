@@ -1,7 +1,28 @@
 require 'test_helper'
 
 class ReviewTest < ActiveSupport::TestCase
-  # test "the truth" do
-  #   assert true
-  # end
+  def setup 
+    @review = Review.new(post: "This bathroom is god awful", id:1, bath_id: 2, user_id:1)
+  end
+  
+  test "should be valid" do
+    assert @review.valid?
+  end
+  
+  test "post should not be empty" do
+    @review.post= "" 
+    assert_not @review.valid?
+  end
+  
+  test "each review needs a bathroom to which it belongs" do
+    
+    @review.bath_id = nil
+    assert_not @review.valid?
+  end
+  
+  test "each review needs a user to which it belongs" do
+    @review.user_id = nil
+    assert_not @review.valid?
+  end
+  
 end

@@ -10,15 +10,14 @@ class BathsController < ApplicationController
   def create
     
     @bath = current_user.baths.new(bath_params)
-    if current_user.role == "admin"
-      @bath.admin_accept = true
-    else
-      # get rid of this and always set admin_accept to false
-      @bath.admin_accept = false
-    end
+    adminAccept
     if @bath.save
       flash[:success] = "Successfully submitted"
-      redirect_to @bath
+      if isAdmin?
+        redirect_to @bath
+      else
+        redirect_to request_path
+      end
     else
       render 'new'
     end
@@ -31,26 +30,20 @@ class BathsController < ApplicationController
   end
 
   def show
-    
-    # if(current_user.role == "admin")
       @baths = Bath.all
-    # else
-    #   @baths = current_user.baths
-
-    # end
-    
   end  
   
   def showsingle
      @bath = Bath.find(params[:id])
-     
-
-     
   end
 
     
   def edit
-    @baths = Bath.where(:admin_accept => false)
+    if isAdmin?
+      @baths = Bath.where(:admin_accept => false)
+    else
+      redirect_to request_path
+    end
   end
   
   def update
@@ -72,13 +65,6 @@ class BathsController < ApplicationController
     redirect_to newbath_path, notice: "Bathroom Deleted"
   end
   private
-  
-  # def revdestroy
-  #   Bath.find(params[:id]).reviews.find(params[:id]).destroy
-  #   redirect_to showbath_path, notice: "Review Deleted"
-  # end
-  
-  
     
   def bath_params
     params.require(:bath).permit(:city, :address, :province,

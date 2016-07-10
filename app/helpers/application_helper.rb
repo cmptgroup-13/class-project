@@ -19,4 +19,16 @@ module ApplicationHelper
     @current_bath ||= current_user.baths.find_by_id(params[:bath_id])
   end
 
+  def isAdmin?
+    current_user.role == "admin"
+  end
+  
+  def adminAccept
+    if isAdmin?
+      @bath.admin_accept=true
+    else
+      @bath.admin_accept=false
+    end
+  end
+  
 end
