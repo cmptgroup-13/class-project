@@ -25,16 +25,16 @@
         <%= f.label :password_confirmation %><br />
         <%= f.password_field :password_confirmation, autocomplete: "off" %>
       
-        <%= label_tag :gender %></br>
-        
-        
-          <%= f.label :role, 'Male' %><%= f.radio_button :role, 'male' %>
-          
-          
-        <div class="form-inline">
-        <%= f.radio_button :role, 'female', :item_wrapper_class => 'inline' %>
-        <%= f.label :role, 'Female' %>
-        </div>
+      <div class="form-group">
+      <%= label_tag :gender %></br>
+       
+       <%= f.radio_button :role, 'male' %>
+       <%= label_tag :role, 'Male' %>
+
+       <%= f.radio_button :role, 'female'  %>
+      <%= f.label :role, 'Female' %>      
+      </div>
+      
       <div class="actions">
         <%= f.submit "Sign up" %>
       </div>

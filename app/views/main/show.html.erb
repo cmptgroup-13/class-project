@@ -16,7 +16,7 @@
                 <td><%= current_user.role %></td>
             </tr>
         </table>
-        <% elsif current_user.role == "admin" %>
+        <% elsif isAdmin? %>
         <% for user in  @user do%>
         <% if user == current_user %>
         <table class="table">

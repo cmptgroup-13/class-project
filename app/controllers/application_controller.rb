@@ -4,7 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include ApplicationHelper
   
-  helper_method :current_bath
+  helper_method :current_bath, :isAdmin?, :adminAccept
+  
   private
   
   def after_sign_out_path_for(resource_or_scope)

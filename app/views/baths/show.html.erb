@@ -37,7 +37,7 @@
     </div>
     
     
-<% elsif current_user.role == "admin" %>
+<% elsif isAdmin? %>
     <h1>These are the bathrooms in the database</h1>
     <% @baths.each do |bath| %>
     <% if bath.admin_accept == true %>
