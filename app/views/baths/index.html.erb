@@ -1,19 +1,6 @@
-<!--
-<h1> Here is the location to add new Bathrooms!</h1>
+<h2>You Can Help Stop Toilet Related Injuries!</h2>
 
-
-<% if isAdmin? %>
-    <%= link_to "Add Bathroom", createbath_path %> <%= link_to "Show all baths", showbath_path %> <%= link_to "View bathroom requests", accept_path %>
-<% else %>
-    <%= link_to "Request to Add Bathroom", createbath_path %> <%= link_to "Show all baths", showbath_path %> <%= link_to "Show your bath requests", request_path %>
-<% end %>
--->
-
-<br/>
-
-<p style="color:#00001a; font-size:21px;">You Can Help Stop Toilet Related Injuries!</p>
-
-<p class="body">
+<p>
 <% if isAdmin? %>
     <%= link_to "View bathroom requests", accept_path %>
 <% end %>
@@ -26,9 +13,9 @@
 </p>
 
 
-<p style="color:#00001a; font-size:21px;">Choosing The Right Bathroom Is Important!</p>
+<h2>Choosing The Right Bathroom Is Important!</h2>
 
-<p class="body">
+<p>
   Smaller children run the risk of drowning if they fall headfirst into the
   toilet bowl. Injuries to adults include bruised buttocks, tail bones, and
   dislocated hips from unsuspectingly sitting on the toilet bowl rim because the
@@ -38,7 +25,7 @@
   have been known to detach from the wall when the chain is pulled to flush,
   causing injuries to the user.
 </p>
-<p class="body">
+<p>
   Toilet related injuries are also surprisingly common, with some estimates
   ranging up to 40,000 injuries in the US every year. In 2012, 2.3 million
   toilets in the United States, and about 9,400 in Canada, were recalled due to faulty

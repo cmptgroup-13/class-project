@@ -1,11 +1,9 @@
-<br/>
-<p class="title">
-Hello Admin <br/>
-This is where you choose to accept or deny bathroom requests.</p>
+<h1>Hello Admin</h1>
+<h2>This is the place where you choose to accept or deny bathroom requests</h2>
 
 <!--this will be a potential problem when our database gets full so make sure you change it-->
 <% @baths.each do |bath| %>
-        <div class="row" style="font-size: 18px">
+        <div class="row">
             <div class="col-md-6 col md-offset-3">
 
 
@@ -44,15 +42,15 @@ This is where you choose to accept or deny bathroom requests.</p>
                         <tr>
                            <td><%= form_for(bath) do |f| %>
                                 <div class="field">
-                                 <%= f.label :admin_accept, class: 'checkbox' do %>
-                                     <%= f.check_box :admin_accept %>
+                                 <%= f.label :admin_accept, class: 'checkbox' do %>   
+                                     <%= f.check_box :admin_accept %> 
                                      Accept
                                  <% end %>
                                 </div>
                             <%= f.submit "Submit", class: "button small radius" %>
                             <% end %></td>
                         </tr>
-
+                        
                         <tr>
                             <th><%= link_to "Destroy", bath, method: :delete, data: { confirm: "You sure?" } %></th>
                         </tr>

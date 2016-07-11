@@ -1,13 +1,12 @@
-  <p class="title">Edit <%= resource_name.to_s.humanize %></p>
+<div class="Condom">
 
 
+
+
+  <h2>Edit <%= resource_name.to_s.humanize %></h2>
   <% if current_user.role="admin" %>
-    <div class="editABC" style="font:size=18px"> <%= link_to "View Users in Database", profile_path %>   </div>
-    </br>
-  </div>
+    <%= link_to "View Users in Database", profile_path %>
   <% end %>
-
-
 <!--  <div class="row">-->
 <!--    <div class="col-md-6 col-md-offset-3 well">-->
 <!--      <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>-->
@@ -49,7 +48,9 @@
 
 
 
-<div class="row" style="font-size: 18px">
+<h2>Edit <%= resource_name.to_s.humanize %></h2>
+
+<div class="row">
   <div class="col-md-6 col-md-offset-3 well">
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put }) do |f| %>
       <%= devise_error_messages! %>
@@ -58,11 +59,6 @@
         <%= f.label :name %><br />
         <%= f.text_field :name, autofocus: true %>
       </div>
-
-      <div class="field">
-         <%= f.label :Gender%><br/>
-       <%= f.text_field :role, autofocus: true %>
-   </div>
 
       <div class="field">
         <%= f.label :email %><br />
@@ -77,8 +73,6 @@
         <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
         <%= f.password_field :password, autocomplete: "off" %>
       </div>
-
-
 
       <div class="field">
         <%= f.label :password_confirmation %><br />

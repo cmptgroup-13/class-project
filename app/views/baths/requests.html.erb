@@ -1,11 +1,9 @@
-<br/>
+<h1>Bathrooms that you have requested to add</h1>
 
-<p class="title">Bathrooms that you have requested to add</p>
-
-<% @baths.each do |bath| %>
-        <div class="row" style="font-size:18px">
+<% @baths.each do |bath| %> 
+        <div class="row">
             <div class="col-md-6 col md-offset-3">
-
+                
             <table class="table">
                         <tr>
                             <th><b>Address</b></th>
@@ -27,17 +25,17 @@
                             <th><b>Rating</b></th>
                             <td><b><%= bath.rating %></b></td>
                         </tr>
-
+                        
                         <tr>
                             <th><b>Longitude</b></th>
                             <td><b><%= bath.longitude %></b></td>
                         </tr>
-
+                        
                         <tr>
                             <th><b>Latitude</b></th>
                             <td><b><%= bath.latitude %></b></td>
                         </tr>
-
+                        
                         <tr>
                             <th><b>Status</b></th>
                             <% if bath.admin_accept == true %>
@@ -46,10 +44,10 @@
                                 <td><b><font color="red">Pending</font></b></td>
                             <% end %>
                         </tr>
+                        
 
-
-            </table>
-
+            </table>    
+                
             </div>
         </div>
 <% end %>

@@ -1,5 +1,5 @@
-<!-- Begin adding bathroom to database -->
-</br>
+<!-- Begin adding bathroom to database --> 
+ 
 <div id="motto">
     <p>Your contribution will prevent others from boom shakaraka</p>
 </div>
@@ -17,28 +17,28 @@
     </div>
   <% end %>
 
-  <div class="row" style="font-size:18px">
+  <div class="row">
     <div class="col-md-6 col-md-offset-3 well">
-      <div class="field">
+      <div class="field">  
         <%= f.label :country, "Country" %>
         <%= f.select "country", options_for_select(countries_list) %>
       </div>
-
+    
       <div class="field">
           <%= f.label :province, "Province/State" %><br />
           <%= f.select "province", options_for_select(us_states) %>
       </div>
-
+    
       <div class="field">
           <%= f.label :city %><br />
           <%= f.text_field :city, autofocus: true %>
-      </div>
+      </div> 
 
       <div class="field">
           <%= f.label :apartment, "Apartment/Suite number if applicable" %><br />
           <%= f.text_field :apartment, autofocus: true %>
       </div>
-
+    
       <div class="field">
           <%= f.label :address %><br />
           <%= f.text_field :address, autofocus: true %>
@@ -48,19 +48,19 @@
         <%= f.label :rating %><br />
         <%= f.number_field :rating, autofocus: true %>
     </div>
-
-  <% if isAdmin? %>
+  
+  <% if isAdmin? %>  
     <%= f.submit "Create my bathroom", class: "btn btn-primary" %>
   <% else %>
     <%= f.submit "Send bathroom request", class: "btn btn-primary" %>
   <% end %>
-
-    <% if current_user=="admin" %>
+  
+    <% if current_user=="admin" %>  
       <%= f.submit "Create my bathroom", class: "btn btn-primary" %>
     <% else %>
       <%= f.submit "Send bathroom request", class: "btn btn-primary" %>
     <% end %>
     </div>
   </div>
-
+  
 <% end %>

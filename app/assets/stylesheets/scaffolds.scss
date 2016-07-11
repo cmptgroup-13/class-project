@@ -8,10 +8,18 @@ html, body, div, a {
 	vertical-align: baseline;
 	text-decoration: none;
   text-shadow: none;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 18px;
 }
 
 html {
 	line-height: 1;
+}
+
+h1, h2 {
+  text-decoration: none;
+  text-shadow: none;
+  font-family: verdana, arial, helvetica, sans-serif;
 }
 
 body {
@@ -34,6 +42,7 @@ body {
 	text-shadow: none;
 	color: white;
 }
+
 
 /*body {
   background-color: #fff;
