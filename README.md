@@ -92,6 +92,59 @@ As the user of UrineLuck, I wish I will be able to edit my own profile such as n
 
 Testing will be done to ensure only admins can be able to edit their own info and regular users can be able to edit their own information.
 
+#### Story 5: Uploading Bathrooms
+As a user of UrineLuck, it is important that I will be able to submit bathrooms to the application so that other users can look for my submission. In my submission I would like to be able to specify the location of the bathroom and be able to assign a rating.
+
+On the form there is a dropdown selection for "Country" and "Province/State". There is a blank textbox for "City","Address", "Apartment number" and a number field for "Rating".
+
+Given that all the fields are given values that satisfy the parameters, a request to add the bathroom should be sent to the database so that an admin can later review the request and decide to add the bathroom. This bathroom should not be visisible to the public until approved by an admin.
+
+Given that all the fields are not given correct values that satisfy the parameters a new bathroom should not be requested to the admin when "Create my bathroom" is pushed and instead an error appears on the page saying what fields containt incorrect values.
+
+Address can't be blank. The number rating must be between 0-5. The entry must also not already exist in the database. The entry must also exist somewhere in the Country specified.
+
+As an admin I want to be able to approve or deny requests so that user submissions can be viewed or not viewed pubicly by other users. Given that I want to add the bathroom, when I fill the checkbox next to add bathroom and click submit, the bathroom should be added so that other users can see it and the request no longer appears on the requests page. Given that I do not want add the bathroom to the database, when I click destroy the request should no longer appear on the request page and it is removed from the database.
+
+In future iterations this could include descriptions along side location and rating.
+
+Testing will be done so that only legitimate entries are added to the database with appropriate values using the above parameters.
+
+We test for uniqueness in addresses, and we test to see if the latitude and longitude is within the bounds of north america.
+
+####Story 6: Looking at bathrooms
+As a user I want to find public bathrooms in the database so that I can determine how close they are and what the quality of the bathroom is.
+
+As a user I want to see the different bathrooms I added to the database and leave or view reviews on them. Given that I click "show all baths" all the different bathrooms that have been added to the database should appear.
+
+Given that I click "Leave a Review" I should be taken to a form where I can type a comment and submit it.
+
+Given that I click "View" I should be taken to a page that displays the address, rating, a map that shows the location of the bathroom, and all the reviews for that bathroom plus a link to leave a review.
+
+As a user I want to be able to find the closest bathrooms near me. Given that I enter nearby address on the home page and click submit, I should be taken to a page with a list of bathrooms within a certain amount of kilometres. If the address entered is a nonexistent address, an error should be returned saying the address entered does not exist.
+
+Given that I am an admin when I click "see all bathrooms" I should be able to see all the different bathrooms in the database with added attributes of "latitude", "longitude" and "bath id". I should also be able to remove entries from this page by clicking destory.
+
+For testing devise makes sure that entries are not blank and we make sure the amount of characters entered does not go above a certain number.
+
+
+####Story 7: Modifying user priviledges
+As an administrator I want to be able to see each user that has signed up with an account.
+Given that I select "view users in database" a list of users should show up.
+
+As an administrator I want to be able to ban users from using our application to prevent misuse.
+Given that I select "destroy" the user should be removed from the database making them unable to login. Before this a notification should rise to ask for confirmation of deletion.
+
+For testing the devise gem ensures proper management.
+
+
+####Story 8: Reviews
+As a user I want to be able to look at reviews for a bathroom so that I can see other users opinions. When I click "view" a list of reviews should show up on the bathroom page below the map.
+
+When I click leave a review I should be taken to a form where I can type a review and submit it to be viewed whenever other users view the page for that specific bathroom. If the review is blank or the review exceeds the maximum amount of characters, the review should not be submitted to the database and an error should be returned saying what the error was.
+
+As an admin I should be able to destory reviews. Given that I am on the view page, beside each review there should be a link to destroy the review which will remove the review from the databse when clicked on. A notification should pop up asking for confirmation to delete the review. If confirmed it should be deleted if not it should stay.
+
+For testing the devise gem comes with its own tests to make sure entries are removed and uploaded.
 
 
 
