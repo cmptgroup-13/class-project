@@ -54,7 +54,7 @@ body {
 }
 
 /* Navigation bar */
-#nav-container {
+.nav {
 	width: 70%;
 	padding: 0.5rem;
 	margin-left: auto;
@@ -62,12 +62,6 @@ body {
 	margin-bottom: 0;
 	border-top: groove black;
 	border-top-width: 1px;
-}
-
-.nav {
-    overflow: hidden;
-    margin: 0 auto;
-    height: 30px;
     position: relative;
     text-align: center;
 }
@@ -83,21 +77,23 @@ body {
     -ms-transition: .7s;
     transition: .7s;
     vertical-align: top;
+    border-right: groove black;
+    border-right-width: 1px;
 }
 
+.nav li:nth-child(4) { border: none; }
+
 .nav li a {
+	display: inline-block;
+	position: relative;
 	padding: 0 0 0 0;
 	text-decoration: none;
 	color: #393939;
 }
 
-.nav li:hover {
-    color: rgba(0, 0, 0, 0.2);
-}
-
-.mid-child {
-    border-right: groove black;
-    border-right-width: 1px;
+.nav li a:hover {
+	background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .nav .effect {
@@ -105,7 +101,6 @@ body {
 	height: 2px;
 	bottom: 0;
 	background: #c6342e;
-	box-shadow: 0 1px 0 white; 
 	margin-left:-45px;
 	position: absolute;
 	left: -12.5%;
@@ -113,13 +108,68 @@ body {
 	-moz-transition: 0.7s ease-in-out;
 	-o-transition: 0.7s ease-in-out;
 	-ms-transition: 0.7s ease-in-out;
-	transition: 0.7s ease-in-out; 
+	transition: 0.7s ease-in-out;
 }
 
 .nav li:nth-child(1):hover ~ .effect { left: 10%; }
 .nav li:nth-child(2):hover ~ .effect { left: 34%; }
 .nav li:nth-child(3):hover ~ .effect { left: 58%; }
 .nav li:nth-child(4):hover ~ .effect { left: 82%; }
+
+.nav ul {
+    position: absolute;
+    left: -9999px;
+    padding-top: 10px;
+    opacity: 0;
+    -webkit-transition: opacity .3s linear;
+    -moz-transition: opacity .3s linear;
+    -o-transition: opacity .3s linear;
+    -ms-transition: opacity .3s linear;
+}
+
+.nav li:hover ul {
+    left: 0;
+    opacity: 1;
+    top: 30px;
+}
+
+/* if sublevel exists
+.nav ul li:hover>ul {
+    left: 150px;
+    opacity: 1;
+    top: -11px;
+    padding-left: 12px;
+    border-bottom: 0;
+    box-shadow: none;
+}
+*/
+
+.nav ul li {
+    display: block;
+    position: relative;
+    border-top: 1px solid #ccc;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    width: 150px;
+    text-align: justify;
+    z-index: 9;
+    background: #eee;
+    box-shadow: 3px 4px 0 rgba(0, 0, 0, .1);
+    /* if sublevel exists
+    -webkit-transition: background .3s linear;
+    -moz-transition: background .3s linear;
+    -ms-transition: background .3s linear;
+    -o-transition: background .3s linear;
+    */
+}
+
+.nav ul li a {
+	font-size: 0.8rem;
+	text-decoration: none;
+	color: #393939;
+    display: block;
+    padding: 7px 12px 7px 20px;
+}
 
 #footer {
 	margin-left: auto;
