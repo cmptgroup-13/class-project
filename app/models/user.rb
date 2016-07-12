@@ -8,7 +8,7 @@ class User < ActiveRecord::Base
   has_many :reviews
   ratyrate_rater
   
-  geocoded_by :current_sign_in_ip
+  geocoded_by :ip_address
   after_validation :geocode,
   :if => lambda{ |obj| obj.ip_address_changed? }
   

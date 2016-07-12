@@ -100,7 +100,7 @@ ActiveRecord::Schema.define(version: 20160712204731) do
     t.string   "role"
     t.float    "latitude"
     t.float    "longitude"
-    t.float    "ip_address"
+    t.string   "ip_address"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

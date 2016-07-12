@@ -36,6 +36,7 @@ Even tarantulas aren't immune from an ambush.</p>
                     <td><%= request.location.city %></td>
                 </tr>
             </table>
+            <%= link_to "Locate me", single_path %>
         <% elsif isAdmin? %>
             <% for user in  @user do%>
                 <% if user == current_user %>

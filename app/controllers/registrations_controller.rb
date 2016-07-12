@@ -13,7 +13,7 @@ class RegistrationsController < Devise::RegistrationsController
   # POST /resource
   def create
     build_resource(sign_up_params)
-
+    resource.ip_address = request.remote_ip
     resource.save
     yield resource if block_given?
     if resource.persisted?

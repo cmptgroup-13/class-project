@@ -17,6 +17,7 @@ Rails.application.routes.draw do
   get 'main/show'
   get 'profile', to: 'main#show'
   get 'about', to: 'main#aboutus'
+  get 'single', to: 'main#single'
   root 'main#index'
   resources :postsrake
 

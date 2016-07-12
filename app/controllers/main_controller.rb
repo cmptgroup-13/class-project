@@ -3,11 +3,15 @@ class MainController < ApplicationController
   def index
   end
 
+  def single
+   
+  end
+  
   def show
  
     @user = User.all
   end
-
+  
   def destroy
     @user = User.find(params[:id])
 
