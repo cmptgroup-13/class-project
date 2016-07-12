@@ -21,7 +21,11 @@ class MainController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation, :role)
+                                   :password_confirmation, :role, :latitude, :longitude)
+    end
+    
+    def ip_time
+      @user.ip_address=@user.current_sign_in_ip
     end
 
 

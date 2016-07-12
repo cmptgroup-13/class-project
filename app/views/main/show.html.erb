@@ -23,6 +23,14 @@ Even tarantulas aren't immune from an ambush.</p>
                     <th>Role</th>
                     <td><%= current_user.role %></td>
                 </tr>
+                <tr>
+                    <th>IP Address</th>
+                    <td><%= current_user.current_sign_in_ip %></td>
+                </tr>
+                <tr>
+                    <th>Current City</th>
+                    <td><%= request.location.city %></td>
+                </tr>
             </table>
         <% elsif isAdmin? %>
             <% for user in  @user do%>

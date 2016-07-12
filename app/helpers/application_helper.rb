@@ -31,4 +31,12 @@ module ApplicationHelper
     end
   end
   
+  def remote_ip
+      @remote_ip ||= (get_header("action_dispatch.remote_ip") || ip).to_s
+  end
+  
+  def set_ip
+    @user.ip_address= request.remote_ip
+  end
+  
 end
