@@ -7,6 +7,14 @@ class MainController < ApplicationController
    
   end
   
+  def nearme
+    if params[:search].present?
+      @baths = Bath.near(params[:search], 50)
+    else
+      @baths = Bath.all
+    end
+  end
+  
   def show
  
     @user = User.all

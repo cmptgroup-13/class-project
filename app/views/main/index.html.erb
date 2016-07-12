@@ -9,9 +9,12 @@
     <div class="navbox">
         <h2>Find Nearest Toilet</h2><br>
         <p>Having trouble with your urine? Or plan before something awkward happens? You can search for the nearest toilet or a toilet near any location</p>
-        <div style="margin:2rem; height:2rem">
-            <input name="ClientSearch" placeholder="Enter a location, address, ..." title="Please enter a place name, address or postcode to find toilets in that area." type="text" value=""></input>
-        </div>
+        <%= form_tag locations_path, :method => :get do %>
+            <p>
+                <%= text_field_tag :search, params[:search] %>
+                <%= submit_tag "Search Near", :name => nil %>
+            </p>
+        <% end %>
         <%= link_to(image_tag("sprint.png", :size => "120x120"), root_path) %>
     </div>
     <div class="navbox">
