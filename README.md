@@ -246,7 +246,7 @@ For each member there should be an image of with a short decription.
 -displaying businesses that are recognized by google
 -an event page for bathroom themed events
 
-##Iteration 2 User Stories
+##Iteration 1 User Stories
 
 
 #### Story 1: Logging in
