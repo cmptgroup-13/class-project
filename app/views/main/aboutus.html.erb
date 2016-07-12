@@ -1,33 +1,16 @@
-<style>
-.imgProfile{
-  box-shadow: 4px 4px 2px #888888;
-  float: left;
-  border: 1px solid;
-  margin-right: 20px;
-  clear:both;
-}
+<!-- Begin about us page -->
 
-.borderProfile {
-    margin-left: 0px;
-    overflow:auto;
-    display:block;
-}
-.BorderProfile.clear {
-    clear:both;
-}
+<script>
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,2000);
 
-
-.nameProfile{
-  font-size: 18px;
-  color:  #000033;
+function nextSlide() {
+	slides[currentSlide].className = "slide";
+	currentSlide = (currentSlide+1)%slides.length;
+	slides[currentSlide].className = 'slide showing';
 }
-
-
-.titleProfile{
-  color:  #00004d;
-  font-size: 16.5px;
-}
-</style>
+</script>
 
 <!--
 IMAGE DIMENSIONS ARE 99px by 99px, or 3.49cm by 3.49cm
@@ -36,19 +19,30 @@ IMAGE DIMENSIONS ARE 99px by 99px, or 3.49cm by 3.49cm
 <h1>Meet the Creators</h1>
 <br/>
 
+<<<<<<< HEAD
+<!-- Slide show effect -->
+<ul id="slides" style="display: none;">
+	<li class="slide showing">
+       <img src="images/image1.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
+	<li class="slide">
+       <img src="images/image2.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
+	<li class="slide">
+       <img src="images/image3.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
+</ul>
+=======
+>>>>>>> 1e6e2308e3176984fcbcbafe3b34ddc010b4a46d
 
 <div class="imgProfile"><%= link_to image_tag('profilePictures/bhatti.png', :size => "99x99") %></div>
   <div class="borderProfile">
   <p class="nameProfile">Dallan Bhatti</p>
   <p class ="titleProfile">Your Title</p>
   <p>
-    Alex co-founded UrineLuck in 2016. He acts as Senior Vice President and Chief
-    Operating Officer. Before creating UrineLuck, Alex spent several years as an
-    executive consultant advising small & mid-size technology companies and prior
-    to that was Vice President of Corporate Development at Orange. Alex
-    has over 15 years of experience in OEM, strategic alliances, partnering
-    strategy, product management and corporate development—creating and driving
-    strategies to enter new markets and accelerate market share and revenues.
+   Dallan co-founded UrineLuck in 2016. He acts as a loving father, sister, 
+   cousin, singer and songwriter. Before creating UrineLuck, Dallan spent 
+   several years as a Regional Manager at Dunder-Mifflin is Scranton, PA.
+   At Dunder-Mifflin he maintained the highest sales average of any branch 
+   despite weak economy and obselete product. His career goals include 
+   eventually getting back into the paper sales game.
     <br/> <br/>
     Alex holds a PhD in Mathematics from Stanford University and a BA in
     Computer Science from Harvard University.

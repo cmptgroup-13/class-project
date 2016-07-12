@@ -35,3 +35,94 @@
   font-family: play;
   text-shadow: 1px 1px 4px #f4f5f0;
 }
+
+/* Begin about us page */
+.imgProfile{
+  box-shadow: 4px 4px 2px #888888;
+  float: left;
+  border: 1px solid;
+  margin-right: 20px;
+  clear:both;
+}
+
+.borderProfile {
+    margin-left: 0px;
+    overflow:auto;
+    display:block;
+}
+.BorderProfile.clear {
+    clear:both;
+}
+
+
+.nameProfile{
+  font-size: 18px;
+  color:  #000033;
+}
+
+
+.titleProfile{
+  color:  #00004d;
+  font-size: 16.5px;
+}
+
+/* begin slide */
+#slides{
+  margin: 0px 50px 5px 50px;
+	position: relative;
+	height: 300px;
+  width: 492px;
+	padding: 0px;
+  background-color: #303030;
+	list-style-type: none;
+}
+
+.slide{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 99%;
+	height: 99%;
+	opacity: 0;
+	z-index: 1;
+  background-color: #303030;
+
+
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	transition: opacity 1s;
+}
+
+.showing{
+	opacity: 1;
+	z-index: 2;
+}
+
+
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide{
+	font-size: 40px;
+	padding: 1px;
+	box-sizing: border-box;
+	background: #303030;
+	color: #fff;
+}
+
+.slide:nth-of-type(1){
+}
+.slide:nth-of-type(2){
+}
+.slide:nth-of-type(3){
+}
+.slide:nth-of-type(4){
+}
+.slide:nth-of-type(5){
+}
+
+/* end */
