@@ -28,6 +28,10 @@ Even tarantulas aren't immune from an ambush.</p>
                     <td><%= current_user.current_sign_in_ip %></td>
                 </tr>
                 <tr>
+                    <th>IP Address Current</th>
+                    <td><%= request.ip %></td>
+                </tr>
+                <tr>
                     <th>Current City</th>
                     <td><%= request.location.city %></td>
                 </tr>
