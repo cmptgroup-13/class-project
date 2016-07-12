@@ -1,8 +1,36 @@
-<h1> Here is the location to add new Bathrooms!</h1>
+<h2>You Can Help Stop Toilet Related Injuries!</h2>
 
-
+<p>
 <% if isAdmin? %>
-    <%= link_to "Add Bathroom", createbath_path %> <%= link_to "Show all baths", showbath_path %> <%= link_to "View bathroom requests", accept_path %> 
-<% else %>
-    <%= link_to "Request to Add Bathroom", createbath_path %> <%= link_to "Show all baths", showbath_path %> <%= link_to "Show your bath requests", request_path %>
-<% end %>    
+    <%= link_to "View bathroom requests", accept_path %>
+<% end %>
+
+<%=  link_to image_tag("bathroom/add.png", :border => 0, :alt => 'Request To Add', :title => 'Request To Add'), createbath_path%>
+<%=  link_to image_tag("bathroom/requests.png", :border => 0, :alt => 'Your Requests', :title => 'Your Requests'), request_path%>
+<%=  link_to image_tag("bathroom/you.png", :border => 0, :alt => 'Your added Bathrooms', :title => 'Your added Bathrooms'), showbath_path%>
+
+<br/>
+</p>
+
+
+<h2>Choosing The Right Bathroom Is Important!</h2>
+
+<p>
+  Smaller children run the risk of drowning if they fall headfirst into the
+  toilet bowl. Injuries to adults include bruised buttocks, tail bones, and
+  dislocated hips from unsuspectingly sitting on the toilet bowl rim because the
+  seat is up or loose. Injuries can also be caused by pinching due to splits in
+  plastic seats or by splinters from wooden seats, or if the toilet itself
+  collapses under the weight of the user. Older high tank cast iron cisterns
+  have been known to detach from the wall when the chain is pulled to flush,
+  causing injuries to the user.
+</p>
+<p>
+  Toilet related injuries are also surprisingly common, with some estimates
+  ranging up to 40,000 injuries in the US every year. In 2012, 2.3 million
+  toilets in the United States, and about 9,400 in Canada, were recalled due to faulty
+  pressure-assist flush mechanisms which put users at risk of the fixture
+  exploding.
+  <a href="https://en.wikipedia.org/wiki/Toilet-related_injuries_and_deaths#Accidental_injuries">(Wikipedia)</a>
+</p>
+<br/>

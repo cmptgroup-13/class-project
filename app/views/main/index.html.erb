@@ -2,16 +2,22 @@
 
 <div id="motto">
     <p>Bathroom Connoissuer? You're In Luck!</p>
+    <%= link_to"Browse all bathrooms", showbath_path, {:style=>"text-decoration:none"} %>
 </div>
 
 <div id="navbox-container">
     <div class="navbox">
-        <h3>Find Nearest Toilet</h3><br>
-        <p>Having trouble with your urine? Or plan before something awkward happens? You can search for the nearest toilet or a toilet near any location</p><br>
-        <input style="width:80%" name="ClientSearch" placeholder="Enter a location, address, ..." title="Please enter a place name, address or postcode to find toilets in that area." type="text" value=""></input>
+        <h2>Find Nearest Toilet</h2><br>
+        <p>Having trouble with your urine? Or plan before something awkward happens? You can search for the nearest toilet or a toilet near any location</p>
+        <div style="margin:2rem; height:2rem">
+            <input name="ClientSearch" placeholder="Enter a location, address, ..." title="Please enter a place name, address or postcode to find toilets in that area." type="text" value=""></input>
+        </div>
+        <%= link_to(image_tag("sprint.png", :size => "120x120"), root_path) %>
     </div>
     <div class="navbox">
-        <h3>Suggest Toilet</h3><br>
-        <p>If you find a toilet which is not in our database, feel free to suggest that toilet simply by clicking the button below. However, you must be signed in before suggesting.</p><br>
+        <h2>Suggest Toilet</h2><br>
+        <p>If you find a toilet which is not in our database, feel free to suggest by clicking the button below. However, you must be signed in before suggesting</p>
+        <div style="margin:2rem; height:2rem"></div>
+        <%= link_to(image_tag("plus-sign.png", :size => "120x120"), createbath_path) %>
     </div>
 </div>

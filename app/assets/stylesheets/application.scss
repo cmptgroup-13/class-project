@@ -73,28 +73,34 @@ body {
     position: relative;
 }
 
-.nav a {
-    display: block;
+.nav li {
+	display: block;
     position: relative;
     float: left;
-    width: 24%;
-    text-decoration: none;
-    color: #393939;
+    width: 25%;
     -webkit-transition: .7s;
     -moz-transition: .7s;
     -o-transition: .7s;
     -ms-transition: .7s;
     transition: .7s;
-}
-
-.nav a:hover {
-    color: #c6342e;
-    background-color: white;
-}
-
-.mid-child {
+    vertical-align: top;
     border-right: groove black;
     border-right-width: 1px;
+}
+
+.nav li:nth-child(4) { border: none; }
+
+.nav li a {
+	display: inline-block;
+	position: relative;
+	padding: 0 0 0 0;
+	text-decoration: none;
+	color: #393939;
+}
+
+.nav li a:hover {
+	background-color: rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.3);
 }
 
 .nav .effect {
@@ -112,7 +118,39 @@ body {
 	transition: 0.7s ease-in-out; 
 }
 
-.nav a:nth-child(1):hover ~ .effect { left: 10%; }
-.nav a:nth-child(2):hover ~ .effect { left: 34%; }
-.nav a:nth-child(3):hover ~ .effect { left: 58%; }
-.nav a:nth-child(4):hover ~ .effect { left: 82%; }
+.nav li:nth-child(1):hover ~ .effect { left: 10%; }
+.nav li:nth-child(2):hover ~ .effect { left: 34%; }
+.nav li:nth-child(3):hover ~ .effect { left: 58%; }
+.nav li:nth-child(4):hover ~ .effect { left: 82%; }
+
+#footer {
+	margin-left: auto;
+	margin-right: auto;
+	height: 6rem;
+	width: 70%;
+	overflow: hidden;
+	border-top: groove black;
+	border-top-width: 1px;
+}
+
+#footer p {
+	margin-top: 1rem;
+	margin-left: 1rem;
+	font-weight: 70%;
+	font-size: 1rem;
+	display: inline-block;
+}
+
+#footer a {
+	margin-top: 1rem;
+	margin-left: 1rem;
+	font-weight: 70%;
+	font-size: 1rem;
+	display: inline-block;
+	text-decoration: none;
+	color: black;
+}
+
+#footer a:hover {
+	color: rgba(0, 0, 0, 0.2);
+}

@@ -5,7 +5,8 @@
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
-
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" />
+  <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jura" />
 </head>
 
 
@@ -23,8 +24,6 @@
 
       <%= yield %>
 
-
-      <!--<img src="urinelucklogo.png" alt="urinelucklogo" height="500" width="500">-->
       <div class="notice"><%= notice %></div>
       <div class="alert"><%= alert %></div>
       <%= render 'layouts/footer' %>

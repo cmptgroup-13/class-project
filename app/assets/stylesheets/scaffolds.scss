@@ -8,11 +8,41 @@ html, body, div, a {
 	vertical-align: baseline;
 	text-decoration: none;
   text-shadow: none;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 18px;
 }
 
 html {
 	line-height: 1;
 }
+
+h1, h2 {
+  text-decoration: none;
+  text-shadow: none;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+body {
+  background-image: image-url("background.jpeg")
+}
+
+/* Motto */
+#motto {
+	width:70%;
+	padding: 0.3rem;
+	margin: auto;
+	background-color: rgba(0, 0, 0, 0.8);
+	text-align: center;
+}
+
+#motto p {
+  margin: 0.3rem 0 0.3rem 0;
+	font-family: Jura;
+	font-size: 1.5rem;
+	text-shadow: none;
+	color: white;
+}
+
 
 /*body {
   background-color: #fff;
