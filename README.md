@@ -47,7 +47,7 @@ Bob is a male who attends Simon Fraser University as a computer science student.
 
 ##User Stories/Epics
 
-####Epic: As a user, I can do operations with bathrooms
+##Epic: As a user, I can do operations with bathrooms
 Stories:
 
 ####As a user, I want to request to add bathrooms (2)
@@ -103,7 +103,7 @@ There should be an option to add a review.
 Tests: Tests are done to see if the bathroom shown selected matches the bathroom selected.
 If the tests passes the data matches.
 
-####Epic: As a user, I can do operations with reviews
+##Epic: As a user, I can do operations with reviews
 ##Stories:
 
 ####As an admin or regular user, I want to create a review (2)
@@ -131,7 +131,7 @@ As an admin there should be an option to delete each review. (Implemented in Ite
 Tests: A test is done to ensure te data populating reviews is the same as added in the database. 
 If the tests passes the data matches.
 
-####Epic: As a user, I can do operations with Google Maps
+##Epic: As a user, I can do operations with Google Maps
 ##Stories:
 
 ####As a regular user or admin I want to see all added bathrooms on a map (3)
@@ -151,7 +151,7 @@ The map should be initially zoomed out to include a few blocks on the map.
 Tests:
 The google maps api tests that the map loads correctly and we test that the marker is added correctly.
 
-####Epic: As a user, I can have profile control
+##Epic: As a user, I can have profile control
 ##Stories:
 
 ####As a regular user or admin, I want to edit my profile info (2)
@@ -186,7 +186,7 @@ The user should be taken to the login screen.
 Tests:
 Specific tests are carried out by the devise gem to make sure the user is removed from the database.
 
-####Epic:	As a user I can make an account
+##Epic:	As a user I can make an account
 
 ####As a user I want to be able to create a personal account. (2)
 It should ask for an name, email, gender, and password.
