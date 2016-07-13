@@ -1,0 +1,1 @@
+var current_location = {latitude: <%= current_location.lat %>, longitude:  <%= current_location.lng %>}

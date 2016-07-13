@@ -12,6 +12,22 @@ class MapController < ApplicationController
       :height  => 32
       })
     end
+    @lat_lng = cookies[:lat_lng].try(:split, "|")
+    current_user.latitude=@lat_lng[0]
+    current_user.longitude=@lat_lng[1]
+    @me = Gmaps4rails.build_markers(current_user) do |current_user, marker|
+      # location_link = view_context.link_to  bath.address, showbath_path(bath)
+      marker.lat current_user.latitude
+      marker.lng current_user.longitude
+      marker.infowindow "<b>#{current_user.name}</b>"
+      marker.picture({
+      :url => "http://emojistatic.github.io/images/32/1f4a9.png", # up to you to pass the proper parameters in the url, I guess with a method from device
+      :width   => 32,
+      :height  => 32
+      })
+    end
+    
+    
 
   end
   

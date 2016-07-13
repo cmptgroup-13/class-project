@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   get 'about', to: 'main#aboutus'
   get 'single', to: 'main#single'
   get 'locations', to: 'main#nearme'
+  get 'practice', to: 'main#practice'
   root 'main#index'
   resources :postsrake
 
