@@ -4,7 +4,8 @@ class ApplicationController < ActionController::Base
   protect_from_forgery with: :exception
   include ApplicationHelper
   
-  helper_method :current_bath, :isAdmin?, :adminAccept, :remote_ip, :set_ip
+  helper_method :current_bath, :isAdmin?, :adminAccept, :remote_ip, :set_ip, :set_long_lat
+  
   
   private
   

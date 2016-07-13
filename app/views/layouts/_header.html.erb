@@ -23,3 +23,10 @@
         <div class="effect"></div>
     </ul>
 </div>
+
+<!--this is for locate me-->
+<%- unless @lat_lng %>
+        <script type="text/javascript">
+            getGeoLocation();
+        </script>
+<%- end %>

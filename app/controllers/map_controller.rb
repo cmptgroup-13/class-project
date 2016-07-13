@@ -1,4 +1,6 @@
 class MapController < ApplicationController
+  before_action :set_long_lat
+  
   def index
     @baths = Bath.where(:admin_accept => true)
     @hash = Gmaps4rails.build_markers(@baths) do |bath, marker|
@@ -12,9 +14,6 @@ class MapController < ApplicationController
       :height  => 32
       })
     end
-    @lat_lng = cookies[:lat_lng].try(:split, "|")
-    current_user.latitude=@lat_lng[0]
-    current_user.longitude=@lat_lng[1]
     @me = Gmaps4rails.build_markers(current_user) do |current_user, marker|
       # location_link = view_context.link_to  bath.address, showbath_path(bath)
       marker.lat current_user.latitude
