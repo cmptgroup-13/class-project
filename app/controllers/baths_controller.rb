@@ -1,5 +1,5 @@
 class BathsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, :set_long_lat
   
   def new
     
