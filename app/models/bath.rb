@@ -28,7 +28,6 @@ DE MS TN FL MT TX GA NC UT HI ND VA	IA NE VT ID NH WA IL NJ WI
 IN NM WV KS NV WY BC AB SA MZ ON QU NF NB NS PE YU NV NT), :message => "Province options are either Canada or United States of America provinces/states"
 validates :city, presence: true
 validates :address, presence: true
-validates :rating, presence: true, inclusion: { in: 0..5, :message => "must be between 0-5" }
 validates :latitude, inclusion: { in: 21..84 }, presence: false
 validates :longitude, inclusion: { in: -177..-53}, :uniqueness => {:scope => :latitude, :message => "and latitude data show this location is already taken"}, presence: false 
 after_validation :id, presence: true

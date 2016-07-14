@@ -7,10 +7,12 @@
                             <th><b>Location</b></th>
                             <td><b><%= @bath.city %>, <%= @bath.address %></b></td>
                         </tr>
+                        
                         <tr>
-                            <th><b>Average Rating</b></th>
-                            <td><b><%= rating_for @bath, "rating", imdb_avg: true %></b></td>
+                            <th><b>Rating</b></th>
+                            <span class = "star-rating" data-score=<%= @avg_rating %></span>
                         </tr>
+                        
 
                             <div class="row">
         <div class="col-md-6 col md-offset-3">
@@ -35,39 +37,14 @@
                             <th><b><%= User.find_by_id(review.user_id).name %> </b> </th>
                             <td><%= review.post %></td>
                         </tr>
+                        
+                        
                 </table>
                 
             <% end %>
         <b><%= link_to "Leave A Review", new_bath_review_path(@bath) %> </b>
 
 <script type="text/javascript">
-
-// function createImage(url){
-//   var image = {
-//     url: url,
-//     // This marker is 32 pixels wide by 32 pixels tall.
-//     size: new google.maps.Size(32, 32),
-//     // The origin for this image is 0,0.
-//     origin: new google.maps.Point(0,0),
-//     // The anchor for this image is the base of the flagpole at 0,32.
-//     anchor: new google.maps.Point(0, 32)
-//   };
-//   return image;
-// }
-
-
-// function createCustomMarker(coords,map,title){
-//   marker = new google.maps.Marker({
-//     position: coords,
-//     map: map,
-//     title: title,
-//     icon: createImage("urinelucklogo.png")
-//   });
-// }
-
-// google.maps.event.addListener(marker, 'click', function() {
-//   info.open(map,marker);
-// });
 
   myLatLng = new google.maps.LatLng({lat: <%= @bath.latitude %>, lng: <%= @bath.longitude %>}); 
 

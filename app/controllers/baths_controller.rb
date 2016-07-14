@@ -34,7 +34,14 @@ class BathsController < ApplicationController
   end  
   
   def showsingle
-     @bath = Bath.find(params[:id])
+    @bath = Bath.find(params[:id])
+    @reviews = Review.where(bath_id: @bath)
+    if @reviews.blank?
+     @avg_rating = 0
+    else
+     @avg_rating = @reviews.average(:rating).round(2)
+    end
+       
   end
 
     
@@ -68,7 +75,7 @@ class BathsController < ApplicationController
     
   def bath_params
     params.require(:bath).permit(:city, :address, :province,
-                                   :country, :rating, :latitude, :longitude, :admin_accept, :apartment)
+                                   :country, :latitude, :longitude, :admin_accept, :apartment)
   end 
   
 

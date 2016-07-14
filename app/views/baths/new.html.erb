@@ -44,10 +44,6 @@
           <%= f.text_field :address, autofocus: true %>
       </div>
 
-      <div class="field">
-        <%= f.label :rating %><br />
-        <%= f.number_field :rating, autofocus: true %>
-    </div>
   
   <% if isAdmin? %>  
     <%= f.submit "Create my bathroom", class: "btn btn-primary" %>

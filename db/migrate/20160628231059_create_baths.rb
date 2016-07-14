@@ -6,7 +6,6 @@ class CreateBaths < ActiveRecord::Migration
       t.string :province
       t.string :country
       t.time :hours
-      t.integer :rating
       t.boolean :admin_accept
       t.references :user, foreign_key: true
       # t.text :smell
