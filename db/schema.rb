@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712204731) do
+ActiveRecord::Schema.define(version: 20160714220046) do
 
   create_table "baths", force: :cascade do |t|
     t.string   "address"
@@ -21,11 +21,15 @@ ActiveRecord::Schema.define(version: 20160712204731) do
     t.time     "hours"
     t.boolean  "admin_accept"
     t.integer  "user_id"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
     t.float    "latitude"
     t.float    "longitude"
     t.string   "apartment"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "baths", ["user_id", "created_at"], name: "index_baths_on_user_id_and_created_at"

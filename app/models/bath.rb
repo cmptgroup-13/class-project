@@ -2,6 +2,8 @@ class Bath < ActiveRecord::Base
 
 belongs_to :user
 has_many :reviews
+has_attached_file :image, styles: { large: "600x600>", medium: "300x300>", thumb: "150x150#" }
+validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
 validates :user_id, presence: true
 geocoded_by :location
@@ -17,7 +19,7 @@ end
 before_validation :geocode
 
 
-ratyrate_rateable "rating"
+
 
 validates :country, presence: true
 validates_inclusion_of :country,  :in => %w(CAN USA), :message => "Country options are either Canada or United States of America"

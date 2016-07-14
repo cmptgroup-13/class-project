@@ -9,10 +9,14 @@
                         </tr>
                         
                         <tr>
-                            <th><b>Rating</b></th>
-                            <span class = "star-rating" data-score=<%= @avg_rating %></span>
+                            <th><b>Average Rating</b></th>
+                            <td><span class = "star-rating" data-score=<%= @avg_rating %></span></td>
                         </tr>
                         
+                        <tr>
+                            <th><b>Images</b></th>
+                            <td><%= image_tag @bath.image.url(:thumb) %></td>
+                        </tr>
 
                             <div class="row">
         <div class="col-md-6 col md-offset-3">
@@ -37,6 +41,11 @@
                             <th><b><%= User.find_by_id(review.user_id).name %> </b> </th>
                             <td><%= review.post %></td>
                         </tr>
+                        <tr>
+                            <th><b>User Rating</b></th>
+                            <td><span class = "star-rating" data-score=<%= review.rating %></span></td>
+                        </tr>
+                        
                         
                         
                 </table>

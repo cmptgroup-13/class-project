@@ -21,10 +21,13 @@ module Workspace
     # config.i18n.default_locale = :de
 
     # Do not swallow errors in after_commit/after_rollback callbacks.
+  config.action_mailer.default_url_options = { host: 'sheltered-anchorage-78577.herokuapp.com' }
+  
   config.action_mailer.smtp_settings = {
-      :address    => 'smtp.gmail.com',
-      :domian     => 'mail.google.com',
+      :address    => "smtp.gmail.com",
+      :domian     => "mail.google.com",
       :port       => 587,
+      :authentication => "plain",
       :user_name  => "group13public@gmail.com", #ENV['GMAIL_USERNAME'],
       :password   => "276group13", #ENV['GMAIL_PASSWORD'],
       :enable_starttls_auto => true
