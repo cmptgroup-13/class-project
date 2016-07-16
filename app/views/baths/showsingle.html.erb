@@ -10,7 +10,12 @@
                         
                         <tr>
                             <th><b>Average Rating</b></th>
-                            <td><span class = "star-rating" data-score=<%= @avg_rating %></span></td>
+                            <% if @bath.reviews.count != 0 %>
+                                <td><span class = "star-rating" data-score=<%= @avg_rating %></span></td>
+                            <% else %>
+                                <td>No reviews yet</td>
+                            <% end %>
+                                
                         </tr>
                         
                         <tr>
@@ -43,7 +48,9 @@
                         </tr>
                         <tr>
                             <th><b>User Rating</b></th>
-                            <td><span class = "star-rating" data-score=<%= review.rating %></span></td>
+                            
+                                <td><span class = "star-rating" data-score=<%= review.rating %></span></td>
+
                         </tr>
                         
                         
