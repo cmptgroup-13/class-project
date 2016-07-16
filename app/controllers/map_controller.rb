@@ -1,5 +1,6 @@
 class MapController < ApplicationController
-  before_action :set_long_lat
+  # for now lets just authenticate before checking map
+  before_action :authenticate_user!, :set_long_lat
   
   def index
     @baths = Bath.where(:admin_accept => true)
