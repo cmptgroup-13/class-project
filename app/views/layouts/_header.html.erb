@@ -1,4 +1,134 @@
-<!-- Begin header file -->
+<style>
+.dropbtn {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    cursor: pointer;
+        border: none;
+}
+.dropdown {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+    position: relative;
+    display: inline-block;
+        border: none;
+}
+.dropdown-content {
+    z-index: 3;
+    display: none;
+    position: absolute;
+    min-width: 160px;
+        border: none;
+}
+.dropdown-content a {
+    text-decoration: none;
+    display: block;
+        border: none;
+}
+.dropdown-content a:hover {
+    border: none;
+}
+.dropdown:hover .dropdown-content {
+      border: none;
+    display: block;
+}
+.dropdown:hover .dropbtn {
+      border: none;
+}
+button::-moz-focus-inner {
+    border:0;
+    padding:0;
+    margin-top:-2px;
+    	margin-bottom: -2px;
+}
+</style>
+
+
+
+
+<br>
+<ul class="TopRight">
+      <!--
+          <div class = "myNavElementsLeft"> <li> <%= link_to 'UrineLuck', '#' %>  </li>                  </div>
+      -->
+
+          <div class= "TopRightElementsSpecial"> <li><%= link_to 'CAREERS', newbath_path %></li>         </div>
+          <div class= "TopRightElements"> <li><%= link_to 'CONTACT US', profile_path %></li>                </div>
+          <div class= "TopRightElements"> <li><%= link_to 'INVESTOR', home_path %></li>                      </div>
+          <div class= "TopRightElements"> <%= link_to 'ABOUT US', about_path %> </li>                    </div>
+
+</ul>
+
+
+<br>
+<p></p>
+
+
+
+
+
+
+<div id="logo"><%= link_to image_tag('logo.PNG', :size => "163x100"), home_path %></div>
+
+  <ul class="myNav">
+        <!--
+            <div class = "myNavElementsLeft"> <li> <%= link_to 'UrineLuck', '#' %>  </li>                  </div>
+        -->
+
+
+                    <div class= "myNavElementsRight"> <li><%= link_to 'HOME', home_path %></li>                      </div>
+
+
+                    <div class= "myNavElementsRight">
+                    <li>
+                    <div class="dropdown">
+                      <button class="dropbtn"> <li><%= link_to 'MAP', showmap_path %> </button>
+                      <div class="dropdown-content">
+                        <%= link_to 'Locate Me', single_path %>
+                      </div>
+                    </div>
+                    </li>
+                    </div>
+
+                    <div class= "myNavElementsRight">
+                    <li>
+                    <div class="dropdown">
+                      <button class="dropbtn"> <li><%= link_to 'BATHROOM', newbath_path %> </button>
+                      <div class="dropdown-content">
+                        <%= link_to 'Request to Add A Bathroom', createbath_path %>
+                        <%= link_to 'Your Requested Bathroom', request_path %>
+                        <%= link_to "Bathrooms You've added Bathrooms", showbath_path %>
+                        <%= link_to "All Bathrooms (broken link)", showbath_path %>
+                      </div>
+                    </div>
+                    </li>
+                    </div>
+
+
+                    <% if !user_signed_in? %>
+                    <div class= "myNavElementsLeftRight"> <li><%= link_to 'Log In', new_user_session_path%></li>         </div>
+                    <div class= "myNavElementsLeftRight"> <li><%= link_to 'Sign Up', new_user_registration_path %></li>  </div>
+                    <% else %>
+                    <div class= "myNavElementsLeftRight"><li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li></div>
+
+                    <div class= "myNavElementsLeftRight">
+                    <li>
+                    <div class="dropdown">
+                      <button class="dropbtn"> <li><%= link_to 'Profile', profile_path %> </button>
+                      <div class="dropdown-content">
+                        <%= link_to 'Edit your profile', edit_user_registration_path %>
+                      </div>
+                    </div>
+                    </li>
+                    </div>
+
+
+                    <% end %>
+  </ul>
+<p> </p>
+
+
+
+<!--
 
 <div id="top_banner">
     <% if !user_signed_in? %>
@@ -24,7 +154,8 @@
     </ul>
 </div>
 
-<!--this is for locate me-->
+-->
+
 <%- unless @lat_lng %>
         <script type="text/javascript">
             getGeoLocation();
