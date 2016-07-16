@@ -10,7 +10,10 @@
                             <th><b>Location</b></th>
                             <td><b><%= bath.city %>, <%= bath.address %></b></td>
                         </tr>
-
+                        <tr>
+                            <th><b>Rating</b></th>
+                            <td><b><%= bath.rating %></b></td>
+                        </tr>
                         <tr>
                             <th><b>Distance from me</b></th>
                             <td><b><%= bath.distance_from([current_user.latitude, current_user.longitude]) %> miles away</b></td>

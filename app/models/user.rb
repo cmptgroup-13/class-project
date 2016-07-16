@@ -6,7 +6,7 @@ class User < ActiveRecord::Base
          
   has_many :baths
   has_many :reviews
-
+  ratyrate_rater
   
   geocoded_by :ip_address
   after_validation :geocode,

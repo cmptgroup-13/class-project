@@ -15,13 +15,6 @@ class MainController < ApplicationController
     end
   end
   
-  
-  def practice
-    @lat_lng = cookies[:lat_lng].try(:split, "|")
-    current_user.latitude=@lat_lng[0]
-    current_user.longitude=@lat_lng[1]
-  end
-  
   def show
  
     @user = User.all

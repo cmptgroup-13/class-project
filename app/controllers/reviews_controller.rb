@@ -40,7 +40,7 @@ private
   end
   
   def review_params
-    params.require(:review).permit(:post, :rating)
+    params.require(:review).permit(:post)
   end
 
 end

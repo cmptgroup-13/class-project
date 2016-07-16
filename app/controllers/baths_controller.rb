@@ -1,5 +1,5 @@
 class BathsController < ApplicationController
-  before_action :authenticate_user!, :set_long_lat
+  before_action :authenticate_user!
   
   def new
     
@@ -34,14 +34,7 @@ class BathsController < ApplicationController
   end  
   
   def showsingle
-    @bath = Bath.find(params[:id])
-    @reviews = Review.where(bath_id: @bath)
-    if @reviews.blank?
-     @avg_rating = 0
-    else
-     @avg_rating = @reviews.average(:rating).round(2)
-    end
-       
+     @bath = Bath.find(params[:id])
   end
 
     
@@ -75,7 +68,7 @@ class BathsController < ApplicationController
     
   def bath_params
     params.require(:bath).permit(:city, :address, :province,
-                                   :country, :latitude, :longitude, :admin_accept, :apartment, :image)
+                                   :country, :rating, :latitude, :longitude, :admin_accept, :apartment)
   end 
   
 

@@ -15,10 +15,10 @@
                             <th><b>Location</b></th>
                             <td><b><%= bath.city %>, <%= bath.address %></b></td>
                         </tr>
-                        <!--<tr>-->
-                        <!--    <th><b>Average Rating</b></th>-->
-                        <!--    <td><b><%= rating_for bath, "rating", imdb_avg: true %></b></td>-->
-                        <!--</tr>-->
+                        <tr>
+                            <th><b>Average Rating</b></th>
+                            <td><b><%= rating_for bath, "rating", imdb_avg: true %></b></td>
+                        </tr>
 
                         <tr>
                             <th></b><%= link_to "Leave A Review", new_bath_review_path(bath) %></th>
@@ -50,6 +50,11 @@
                             <th><b>Location</b></th>
                             <td><b><%= bath.city %>, <%= bath.address %></b></td>
                         </tr>
+                        <tr>
+                            <th><b>Rating</b></th>
+                            <td><b><%= bath.rating %></b></td>
+                        </tr>
+                        
                         <tr>
                             <th><b>Longitude</b></th>
                             <td><b><%= bath.longitude %></b></td>
