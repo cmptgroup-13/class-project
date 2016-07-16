@@ -46,7 +46,12 @@
                             <th><b><%= User.find_by_id(review.user_id).name %> </b> </th>
                             <td><%= review.post %></td>
                         </tr>
-                        
+                        <tr>
+                            <th><b>User Rating</b></th>
+                            
+                                <td><span class = "star-rating" data-score=<%= review.rating %></span></td>
+
+                        </tr>
                         
                         
                         
