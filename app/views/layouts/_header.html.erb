@@ -95,10 +95,10 @@ button::-moz-focus-inner {
                     <div class="dropdown">
                       <button class="dropbtn"> <li><%= link_to 'BATHROOM', newbath_path %> </button>
                       <div class="dropdown-content">
-                        <%= if !isAdmin? %>
+                        <% if !isAdmin? %>
                             <%= link_to 'Request to Add A Bathroom', createbath_path %>
                             <%= link_to 'Your Requested Bathroom', request_path %>
-                        <%= else %>
+                        <% else %>
                             <%= link_to 'Add A Bathroom', createbath_path %>
                             <%= link_to 'View Bath Requests', accept_path %>
                         <% end %>
