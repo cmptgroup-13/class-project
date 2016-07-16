@@ -1,0 +1,124 @@
+<!-- Begin about us page -->
+
+<script>
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,2000);
+
+function nextSlide() {
+	slides[currentSlide].className = "slide";
+	currentSlide = (currentSlide+1)%slides.length;
+	slides[currentSlide].className = 'slide showing';
+}
+</script>
+
+<!--
+IMAGE DIMENSIONS ARE 99px by 99px, or 3.49cm by 3.49cm
+-->
+
+<h1>Meet the Creators</h1>
+<br/>
+
+
+<!-- Slide show effect -->
+<ul id="slides" style="display: none;">
+	<li class="slide showing">
+       <img src="images/image1.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
+	<li class="slide">
+       <img src="images/image2.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
+	<li class="slide">
+       <img src="images/image3.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
+</ul>
+
+
+<div class="imgProfile"><%= link_to image_tag('profilePictures/bhatti.png', :size => "99x99") %></div>
+  <div class="borderProfile">
+  <p class="nameProfile">Dallan Bhatti</p>
+  <p class ="titleProfile">Your Title</p>
+  <p>
+   Dallan co-founded UrineLuck in 2016. He acts as a loving father, sister, 
+   cousin, singer and songwriter. Before creating UrineLuck, Dallan spent 
+   several years as a Regional Manager at Dunder-Mifflin is Scranton, PA.
+   At Dunder-Mifflin he maintained the highest sales average of any branch 
+   despite weak economy and obselete product. His career goals include 
+   eventually getting back into the paper sales game.
+    <br/> <br/>
+    Alex holds a PhD in Mathematics from Stanford University and a BA in
+    Computer Science from Harvard University.
+  </p>
+  </div>
+  <br/>
+  <br/>
+
+
+
+
+<div class="imgProfile"><%= link_to image_tag('profilePictures/nguyen.png', :size => "99x99") %></div>
+  <div class="borderProfile">
+  <p class="nameProfile">Alex Nguyen</p>
+  <p class ="titleProfile">Senior Vice President, Chief Operating Officer</p>
+  <p>
+    Alex co-founded UrineLuck in 2016. He acts as Senior Vice President and Chief
+    Operating Officer. Before creating UrineLuck, Alex spent several years as an
+    executive consultant advising small & mid-size technology companies and prior
+    to that was Vice President of Corporate Development at Orange. Alex
+    has over 15 years of experience in OEM, strategic alliances, partnering
+    strategy, product management and corporate development—creating and driving
+    strategies to enter new markets and accelerate market share and revenues.
+    <br/> <br/>
+    Alex holds a PhD in Mathematics from Stanford University and a BA in
+    Computer Science from Harvard University.
+  </p>
+  </div>
+  <br/>
+  <br/>
+
+
+
+  <div class="imgProfile"><%= link_to image_tag('profilePictures/perron.png', :size => "99x99") %></div>
+    <div class="borderProfile">
+    <p class="nameProfile">Dawson Perron</p>
+    <p class ="titleProfile">Your Title</p>
+    <br/>
+    <p>
+      Dawson is currently a student at Simon Fraser University. When not in school
+      he acts as a professional Super Smash Bros player placing 17th at Paragon LA
+      and 49th at Genesis 3 eliminating Mew2King. Best Smash 4 player in BC ranked first
+      on the BC power rankings.
+      <br/> <br/>
+      Dawson holds an Associate of Science degree from Langara College and title for
+      world's best King Dedede in Smash 4.
+    </p>
+    </div>
+    <br/>
+    <br/>
+
+
+    <div class="imgProfile"><%= link_to image_tag('profilePictures/wang.png', :size => "99x99") %></div>
+      <div class="borderProfile">
+      <p class="nameProfile">Dylan Wang</p>
+      <p class ="titleProfile">Your Title</p>
+      <p>
+        Your descripton
+        <br/> <br/>
+        Your Qualifications.
+      </p>
+      </div>
+      <br/>
+      <br/>
+
+      <div class="imgProfile"><%= link_to image_tag('profilePictures/yao.png', :size => "99x99") %></div>
+        <div class="borderProfile">
+        <p class="nameProfile">Yolando Yao</p>
+        <p class ="titleProfile">Your Title</p>
+        <br/>
+        <p>
+          Your descripton
+          <br/> <br/>
+          Your Qualifications.
+        </p>
+        </div>
+        <br/>
+        <br/>
+
+<p> Send all emails to <i>group13public@gmail.com</i> </p>

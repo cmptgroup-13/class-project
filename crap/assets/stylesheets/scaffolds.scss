@@ -1,0 +1,127 @@
+/* Reset everything */
+html, body, div, a {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	font-size: 100%;
+	vertical-align: baseline;
+	text-decoration: none;
+  text-shadow: none;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  font-size: 18px;
+}
+
+body {
+	margin: 25px 100px 25px 100px;
+}
+
+h1, h2 {
+  text-decoration: none;
+  text-shadow: none;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+}
+
+/* Motto */
+#motto {
+	width:70%;
+	padding: 0.3rem;
+	margin: auto;
+	background-color: rgba(0, 0, 0, 0.8);
+	text-align: center;
+}
+
+#motto p {
+  margin: 0.3rem 0 0.3rem 0;
+  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-size: 1.5rem;
+	text-shadow: none;
+	color: white;
+}
+
+
+/*body {
+  background-color: #fff;
+  color: #333;
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  padding: 50px 50px 50px 50px;
+}
+
+p, ol, ul, td {
+  font-family: verdana, arial, helvetica, sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+}
+
+pre {
+  background-color: #eee;
+
+  padding: 10px;
+
+  font-size: 11px;
+}
+
+a {
+  color: #000;
+
+  &:visited {
+    color: #666;
+  }
+
+  &:hover {
+    color: #fff;
+    background-color: #000;
+  }
+}
+
+div {
+  &.field, &.actions {
+    margin-bottom: 10px;
+  }
+}
+
+#notice {
+  color: green;
+}
+
+.field_with_errors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#error_explanation {
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 0;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+
+  h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px;
+    margin-bottom: 0px;
+    background-color: #c00;
+    color: #fff;
+  }
+
+  ul li {
+    font-size: 12px;
+    list-style: square;
+  }
+}
+*/
+
+
+.moveToLeft{
+  width: 50%;
+  float: left;
+
+
+}

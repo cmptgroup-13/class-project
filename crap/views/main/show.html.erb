@@ -1,0 +1,76 @@
+<!-- Begin user profile page -->
+
+<div style="width:100%;margin:auto;padding:none">
+    <div class="col-md-6 col md-offset-3" style="width:100%">
+        <h1>Profile</h1>
+        <% if current_user.role == "female" || current_user.role == "male" %>
+            <table class="table">
+                <tr>
+                    <th>Name</th>
+                    <td><%= current_user.name %></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><%= current_user.email %></td>
+                </tr>
+                <tr>
+                    <th>Role</th>
+                    <td><%= current_user.role %></td>
+                </tr>
+                <tr>
+                    <th>IP Address</th>
+                    <td><%= current_user.current_sign_in_ip %></td>
+                </tr>
+                <tr>
+                    <th>IP Address Current</th>
+                    <td><%= request.ip %></td>
+                </tr>
+                <tr>
+                    <th>Current City</th>
+                    <td><%= request.location.city %></td>
+                </tr>
+            </table>
+
+        <% elsif isAdmin? %>
+            <% for user in  @user do%>
+                <% if user == current_user %>
+                    <table class="table">
+                        <tr>
+                            <th><b>Name</b></th>
+                            <td><b><%= user.name %></b></td>
+                        </tr>
+                        <tr>
+                            <th><b>Email</b></th>
+                            <td><b><%= user.email %></b></td>
+                        </tr>
+                        <tr>
+                            <th><b>Role</b></th>
+                            <td><b><%= user.role %></b></td>
+                        </tr>
+                        <tr>
+                            <td><%= link_to 'Destroy', admin_destroy_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                        </tr>
+                    </table>
+                <% else %>
+                    <table class="table">
+                        <tr>
+                            <th>Name</th>
+                            <td><%= user.name %></td>
+                        </tr>
+                        <tr>
+                            <th>Email</th>
+                            <td><%= user.email %></td>
+                        </tr>
+                        <tr>
+                            <th>Role</th>
+                            <td><%= user.role %></td>
+                        </tr>
+                        <tr>
+                            <td><%= link_to 'Destroy', admin_destroy_user_path(user), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+                        </tr>
+                    </table>
+                <% end %>
+            <% end %>
+        <% end %>
+    </div>
+</div>

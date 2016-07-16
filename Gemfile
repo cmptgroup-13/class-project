@@ -27,7 +27,8 @@ gem 'geocoder'
 gem 'gmaps4rails'
 gem 'ratyrate'
 gem 'carrierwave'
-gem "paperclip", "~> 4.2" 
+gem "paperclip", "~> 4.2"
+gem 'aws-sdk'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
