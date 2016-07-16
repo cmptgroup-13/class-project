@@ -4,7 +4,7 @@
     <p>Your contribution will prevent others from boom shakaraka</p>
 </div>
 
-<%= form_for(@bath) do |f| %>
+<%= form_for @bath, html: {multipart: true} do |f| %>
 
   <% if @bath.errors.any? %>
     <div id="error_explanation">
@@ -43,11 +43,12 @@
           <%= f.label :address %><br />
           <%= f.text_field :address, autofocus: true %>
       </div>
-
+      
       <div class="field">
-        <%= f.label :rating %><br />
-        <%= f.number_field :rating, autofocus: true %>
-    </div>
+          <%= f.label :image %><br />
+          <%= f.file_field :image, autofocus: true %>
+      </div>
+
   
   <% if isAdmin? %>  
     <%= f.submit "Create my bathroom", class: "btn btn-primary" %>

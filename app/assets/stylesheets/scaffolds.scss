@@ -8,18 +8,22 @@ html, body, div, a {
 	vertical-align: baseline;
 	text-decoration: none;
   text-shadow: none;
-  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+  font-family: verdana, arial, helvetica, sans-serif;
   font-size: 18px;
 }
 
-body {
-	margin: 25px 100px 25px 100px;
+html {
+	line-height: 1;
 }
 
 h1, h2 {
   text-decoration: none;
   text-shadow: none;
-  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+  font-family: verdana, arial, helvetica, sans-serif;
+}
+
+body {
+  background-image: image-url("background.jpeg")
 }
 
 /* Motto */
@@ -33,7 +37,7 @@ h1, h2 {
 
 #motto p {
   margin: 0.3rem 0 0.3rem 0;
-  font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
+	font-family: Jura;
 	font-size: 1.5rem;
 	text-shadow: none;
 	color: white;
@@ -117,11 +121,3 @@ div {
   }
 }
 */
-
-
-.moveToLeft{
-  width: 50%;
-  float: left;
-
-
-}

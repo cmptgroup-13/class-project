@@ -1,15 +1,19 @@
+<h2>You Can Help Stop Toilet Related Injuries!</h2>
 
 <p>
 <% if isAdmin? %>
     <%= link_to "View bathroom requests", accept_path %>
 <% end %>
 
-<div class = "hold" style="height:100%">
+<%=  link_to image_tag("bathroom/add.png", :border => 0, :alt => 'Request To Add', :title => 'Request To Add'), createbath_path%>
+<%=  link_to image_tag("bathroom/requests.png", :border => 0, :alt => 'Your Requests', :title => 'Your Requests'), request_path%>
+<%=  link_to image_tag("bathroom/you.png", :border => 0, :alt => 'Your added Bathrooms', :title => 'Your added Bathrooms'), showbath_path%>
+
 <br/>
 </p>
 
-<div class="moveToLeft" style="width:50%; float:left;">
-<h2>You can prevent Bathroom Injuries!</h2>
+
+<h2>Choosing The Right Bathroom Is Important!</h2>
 
 <p>
   Smaller children run the risk of drowning if they fall headfirst into the
@@ -30,36 +34,3 @@
   <a href="https://en.wikipedia.org/wiki/Toilet-related_injuries_and_deaths#Accidental_injuries">(Wikipedia)</a>
 </p>
 <br/>
-</div>
-
-<div class="moveToRight" style="width:50%; float:right; height:100%">
-  <h2>Choosing The Right Bathroom Is Important!</h2>
-
-<ul id="slides">
-	<li class="slide showing">
-       <img src="images/image1.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
-	<li class="slide">
-       <img src="images/image2.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
-	<li class="slide">
-       <img src="images/image3.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
-
-<!--
-	<li class="slide">
-       <img src="landscape.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:right; position:relative; right:45%; text-align:left"> </li>
-	<li class="slide">
-       <img src="landscape.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:right; position:relative; right:45%; text-align:left"> </li>
--->
-</ul>
-</div>
-
-</div>
-<script>
-var slides = document.querySelectorAll('#slides .slide');
-var currentSlide = 0;
-var slideInterval = setInterval(nextSlide,2000);
-function nextSlide(){
-	slides[currentSlide].className = 'slide';
-	currentSlide = (currentSlide+1)%slides.length;
-	slides[currentSlide].className = 'slide showing';
-}
-</script>
