@@ -5,7 +5,7 @@ class MapController < ApplicationController
   def index
     @baths = Bath.where(:admin_accept => true)
     @hash = Gmaps4rails.build_markers(@baths) do |bath, marker|
-      location_link = view_context.link_to  bath.address, showbath_path(bath)
+      location_link = view_context.link_to  bath.address, view_path(bath)
       marker.lat bath.latitude
       marker.lng bath.longitude
       marker.infowindow "<b>#{location_link}</b>"
