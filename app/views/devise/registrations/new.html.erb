@@ -28,8 +28,10 @@
       <div class="form-group">
       <%= label_tag :gender %></br>
        
-       <%= f.radio_button :role, 'male' %>
-       <%= label_tag :role, 'Male' %>
+       <%= f.label :role, class: 'radiobox' do %>
+         <%= f.radio_button :role %>
+         Male
+       <% end %>
 
        <%= f.radio_button :role, 'female'  %>
       <%= f.label :role, 'Female' %>      
@@ -43,3 +45,4 @@
     <%= render "devise/shared/links" %>
   </div>
 </div>
+
