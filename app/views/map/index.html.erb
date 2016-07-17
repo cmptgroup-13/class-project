@@ -7,7 +7,7 @@
     <p>A glance of toilets?</p>
 </div>
 
-<div style="width: 70%; margin: auto">
+<div style="width: 100%; margin: auto">
   <div id="map" style="height: 500px"></div>
 </div>
 
@@ -15,9 +15,9 @@
 
 
 <script type="text/javascript">
-  
 
-  var mapOptions = 
+
+  var mapOptions =
   {
     maxZoom:19,
     minZoom:2,
@@ -32,7 +32,7 @@
     handler.bounds.extendWith(markers_two);
     handler.fitMapToBounds();
   });
-  
-   
- <%= current_user.latitude %> 
+
+
+ <%= current_user.latitude %>
 </script>

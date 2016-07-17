@@ -13,7 +13,9 @@ html, body, div, a {
 }
 
 body {
-	margin: 25px 100px 25px 100px;
+	margin: 25px 75px 25px 75px;
+  min-width:800px; // suppose you want minimun width of 1000px
+  _width: expression( document.body.clientWidth > 800 ? "800px" : "auto" ); /* sets max-width for IE */
 }
 
 h1, h2 {
@@ -24,7 +26,7 @@ h1, h2 {
 
 /* Motto */
 #motto {
-	width:70%;
+	width:100%;
 	padding: 0.3rem;
 	margin: auto;
 	background-color: rgba(0, 0, 0, 0.8);
@@ -32,7 +34,6 @@ h1, h2 {
 }
 
 #motto p {
-  margin: 0.3rem 0 0.3rem 0;
   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
 	font-size: 1.5rem;
 	text-shadow: none;
