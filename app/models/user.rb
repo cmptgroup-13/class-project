@@ -12,8 +12,9 @@ class User < ActiveRecord::Base
   after_validation :geocode,
   :if => lambda{ |obj| obj.ip_address_changed? }
   
-  has_attached_file :image, styles: { large: "600x600>", medium: "300x300>", thumb: "150x150#", mini: "75X75#" }
-  # default_url: lambda { |image| ActionController::Base.helpers.asset_path('poop_thumb.png') }
+  has_attached_file :image, styles: { large: "600x600>", medium: "300x300>", thumb: "150x150#", mini: "75X75#" },
+  #do this!!!!!!!!
+  default_url: lambda { |image| ActionController::Base.helpers.asset_path('poop_:style.png') }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   
   
