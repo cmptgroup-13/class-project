@@ -98,7 +98,6 @@
                                 <%= link_to 'Add A Bathroom', createbath_path %>
                                 <%= link_to 'View Bath Requests', accept_path %>
                             <% end %>
-                            <%= link_to "Bathrooms You've added Bathrooms", showbath_path %>
                             <%= link_to "All Bathrooms", showbath_path %>
                         <% end %>
                       </div>
@@ -158,10 +157,7 @@
 </div>
 
 -->
-
 <div class="clear"></div>
-
-
 <%- unless @lat_lng %>
         <script type="text/javascript">
             getGeoLocation();

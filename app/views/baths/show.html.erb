@@ -2,8 +2,10 @@
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
+<h1>All bathrooms</h1>
+
+
 <% if current_user.role == "female" || current_user.role == "male" %>
-    <h1>These are the bathrooms you have added</h1>
 
     <div class="row" style="width:50%;">
         <div class="col-md-6 col md-offset-3" style="min-width: 450px;">
@@ -15,11 +17,13 @@
                             <td><b><%= bath.city %>, <%= bath.address %></b></td>
                         </tr>
 
+
+
                         <tr style="border-bottom: 1px solid #fff">
-                            <td colspan="2">
+                          <td colspan="2">
                             <div style="text-alighn:left; width:30%; float: left;"><%= link_to " Review ", new_bath_review_path(bath) %></div>
                             <div style="text-align:right; width:30%; float: left;"><%= link_to " View ", view_path(bath) %></div>
-                            </td>
+                          </td>
                         </tr>
 
 
@@ -35,11 +39,12 @@
 
 
 <% elsif isAdmin? %>
-    <h1>These are the bathrooms in the database</h1>
     <% @baths.each do |bath| %>
     <% if bath.admin_accept == true %>
     <div class="row" style="width:50%;">
         <div class="col-md-6 col md-offset-3" style="min-width: 450px;">
+
+
                     <table class="table">
                         <tr>
                             <th><b>Location</b></th>
@@ -58,17 +63,18 @@
                             <th><b>Bath ID</b></th>
                             <td><b><%= bath.id %></b></td>
                         </tr>
+
+
                         <tr style="border-bottom: 1px solid #fff">
-                            <td colspan="2">
+                          <td colspan="2">
                             <div style="text-alighn:left; width:30%; float: left;"><%= link_to " Review ", new_bath_review_path(bath) %></div>
-                            <div style="text-align:center; width:30%; float: left;"><%= link_to " Destroy ", bath, method: :delete, data: { confirm: "You sure?" } %></div>
+                            <div style="text-alighn:left; width:30%; float: left;"><%= link_to "Destroy", bath, method: :delete, data: { confirm: "You sure?" } %></div>
                             <div style="text-align:right; width:30%; float: left;"><%= link_to " View ", view_path(bath) %></div>
-                            </td>
+                          </td>
                         </tr>
 
                     </table>
-                    <div class="clear"></div>
-
+ <div class="clear"></div>
 
 
 
