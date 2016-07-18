@@ -21,6 +21,7 @@ class MapController < ApplicationController
       marker.lng current_user.longitude
       marker.infowindow "<b>#{current_user.name}</b>"
       marker.picture({
+      #"url" => current_user.image.url(:mini), # up to you to pass the proper parameters in the url, I guess with a method from device
       :url => "http://emojistatic.github.io/images/32/1f4a9.png", # up to you to pass the proper parameters in the url, I guess with a method from device
       :width   => 32,
       :height  => 32

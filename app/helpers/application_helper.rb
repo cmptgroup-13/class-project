@@ -46,5 +46,12 @@ module ApplicationHelper
     current_user.save
   end
   
+  # def img_set
+  #   if resource.role == "male"
+  #     resource.image = "/assets/images/boy.png" 
+  #   else
+  #     resource.image = "/assets/images/girl.png"
+  #   end
+  # end
   
 end

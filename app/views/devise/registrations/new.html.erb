@@ -29,12 +29,11 @@
       <%= label_tag :gender %></br>
        
        <%= f.label :role, class: 'radiobox' do %>
-         <%= f.radio_button :role %>
-         Male
+         Male<%= f.radio_button :role, 'male', :checked => true %>
+         Female<%= f.radio_button :role, 'female'  %>
        <% end %>
+       
 
-       <%= f.radio_button :role, 'female'  %>
-      <%= f.label :role, 'Female' %>      
       </div>
       
       <div class="actions">

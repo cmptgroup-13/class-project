@@ -40,7 +40,7 @@ class MainController < ApplicationController
 
     def user_params
       params.require(:user).permit(:name, :email, :password,
-                                   :password_confirmation, :role, :latitude, :longitude)
+                                   :password_confirmation, :role, :latitude, :longitude, :image)
     end
     
     def ip_time
