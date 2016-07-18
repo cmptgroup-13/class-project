@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSSample</title>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+</head>
+<body>
+
+<script type="text/javascript">
+    $(function() {
+        var params = {
+            // Request parameters
+            "q": "Bathroom",
+            "count": "10",
+            "offset": "0",
+            "mkt": "en-us",
+            "safeSearch": "Moderate",
+        };
+      
+        $.ajax({
+            url: "https://api.cognitive.microsoft.com/bing/v5.0/news/search?" + $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","496775ab5d2f40229f3f066233cfa459");
+            },
+            type: "GET",
+            // Request body
+            data: "{body}",
+        })
+        .done(function(data) {
+            alert("hi");
+          //  document.write("test");
+			//document.write(data.value[0].name); //Just a test to make sure it works
+			//How to use:
+			//Data is the object with all the results (the JSON object)
+			//The value array contains all the news articles
+			//you access the fields by doing value[index of article].element
+            //go here to see the fields (try searching something then click json)
+            // https://www.microsoft.com/cognitive-services/en-us/bing-news-search-api
+            
+            //An idea to present these would be to save these to variables and then use ruby code to display them in a div
+            //NOTE: ONLY WORKING LOCALLY SO FAR NOT ON SERVER
+			  
+        })
+        .fail(function() {
+            alert("error");
+        });
+    });
+	
+	
+</script>
+</body>
+News
+</html>
