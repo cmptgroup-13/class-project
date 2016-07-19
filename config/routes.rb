@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
 
 
+  get 'news/index'
+
   get 'baths/new'
 
   get 'baths/create'
@@ -8,6 +10,8 @@ Rails.application.routes.draw do
   get 'baths/index'
 
   get 'baths/show'
+  
+  get 'news' => 'news#index'
 
   get 'main/index'
   get 'newbath' => 'baths#index'
@@ -19,6 +23,7 @@ Rails.application.routes.draw do
   get 'locations', to: 'main#nearme'
   get 'practice', to: 'main#practice'
   root 'main#index'
+  #root 'news#index'
   resources :postsrake
 
   devise_for :users, controllers: { registrations: "registrations" }

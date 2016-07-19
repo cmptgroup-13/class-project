@@ -29,6 +29,8 @@ gem 'ratyrate'
 gem 'carrierwave'
 gem "paperclip", "~> 4.2"
 gem 'aws-sdk', '<2.0'
+gem 'bing-search'
+gem 'searchbing'
 
 group :development, :test do
   gem 'sqlite3',     '1.3.9'
