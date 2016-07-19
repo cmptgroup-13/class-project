@@ -9,7 +9,7 @@
                 <% if current_user.image != nil %>
                     <tr>
                         <th>Profile Picture</th>
-                        <td><%= image_tag current_user.image.url(:thumb) %></td>
+                        <td><%= image_tag current_user.image.url(:mini) %></td>
                     </tr>
                 <% end %>
                 <tr>
