@@ -2,6 +2,10 @@ class MainController < ApplicationController
   before_action :authenticate_user!
   def index
   end
+  
+  def directions
+    @bath = Bath.find(params[:id])
+  end
 
   def single
    

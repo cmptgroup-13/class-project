@@ -48,6 +48,7 @@ Rails.application.routes.draw do
   get 'request' => 'baths#requests'
   get 'baths/showsingle/:id' => 'baths#showsingle', :as => :view
   get 'reviews/new/:id' => 'reviews#new', :as => :gob
+  get 'main/directions/:id' => 'main#directions', :as => :direction
   # # get 'newreview', to: 'baths#newreview'
   # get 'showreview', to: 'baths#showreview'
   # get '/reviews/new/:id' => 'reviews#new', :as => :newreview
