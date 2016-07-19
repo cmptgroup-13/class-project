@@ -13,7 +13,7 @@ class User < ActiveRecord::Base
   :if => lambda{ |obj| obj.ip_address_changed? }
   
   has_attached_file :image, styles: { large: "600x600>", medium: "300x300>", thumb: "150x150#", mini: "75X75#" },
-  default_url: lambda { |image| ActionController::Base.helpers.asset_path('poop_:style.png') }
+  default_url: lambda { |image| ActionController::Base.helpers.asset_path('poop_:style-0fea5b6fb1b99d9e6f9152c309980e700f52ce2efcf2c2dfa36ba258fe6e954d.png') }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
   
   
