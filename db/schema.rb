@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160714220046) do
+ActiveRecord::Schema.define(version: 20160718035238) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -105,6 +105,10 @@ ActiveRecord::Schema.define(version: 20160714220046) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "ip_address"
+    t.string   "image_file_name"
+    t.string   "image_content_type"
+    t.integer  "image_file_size"
+    t.datetime "image_updated_at"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

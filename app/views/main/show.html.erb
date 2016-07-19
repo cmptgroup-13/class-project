@@ -6,6 +6,12 @@
         <h1>Profile</h1>
         <% if current_user.role == "female" || current_user.role == "male" %>
             <table class="table">
+                <% if current_user.image != nil %>
+                    <tr>
+                        <th>Profile Picture</th>
+                        <td><%= image_tag current_user.image.url(:thumb) %></td>
+                    </tr>
+                <% end %>
                 <tr>
                     <th>Name</th>
                     <td><%= current_user.name %></td>
