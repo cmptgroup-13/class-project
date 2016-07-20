@@ -17,6 +17,9 @@ class ReviewsController < ApplicationController
   end
 
   def edit
+    @review = Review.find(params[:id])
+    @bath = Bath.find(params[:bath_id])
+      
   end
 
   def show
@@ -25,6 +28,14 @@ class ReviewsController < ApplicationController
   end
 
   def update
+    @review = Review.find(params[:id])
+    @bath = Bath.find(params[:bath_id])
+    if @review.update_attributes(review_params)
+      flash[:success] = "Profile updated"
+      redirect_to view_path(@bath)
+    else
+      render 'edit'
+    end
   end
   
   # def destroy

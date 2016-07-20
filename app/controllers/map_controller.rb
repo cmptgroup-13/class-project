@@ -4,19 +4,20 @@ class MapController < ApplicationController
   
   def index
     @baths = Bath.where(:admin_accept => true)
-    @baths.each do |bath|
-      @reviews = Review.where(bath_id: bath)
-      if @reviews.blank?
-        @avg_rating = 0
-      else
-        @avg_rating = @reviews.average(:rating).round(2)
-      end
-    end  
+    # @baths.each do |bath|
+    #   @reviews = Review.where(bath_id: bath)
+    #   if @reviews.blank?
+    #     @avg_rating = 0
+    #   else
+    #     @avg_rating = @reviews.average(:rating).round(2)
+    #   end
+    # end  
     @hash = Gmaps4rails.build_markers(@baths) do |bath, marker|
       location_link = view_context.link_to  bath.address, view_path(bath)
       marker.lat bath.latitude
       marker.lng bath.longitude
-      marker.infowindow "<b>#{location_link}</b><b>#{@avg_rating}</b>"
+      marker.infowindow "<b>#{location_link}</b>"
+      #<b>#{@avg_rating}</b>
       marker.picture({
       :url => "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|FF0000|000000", # up to you to pass the proper parameters in the url, I guess with a method from device
       :width   => 32,

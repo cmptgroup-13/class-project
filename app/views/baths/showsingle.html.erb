@@ -28,7 +28,11 @@
 
                         <tr>
                             <th><b>Images</b></th>
-                            <td><%= image_tag @bath.image.url(:thumb) %></td>
+                            <% if @bath.image_file_name != nil %>
+                                <td><%= image_tag @bath.image.url(:thumb) %></td>
+                            <% else %>
+                                <td>No images added yet!</td>
+                            <% end %>
                         </tr>
   </table>
 
@@ -110,6 +114,9 @@
                   <tr>
                       <td><%= image_tag current_user.image.url(:mini) %></td>
                       <td style="width:750px"><%= review.post %></td>
+                      <% if current_user.id == review.user_id %>
+                          <td><%= link_to "Edit your review", edit_bath_review_path(@bath.id, current_user.id) %></td>
+                      <% end %>
                   </tr>
 
                 </table>
