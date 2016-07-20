@@ -1,16 +1,15 @@
 Project by: Dallan Bhatti, Alex Nguyen, Dawson Perron, Dylan Wang, Yolanda Yao
 
-For latest WORKING version visit: https://cmpt276group13project.herokuapp.com/
-
+For latest WORKING version visit: https://cmpt276group13project.herokuapp.com/</br>
 For latest TESTING version visit: https://my-test-app-cmpt276.herokuapp.com/
 
-Admin User:
-Username: myadmin@sfu.ca
-Password: password
+Admin User:</br>
+Username: myadmin@sfu.ca </br>
+Password: password</br>
 
-Normal User
-Username: myuser@sfu.ca
-Password: password
+Normal User</br>
+Username: myuser@sfu.ca</br>
+Password: password</br>
 
 # UrineLuck
 
