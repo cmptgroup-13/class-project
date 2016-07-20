@@ -112,11 +112,12 @@
                   </tr>
 
                   <tr>
-                      <td><%= image_tag current_user.image.url(:mini) %></td>
+                      <td><%= image_tag User.find_by_id(review.user_id).image.url(:mini) %></td>
                       <td style="width:750px"><%= review.post %></td>
                       <% if current_user.id == review.user_id %>
-                          <td><%= link_to "Edit your review", edit_bath_review_path(@bath.id, current_user.id) %></td>
+                          <td><%= link_to '<button type="button">Edit your review</button>'.html_safe, edit_bath_review_path(@bath.id, current_user.id) %></td>
                       <% end %>
+                      
                   </tr>
 
                 </table>

@@ -41,6 +41,7 @@ class BathsController < ApplicationController
     else
      @avg_rating = @reviews.average(:rating).round(2)
     end
+    
        
   end
 
@@ -69,6 +70,7 @@ class BathsController < ApplicationController
 
   def destroy
     Bath.find(params[:id]).destroy
+    
     redirect_to newbath_path, notice: "Bathroom Deleted"
   end
   private
