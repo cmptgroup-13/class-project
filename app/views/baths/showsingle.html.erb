@@ -100,19 +100,17 @@
 
                     <% @bath.reviews.each do |review| %>
 
-                <table class="table">
-                        <tr>
-                            <th><b><%= User.find_by_id(review.user_id).name %> </b> </th>
-                            <td><%= review.post %></td>
-                        </tr>
-                        <tr>
-                            <th><b>User Rating</b></th>
+                <table class="table" style='width: 80%;'>
 
-                                <td><span class = "star-rating" data-score=<%= review.rating %></span></td>
+                  <tr>
+                      <th><b><%= User.find_by_id(review.user_id).name %> </b> </th>
+                      <td><span class = "star-rating" data-score=<%= review.rating %></span></td>
+                  </tr>
 
-                        </tr>
-
-
+                  <tr>
+                      <td><%= image_tag current_user.image.url(:mini) %></td>
+                      <td style="width:750px"><%= review.post %></td>
+                  </tr>
 
                 </table>
 
