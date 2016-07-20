@@ -43,11 +43,12 @@ Rails.application.routes.draw do
   resources :baths do
     # delete 'baths/showsingle/:id' => 'baths#showsingle', :via => :get
     resources :reviews
+      get 'reviews/:id' => 'reviews#destroy', :via => :delete, :as => :review_destroy
   end
 
   get 'accept' => 'baths#edit'
   get 'request' => 'baths#requests'
-  get 'review_destroy' => 'reviews#delete'
+  # get 'review_destroy' => 'reviews#delete'
   get 'baths/showsingle/:id' => 'baths#showsingle', :as => :view
   get 'reviews/new/:id' => 'reviews#new', :as => :gob
   get 'main/directions/:id' => 'main#directions', :as => :direction
