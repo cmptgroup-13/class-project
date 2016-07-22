@@ -12,6 +12,7 @@ gem 'bcrypt'
 gem 'devise'
 gem 'omniauth'
 gem 'omniauth-facebook'
+gem 'figaro'
 
 gem 'sdoc',         '0.4.0', group: :doc
 gem 'autoprefixer-rails'
