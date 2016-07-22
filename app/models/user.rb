@@ -65,7 +65,7 @@ class User < ActiveRecord::Base
     
 
   validates :name, presence: true, length: { maximum: 50 }, uniqueness: { case_sensitive: false }
-  validates :role, presence: true
-  validates_inclusion_of :role,  :in => %w(male female admin), :message => "extension %s is not included in the list"
+  # validates :role, presence: true
+  # validates_inclusion_of :role,  :in => %w(male female admin), :message => "extension %s is not included in the list"
   after_validation :id, presence: true
 end
