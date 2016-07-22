@@ -13,10 +13,11 @@ class ReviewsController < ApplicationController
     redirect_to view_path(@bath)
   end
 
-  def delete
-  end
 
   def edit
+    @review = Review.find(params[:id])
+    @bath = Bath.find(params[:bath_id])
+      
   end
 
   def show
@@ -25,12 +26,22 @@ class ReviewsController < ApplicationController
   end
 
   def update
+    @review = Review.find(params[:id])
+    @bath = Bath.find(params[:bath_id])
+    if @review.update_attributes(review_params)
+      flash[:success] = "Profile updated"
+      redirect_to view_path(@bath)
+    else
+      render 'edit'
+    end
   end
   
-  # def destroy
-  #   Review.find(params[:id]).destroy
-  #   redirect_to view_path, notice: "Review Deleted"
-  # end
+  def destroy
+    @bath = Bath.find_by_id(params[:bath_id])
+    @review= Review.find(params[:id])
+    @review.destroy
+    redirect_to view_path(@bath), notice: "Review Deleted"
+  end
 
 
 private

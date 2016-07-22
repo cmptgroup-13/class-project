@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160718035238) do
+ActiveRecord::Schema.define(version: 20160722192250) do
 
   create_table "average_caches", force: :cascade do |t|
     t.integer  "rater_id"
@@ -44,6 +44,7 @@ ActiveRecord::Schema.define(version: 20160718035238) do
 
   add_index "baths", ["user_id", "created_at"], name: "index_baths_on_user_id_and_created_at"
 
+<<<<<<< HEAD
   create_table "overall_averages", force: :cascade do |t|
     t.integer  "rateable_id"
     t.string   "rateable_type"
@@ -76,6 +77,17 @@ ActiveRecord::Schema.define(version: 20160718035238) do
   end
 
   add_index "rating_caches", ["cacheable_id", "cacheable_type"], name: "index_rating_caches_on_cacheable_id_and_cacheable_type"
+=======
+  create_table "identities", force: :cascade do |t|
+    t.string   "provider"
+    t.string   "uid"
+    t.integer  "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  add_index "identities", ["user_id"], name: "index_identities_on_user_id"
+>>>>>>> 1205f5d61eedeb3cfcba1223f25a087f5988e8d9
 
   create_table "reviews", force: :cascade do |t|
     t.text     "post"

@@ -28,7 +28,11 @@
 
                         <tr>
                             <th><b>Images</b></th>
-                            <td><%= image_tag @bath.image.url(:thumb) %></td>
+                            <% if @bath.image_file_name != nil %>
+                                <td><%= image_tag @bath.image.url(:thumb) %></td>
+                            <% else %>
+                                <td>No images added yet!</td>
+                            <% end %>
                         </tr>
   </table>
 
@@ -100,19 +104,22 @@
 
                     <% @bath.reviews.each do |review| %>
 
-                <table class="table">
-                        <tr>
-                            <th><b><%= User.find_by_id(review.user_id).name %> </b> </th>
-                            <td><%= review.post %></td>
-                        </tr>
-                        <tr>
-                            <th><b>User Rating</b></th>
+                <table class="table" style='width: 80%;'>
 
-                                <td><span class = "star-rating" data-score=<%= review.rating %></span></td>
+                  <tr>
+                      <th><b><%= User.find_by_id(review.user_id).name %> </b> </th>
+                      <td><span class = "star-rating" data-score=<%= review.rating %></span></td>
+                  </tr>
 
-                        </tr>
-
-
+                  <tr>
+                      <td><%= image_tag User.find_by_id(review.user_id).image.url(:mini) %></td>
+                      <td style="width:750px"><%= review.post %></td>
+                      <% if current_user.id == review.user_id %>
+                          <td><%= link_to '<button type="button">Edit your review</button>'.html_safe, edit_bath_review_path(@bath.id, review.id) %>
+                          <%= link_to "Destroy", bath_review_destroy_path(@bath, review), method: :delete, data: { confirm: "You sure?" } %></div></td>
+                      <% end %>
+                      
+                  </tr>
 
                 </table>
 
