@@ -48,7 +48,7 @@ class User < ActiveRecord::Base
     self.email && self.email !~ TEMP_EMAIL_REGEX
   end
          
-  has_many :identities, dependant: :destroy
+  has_many :identities, dependent: :destroy
   has_many :baths
   has_many :reviews
 
