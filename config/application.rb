@@ -29,7 +29,7 @@ module Workspace
       :port       => 587,
       :authentication => "plain",
       :user_name  => "group13public@gmail.com", #ENV['GMAIL_USERNAME'],
-      :password   => "276group13", #ENV['GMAIL_PASSWORD'],
+      :password   => "lzyurbkvxlwnchdx", #ENV['GMAIL_PASSWORD'],
       :enable_starttls_auto => true
     
   
