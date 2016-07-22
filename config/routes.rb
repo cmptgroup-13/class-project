@@ -26,8 +26,9 @@ Rails.application.routes.draw do
   #root 'news#index'
   resources :postsrake
 
-  devise_for :users, controllers: { registrations: "registrations" }
+  devise_for :users, controllers: { registrations: "registrations", omniauth_callbacks: 'omniauth_callbacks' }
   match 'users/:id' => 'main#destroy', :via => :delete, :as => :admin_destroy_user
+ 
 
   get 'change', to: 'registrations#change'
 

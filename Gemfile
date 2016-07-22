@@ -10,6 +10,8 @@ gem 'jbuilder',     '2.2.3'
 gem 'bootstrap-sass'
 gem 'bcrypt'
 gem 'devise'
+gem 'omniauth'
+gem 'omniauth-facebook'
 
 gem 'sdoc',         '0.4.0', group: :doc
 gem 'autoprefixer-rails'
