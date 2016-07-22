@@ -14,7 +14,13 @@
         <%= f.text_field :email, :autofocus => true, :value => '', class: 'form-control input-lg', placeholder: 'Example: email@me.com' %>
         <p class="help-block">Please confirm your email address. No spam.</p>
       </div>
-    </div>
+      
+      <div class="form-group">
+      <%= label_tag :gender %></br>
+      <%= f.label :role, class: 'radiobox' do %>
+         Male<%= f.radio_button :role, 'male', :checked => true %>
+         Female<%= f.radio_button :role, 'female'  %>
+     </div>
     <div class="actions">
       <%= f.submit 'Continue', :class => 'btn btn-primary' %>
     </div>
