@@ -4,6 +4,7 @@ class CreateIdentities < ActiveRecord::Migration
       t.string :provider
       t.string :uid
       t.references :user, index: true, foreign_key: true
+      
 
       t.timestamps null: false
     end
