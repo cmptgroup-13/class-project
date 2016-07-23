@@ -15,13 +15,17 @@
 
 
 <script type="text/javascript">
+  // Bounds for Canada
+  var strictBounds = new google.maps.LatLngBounds(
+    new google.maps.LatLng(41.45, -141),
+    new google.maps.LatLng(72, -65.55));
 
 
   var mapOptions =
   {
     maxZoom:19,
     minZoom:2,
-
+    bounds: strictBounds,
   };
 
   handler = Gmaps.build('Google');
@@ -32,6 +36,27 @@
     handler.bounds.extendWith(markers_two);
     handler.fitMapToBounds();
   });
+  
+
+  
+   google.maps.event.addListener(map, 'dragend', function () {
+     if (strictBounds.contains(map.getCenter())) return;
+
+     var c = map.getCenter(),
+         x = c.lng(),
+         y = c.lat(),
+         maxX = strictBounds.getNorthEast().lng(),
+         maxY = strictBounds.getNorthEast().lat(),
+         minX = strictBounds.getSouthWest().lng(),
+         minY = strictBounds.getSouthWest().lat();
+
+     if (x < minX) x = minX;
+     if (x > maxX) x = maxX;
+     if (y < minY) y = minY;
+     if (y > maxY) y = maxY;
+
+     map.setCenter(new google.maps.LatLng(y, x));
+ });
 
 
  <%= current_user.latitude %>

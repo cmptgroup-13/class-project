@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(version: 20160722212535) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-  
+
   create_table "baths", force: :cascade do |t|
     t.string   "address"
     t.string   "city"
