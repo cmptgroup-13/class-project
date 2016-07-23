@@ -19,28 +19,20 @@
 
   <div class="row">
     <div class="col-md-6 col-md-offset-3 well">
-      <div class="field">
-        <%= f.label :country, "Country" %>
-        <%= f.select "country", options_for_select(countries_list) %>
-      </div>
 
-      <div class="field">
-          <%= f.label :province, "Province/State" %><br />
-          <%= f.select "province", options_for_select(us_states) %>
-      </div>
+        <%= f.input :country, label: "Country" do %>
+          <%= f.select "country", options_for_select(countries_list) %>
+        <% end %>
 
-      <div class="field">
+          <%= f.input :province, label: "Province/State" do %>
+            <%= f.select :province, options_for_select(us_states) %>
+          <% end %>
+        
           <%= f.input :city, autofocus: true %>
-      </div>
 
-      <div class="field">
-          <%= f.label :apartment, "Apartment/Suite number if applicable" %><br />
-          <%= f.text_field :apartment, autofocus: true %>
-      </div>
+          <%= f.input :apartment, placeholder: "Apartment/Suite number if applicable" %>
 
-      <div class="field">
           <%= f.input :address, autofocus: true %>
-      </div>
 
       <div class="field">
           <%= f.label :image %><br />
@@ -49,9 +41,9 @@
 
 
   <% if isAdmin? %>
-    <%= f.submit "Create my bathroom", class: "btn btn-default" %>
+    <%= f.button :submit, "Create my bathroom", class: "btn btn-success" %>
   <% else %>
-    <%= f.submit "Send bathroom request", class: "btn btn-default" %>
+    <%=  f.button :submit, "Send bathroom request", class: "btn btn-sucess" %>
   <% end %>
 
     </div>

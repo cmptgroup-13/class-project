@@ -2,46 +2,25 @@
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3 well">
-    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= devise_error_messages! %>
         <% if f.object.password_required? %>
-        <%= f.label :name %>
-        <%= f.text_field :name %>
+        <%= f.input :name %>
     
+        <%= f.input :email, placeholder: 'user@domain.com' %>
     
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true %>
-      
-    
-        
-          <%= f.label :password %>
-          <% if @minimum_password_length %>
-          <em>(<%= @minimum_password_length %> characters minimum)</em>
-          <% end %><br />
-          <%= f.password_field :password, autocomplete: "off" %>
-        
-      
-       
-          <%= f.label :password_confirmation %><br />
-          <%= f.password_field :password_confirmation, autocomplete: "off" %>
-        <% end %>
-      <div class="form-group">
-      <%= label_tag :gender %></br>
-       
-       <%= f.label :role, class: 'radiobox' do %>
-         Male<%= f.radio_button :role, 'male', :checked => true %>
-         Female<%= f.radio_button :role, 'female'  %>
-       <% end %>
-       
+        <%= f.input :password %>
 
-      </div>
-      
-      <div class="actions">
-        <%= f.submit "Sign up" %>
-      </div>
-    <% end %>
+        <%= f.input :password_confirmation %>
+        
+        <%= f.input :role, :collection => [['Male', 'male'], ['Female', 'female']], placeholder: 'Please select your gender' %>
+ 
+        <%= f.button :submit, class: "btn btn-success" %> 
+
+        <% end %>
     
     <%= render "devise/shared/links" %>
   </div>
 </div>
 
+<% end %>

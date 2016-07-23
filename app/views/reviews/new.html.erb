@@ -1,18 +1,14 @@
-<%= form_for [@bath, @review] do |f| %>
-    
+<h1>Create Review</h1>
+<%= simple_form_for [@bath, @review] do |f| %>
+    <div class="container">
     <div class="field">  
-        <%= f.label :rating %><br />
-        <%= f.radio_button :rating, 1 %> 1
-        <%= f.radio_button :rating, 2 %> 2
-        <%= f.radio_button :rating, 3 %> 3
-        <%= f.radio_button :rating, 4 %> 4
-        <%= f.radio_button :rating, 5 %> 5
+        <%= f.input :rating, :collection => 1..5, placeholder: 'Rate this bathroom from 1-5' %>
     </div>
     
     <div class="field">  
-        <%= f.label :post %><br />
-        <%= f.text_area :post %>
-        
+        <%= f.input :post, as: :text %>
     </div>
-        <%= f.submit "Create my review" %> 
+     <br> 
+        <%= f.button :submit, class: "btn btn-success" %> 
 <% end %>
+</div>
