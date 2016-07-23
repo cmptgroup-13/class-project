@@ -22,12 +22,14 @@ Rails.application.routes.draw do
   get 'about', to: 'main#aboutus'
   get 'locations', to: 'main#nearme'
   get 'practice', to: 'main#practice'
-  root 'main#index'
-  #root 'news#index'
+  #root 'main#index'
+  root 'news#index'
   resources :postsrake
 
-  devise_for :users, controllers: { registrations: "registrations" }
+  devise_for :users, controllers: { registrations: "registrations", omniauth_callbacks: 'omniauth_callbacks' }
   match 'users/:id' => 'main#destroy', :via => :delete, :as => :admin_destroy_user
+  match '/users/:id/finish_signup' => 'users#finish_signup', via: [:get, :patch], :as => :finish_signup
+ 
 
   get 'change', to: 'registrations#change'
 
@@ -41,13 +43,17 @@ Rails.application.routes.draw do
 
 
   resources :baths do
+    # delete 'baths/showsingle/:id' => 'baths#showsingle', :via => :get
     resources :reviews
+      get 'reviews/:id' => 'reviews#destroy', :via => :delete, :as => :review_destroy
   end
 
   get 'accept' => 'baths#edit'
   get 'request' => 'baths#requests'
+  # get 'review_destroy' => 'reviews#delete'
   get 'baths/showsingle/:id' => 'baths#showsingle', :as => :view
   get 'reviews/new/:id' => 'reviews#new', :as => :gob
+  get 'main/directions/:id' => 'main#directions', :as => :direction
   # # get 'newreview', to: 'baths#newreview'
   # get 'showreview', to: 'baths#showreview'
   # get '/reviews/new/:id' => 'reviews#new', :as => :newreview
