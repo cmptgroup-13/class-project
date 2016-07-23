@@ -61,11 +61,3 @@ private
 
 end
 
-
-
-        <!--<%= form_tag locations_path, :method => :get do %>-->
-        <!--    <p>-->
-        <!--        <%= text_field_tag :search, params[:search], placeholder: "address, city, province/state" %>-->
-        <!--        <%= submit_tag "Search", :name => nil %>-->
-        <!--    </p>-->
-        <!--<% end %>-->
