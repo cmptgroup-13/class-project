@@ -14,7 +14,8 @@ gem 'omniauth'
 gem 'omniauth-facebook'
 gem 'figaro'
 gem 'open_uri_redirections'
-
+gem 'bootstrap-social-rails'
+gem 'font-awesome-rails'
 
 gem 'sdoc',         '0.4.0', group: :doc
 gem 'autoprefixer-rails'
