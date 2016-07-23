@@ -29,16 +29,8 @@ class User < ActiveRecord::Base
       # user.image = auth.info.image
       user.email = auth.info.email
       # user.role = auth.extra.raw.gender
-      if auth.info.image.present?
-        image_url = process_uri(auth.info.image)
-        user.update_attribute(:image, URI.parse(image_url))
-      end
-      
     end
   end
-  
-  
-  
   
   def self.new_with_session(params, session)
     if session["devise.user_attributes"]
@@ -68,17 +60,4 @@ class User < ActiveRecord::Base
 
   validates_inclusion_of :role,  :in => %w(male female admin), :message => "must be male or female"
   after_validation :id, presence: true
-
-  private
-  
-    def process_uri(uri)
-      require 'open-uri'
-      require 'open_uri_redirections'
-      open(uri, :allow_redirections => :safe) do |r|
-        r.base_uri.to_s
-      end
-    end
-
-
-
 end
