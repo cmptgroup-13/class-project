@@ -33,9 +33,11 @@ class MainController < ApplicationController
   
   def destroy
     @user = User.find(params[:id])
-
-
-    if @user.destroy
+    @reviews = @user.reviews.all
+    @reviews.each do |review|
+      review.destroy
+    end
+    if @user.destroy && @reviews.count == 0 
         redirect_to profile_path, notice: "User deleted."
     end
   end

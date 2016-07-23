@@ -15,6 +15,7 @@ gem 'omniauth-facebook'
 gem 'figaro'
 gem 'open_uri_redirections'
 
+
 gem 'sdoc',         '0.4.0', group: :doc
 gem 'autoprefixer-rails'
 gem "responders"

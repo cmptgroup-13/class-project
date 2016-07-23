@@ -4,7 +4,7 @@
     <p>Your contribution will prevent others from boom shakaraka</p>
 </div>
 
-<%= form_for @bath, html: {multipart: true} do |f| %>
+<%= simple_form_for @bath, html: {multipart: true, class: 'form-horizontal'} do |f| %>
 
   <% if @bath.errors.any? %>
     <div id="error_explanation">
@@ -30,8 +30,7 @@
       </div>
 
       <div class="field">
-          <%= f.label :city %><br />
-          <%= f.text_field :city, autofocus: true %>
+          <%= f.input :city, autofocus: true %>
       </div>
 
       <div class="field">
@@ -40,8 +39,7 @@
       </div>
 
       <div class="field">
-          <%= f.label :address %><br />
-          <%= f.text_field :address, autofocus: true %>
+          <%= f.input :address, autofocus: true %>
       </div>
 
       <div class="field">
