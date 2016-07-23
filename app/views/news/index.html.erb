@@ -1,39 +1,5 @@
-<script type="text/javascript">
-    $(function() {
-        var params = {
-            // Request parameters
-            "q": "Bathroom",
-            "count": "10",
-            "offset": "0",
-            "mkt": "en-us",
-            "safeSearch": "Moderate",
-        };
-      
-        $.ajax({
-            url: "https://api.cognitive.microsoft.com/bing/v5.0/news/search?" + $.param(params),
-            beforeSend: function(xhrObj){
-                // Request headers
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","496775ab5d2f40229f3f066233cfa459");
-            },
-            type: "GET",
-            // Request body
-            data: "{body}",
-        })
-        .done(function(data) {
-            document.getElementById("news").innerHTML = data.value[0].name;
-            //So for this data.value is the array of news articles
-            //You could use ruby code to loop through all the articles
-            //There are a bunch of attributes you can go here and click json to see what they are for each article
-            //https://www.microsoft.com/cognitive-services/en-us/bing-news-search-api
-			  
-        })
-        .fail(function() {
-            alert("error");
-        });
-    });
-	
-	
-</script>
 
-<div id="news">
-</div>
+<center>
+    <h1>NEWS</h1>
+<div id="news" style="height: 600px; overflow: auto;"></div>
+</center>

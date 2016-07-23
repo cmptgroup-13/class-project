@@ -22,8 +22,8 @@ Rails.application.routes.draw do
   get 'about', to: 'main#aboutus'
   get 'locations', to: 'main#nearme'
   get 'practice', to: 'main#practice'
-  root 'main#index'
-  #root 'news#index'
+  #root 'main#index'
+  root 'news#index'
   resources :postsrake
 
   devise_for :users, controllers: { registrations: "registrations", omniauth_callbacks: 'omniauth_callbacks' }
