@@ -12,12 +12,12 @@
         <%= f.input :password %>
 
         <%= f.input :password_confirmation %>
-        
+        <% end %>
         <%= f.input :role, :collection => [['Male', 'male'], ['Female', 'female']], placeholder: 'Please select your gender' %>
  
         <%= f.button :submit, class: "btn btn-success" %> 
 
-        <% end %>
+        
     
     <%= render "devise/shared/links" %>
   </div>
