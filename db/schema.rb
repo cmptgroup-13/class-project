@@ -21,16 +21,7 @@ ActiveRecord::Schema.define(version: 20160722212535) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
-  create_table "average_caches", force: :cascade do |t|
-    t.integer  "rater_id"
-    t.integer  "rateable_id"
-    t.string   "rateable_type"
-    t.float    "avg",           null: false
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
+  
   create_table "baths", force: :cascade do |t|
     t.string   "address"
     t.string   "city"
