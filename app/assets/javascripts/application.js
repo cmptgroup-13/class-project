@@ -104,3 +104,48 @@ function setGeoCookie(position) {
 }
 
 
+
+    $(function() {
+        var params = {
+            // Request parameters
+            "q": "Bathroom",
+            "count": "20",
+            "offset": "0",
+            "mkt": "en-us",
+            "safeSearch": "Moderate",
+        };
+      
+        $.ajax({
+            url: "https://api.cognitive.microsoft.com/bing/v5.0/news/search?" + $.param(params),
+            beforeSend: function(xhrObj){
+                // Request headers
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","496775ab5d2f40229f3f066233cfa459");
+            },
+            type: "GET",
+            // Request body
+            data: "{body}",
+        })
+        .done(function(data) {
+     //       var html = data.value[0].image.thumbnail.contentUrl;
+            var html = "<table border='1' cellpadding='5' cellspacing='5'><caption>Monthly savings</caption>";
+            for(i=0; i<20; i++)
+            {
+              html += "<tr><td><a href='" + data.value[i].url + "'><img src=" + data.value[i].image.thumbnail.contentUrl +" border=3 height=100 width=100></img></a></td>"
+              html += "<td><b><a href='" + data.value[i].url +"'>" + data.value[i].name + "</a></b><br>" + data.value[i].description + "</td></tr>";
+            }
+            html += "</table>";
+            document.getElementById("news").innerHTML += html;
+            //So for this data.value is the array of news articles
+            //You could use ruby code to loop through all the articles
+            //There are a bunch of attributes you can go here and click json to see what they are for each article
+            //https://www.microsoft.com/cognitive-services/en-us/bing-news-search-api
+			  
+        })
+        .fail(function() {
+            alert("error");
+        });
+    });
+	
+
+
+
