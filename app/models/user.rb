@@ -57,7 +57,7 @@ class User < ActiveRecord::Base
   
 
   validates :name, presence: true, length: { maximum: 50 }, uniqueness: { case_sensitive: false }
-
+  validates :role, presence: true
   validates_inclusion_of :role,  :in => %w(male female admin), :message => "must be male or female"
   after_validation :id, presence: true
 end
