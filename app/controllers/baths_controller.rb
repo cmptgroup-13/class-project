@@ -41,8 +41,6 @@ class BathsController < ApplicationController
     else
      @avg_rating = @reviews.average(:rating).round(2)
     end
-    
-       
   end
 
     

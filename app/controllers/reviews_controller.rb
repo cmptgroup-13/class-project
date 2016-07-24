@@ -24,6 +24,13 @@ class ReviewsController < ApplicationController
     @bath = Bath.find(params[:bath_id])
       
   end
+  
+  def reported
+    @reviews = Review.all
+    @bath = Bath.find_by_id(params[:bath_id])
+  end
+  
+
 
   def show
     
@@ -56,7 +63,7 @@ private
   end
   
   def review_params
-    params.require(:review).permit(:post, :rating)
+    params.require(:review).permit(:post, :rating, :report)
   end
 
 end

@@ -44,18 +44,24 @@ Rails.application.routes.draw do
   resources :baths do
     # delete 'baths/showsingle/:id' => 'baths#showsingle', :via => :get
     resources :reviews
-      get 'reviews/:id' => 'reviews#destroy', :via => :delete, :as => :review_destroy
+    get 'reviews/:id' => 'reviews#destroy', :via => :delete, :as => :review_destroy  
+
   end
+  
+  resources :reviews do
+    resources :flags
+  end
+  
+
 
   get 'accept' => 'baths#edit'
   get 'request' => 'baths#requests'
   # get 'review_destroy' => 'reviews#delete'
   get 'baths/showsingle/:id' => 'baths#showsingle', :as => :view
-  get 'reviews/new/:id' => 'reviews#new', :as => :gob
   get 'main/directions/:id' => 'main#directions', :as => :direction
-  # # get 'newreview', to: 'baths#newreview'
-  # get 'showreview', to: 'baths#showreview'
-  # get '/reviews/new/:id' => 'reviews#new', :as => :newreview
+  get 'reviews/reported' => 'reviews#reported', :as => :report
+
+
 
   # clean this file up by seeing which "get"'s can be replaced with their equavilant rake routes name
 

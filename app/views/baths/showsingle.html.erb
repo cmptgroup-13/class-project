@@ -117,7 +117,12 @@
                       <% if current_user.id == review.user_id %>
                           <td><%= link_to '<button type="button">Edit your review</button>'.html_safe, edit_bath_review_path(@bath.id, review.id) %>
                           <%= link_to "Destroy", bath_review_destroy_path(@bath, review), method: :delete, data: { confirm: "You sure?" } %></div></td>
+                      <% elsif review.flags.find_by_user_id(current_user.id) == nil  %>
+                          <td><%= link_to "Report", new_review_flag_path(review) %></td>
+                      <% elsif current_user.flags.find_by_user_id(current_user.id) != nil %>
+                          <td><font color="red">Reported</font></td>
                       <% end %>
+                      
                       
                   </tr>
 
