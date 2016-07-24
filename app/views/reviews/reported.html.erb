@@ -1,2 +1,8 @@
+<h1>These are all the reviews that have been multiply reported by users</h1>
 
+<% @reviews.each do |review| %>
 
+<%= User.find_by_id(review.user_id) %>
+<%= review.post %><br>
+
+<% end %>

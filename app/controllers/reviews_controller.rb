@@ -26,14 +26,10 @@ class ReviewsController < ApplicationController
   end
   
   def reported
-    @reviews = Review.all
-    @bath = Bath.find_by_id(params[:bath_id])
+    @reviews = Review.where(:flag.count > 5)
   end
-  
-
 
   def show
-    
     @reviews = @bath.reviews.all
   end
 

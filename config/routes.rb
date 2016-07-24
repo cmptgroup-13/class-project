@@ -44,7 +44,8 @@ Rails.application.routes.draw do
   resources :baths do
     # delete 'baths/showsingle/:id' => 'baths#showsingle', :via => :get
     resources :reviews
-    get 'reviews/:id' => 'reviews#destroy', :via => :delete, :as => :review_destroy  
+    get 'reviews/:id' => 'reviews#destroy', :via => :delete, :as => :review_destroy
+    get 'reviews/reported/:id' => 'reviews#reported', :as => :report
 
   end
   
@@ -59,7 +60,7 @@ Rails.application.routes.draw do
   # get 'review_destroy' => 'reviews#delete'
   get 'baths/showsingle/:id' => 'baths#showsingle', :as => :view
   get 'main/directions/:id' => 'main#directions', :as => :direction
-  get 'reviews/reported' => 'reviews#reported', :as => :report
+ 
 
 
 
