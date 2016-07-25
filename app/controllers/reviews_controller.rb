@@ -26,7 +26,9 @@ class ReviewsController < ApplicationController
   end
   
   def reported
-    @reviews = Review.where(:flag.count > 5)
+    @reviews = Review.where("flag_count >= 5", params[:flag_count])
+    @baths = Bath.all
+    # Record.count('date', :distinct => true)
   end
 
   def show

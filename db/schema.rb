@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160722192250) do
+ActiveRecord::Schema.define(version: 20160725170842) do
 
   create_table "baths", force: :cascade do |t|
     t.string   "address"
@@ -34,6 +34,19 @@ ActiveRecord::Schema.define(version: 20160722192250) do
 
   add_index "baths", ["user_id", "created_at"], name: "index_baths_on_user_id_and_created_at"
 
+  create_table "flags", force: :cascade do |t|
+    t.integer  "review_id",  default: 1
+    t.integer  "user_id",    default: 1
+    t.string   "reason"
+    t.integer  "count"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "flags", ["review_id"], name: "index_flags_on_review_id"
+  add_index "flags", ["user_id", "review_id"], name: "index_flags_on_user_id_and_review_id", unique: true
+  add_index "flags", ["user_id"], name: "index_flags_on_user_id"
+
   create_table "identities", force: :cascade do |t|
     t.string   "provider"
     t.string   "uid"
@@ -51,6 +64,7 @@ ActiveRecord::Schema.define(version: 20160722192250) do
     t.integer  "bath_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer  "flag_count"
   end
 
   add_index "reviews", ["user_id", "bath_id", "created_at"], name: "index_reviews_on_user_id_and_bath_id_and_created_at"
@@ -77,6 +91,8 @@ ActiveRecord::Schema.define(version: 20160722192250) do
     t.string   "image_content_type"
     t.integer  "image_file_size"
     t.datetime "image_updated_at"
+    t.string   "provider"
+    t.string   "uid"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true

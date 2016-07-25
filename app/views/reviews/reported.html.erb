@@ -2,7 +2,9 @@
 
 <% @reviews.each do |review| %>
 
-<%= User.find_by_id(review.user_id) %>
+<%= User.find_by_id(review.user_id).name %>
 <%= review.post %><br>
+<%= link_to "Destroy", bath_review_destroy_path(review.bath_id, review), method: :delete, data: { confirm: "You sure?" } %></div></td>
+
 
 <% end %>

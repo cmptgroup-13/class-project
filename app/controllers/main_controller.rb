@@ -13,9 +13,9 @@ class MainController < ApplicationController
   
   def nearme
     if params[:search].present?
-      @baths = Bath.near(params[:search], 50)
+      @baths = Bath.near(params[:search], 50).where(:admin_accept => true)
     end  
-      @baths = Bath.near([current_user.latitude, current_user.longitude], 10)
+      @baths = Bath.near([current_user.latitude, current_user.longitude], 10).where(:admin_accept => true)
     
   end
   

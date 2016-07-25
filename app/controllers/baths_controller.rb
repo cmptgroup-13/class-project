@@ -67,9 +67,15 @@ class BathsController < ApplicationController
   
 
   def destroy
-    Bath.find(params[:id]).destroy
+    @bath = Bath.find(params[:id])
+    @reviews = @bath.reviews.all
+    @reviews.each do |review|
+      review.destroy
+    end
     
-    redirect_to newbath_path, notice: "Bathroom Deleted"
+    if @reviews.count == 0 && @bath.destroy  
+        redirect_to newbath_path, notice: "Bathroom Deleted"
+    end
   end
   private
     

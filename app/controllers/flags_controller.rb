@@ -6,12 +6,13 @@ class FlagsController < ApplicationController
     
     def create 
         @review = Review.find(params[:review_id])
-        @bath = Bath.find_by_id(params[@review.bath_id])
+        @bath = Bath.find_by_id!(@review.bath_id)
         @flag = @review.flags.build(flag_params)
         @flag.user_id = current_user.id
         if @flag.save
           flash[:success] = "Flagged as inapproriate"
-          redirect_to showbath_path
+          @review.increment!(:flag_count, 1)
+          redirect_to view_path(@bath)
         else
           flash[:danger] = "Unable to create flag"
           render 'new'

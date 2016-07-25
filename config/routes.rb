@@ -45,7 +45,7 @@ Rails.application.routes.draw do
     # delete 'baths/showsingle/:id' => 'baths#showsingle', :via => :get
     resources :reviews
     get 'reviews/:id' => 'reviews#destroy', :via => :delete, :as => :review_destroy
-    get 'reviews/reported/:id' => 'reviews#reported', :as => :report
+    
 
   end
   
@@ -54,7 +54,7 @@ Rails.application.routes.draw do
   end
   
 
-
+  get 'report' => 'reviews#reported'
   get 'accept' => 'baths#edit'
   get 'request' => 'baths#requests'
   # get 'review_destroy' => 'reviews#delete'
