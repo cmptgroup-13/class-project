@@ -1,10 +1,27 @@
 <h1>These are all the reviews that have been multiply reported by users</h1>
-
 <% @reviews.each do |review| %>
+<div class="container">
+    <div class="row" style="width:50%">
+        <div class="col-md-6 col md-offset-3" style="min-width: 450px">
+            <table class="table">
+                <tr>
+                    <th><b>Reported User Name: </b></th>
+                    <td><%= User.find_by_id(review.user_id).name %></td>
+                </tr>
+                <tr>
+                    <th><b>Reported Post: </b></th>
+                    <td><%= review.post %></td>
+                </tr>
+                <tr>
+                <th><%= button_to('DESTROY', bath_review_destroy_path(review.bath_id, review), method: :delete, data: { confirm: "You sure?" }, :class => 'btn btn-danger')  %></th>
+                </tr>
+                <hr>
+            </table>
+        </div>
 
-<%= User.find_by_id(review.user_id).name %>
-<%= review.post %><br>
-<%= link_to "Destroy", bath_review_destroy_path(review.bath_id, review), method: :delete, data: { confirm: "You sure?" } %></div></td>
+        
+    </div>
 
+</div>
 
 <% end %>

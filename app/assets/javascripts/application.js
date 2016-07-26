@@ -142,7 +142,7 @@ function setGeoCookie(position) {
 			  
         })
         .fail(function() {
-            alert("error");
+            // alert("error");
         });
     });
 	

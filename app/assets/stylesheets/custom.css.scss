@@ -83,4 +83,13 @@ input {
     text-align: left;
  }
  
- 
+
+.centerize {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.table tbody>tr>td.vert-align{
+    vertical-align: middle;
+}

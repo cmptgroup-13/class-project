@@ -30,7 +30,8 @@ class BathsController < ApplicationController
   end
 
   def show
-      @baths = Bath.all
+      # @baths = Bath.all
+        @baths = Bath.paginate(page: params[:page], per_page: 5)
   end  
   
   def showsingle
@@ -57,6 +58,8 @@ class BathsController < ApplicationController
     @bath = Bath.find(params[:id])
     if @bath.update_attributes(bath_params)
     render 'edit'
+    else 
+      render home_path
     end
 
   end

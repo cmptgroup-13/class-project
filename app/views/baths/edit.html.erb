@@ -9,46 +9,42 @@
 
                     <table class="table">
                         <tr>
-                            <th><b>Address</b></th>
-                            <td><b><%= bath.address %></b></td>
+                            <th><b></b>Address</b></th>
+                            <td><%= bath.address %></td>
                         </tr>
                         <tr>
                             <th><b>City</b></th>
-                            <td><b><%= bath.city %></b></td>
+                            <td><%= bath.city %></td>
                         </tr>
                         <tr>
                             <th><b>Province/State</b></th>
-                            <td><b><%= bath.province %></b></td>
+                            <td><%= bath.province %></td>
                         </tr>
                         <tr>
                             <th><b>Country</b></th>
-                            <td><b><%= bath.country %></b></td>
+                            <td><%= bath.country %></td>
                         </tr>
                         <tr>
-                            <th><b>Longitude</b></th>
-                            <td><b><%= bath.longitude %></b></td>
+                            <th><b><b>Longitude</b></th>
+                            <td><%= bath.longitude %></td>
                         </tr>
 
                         <tr>
-                            <th><b>Latitude</b></th>
-                            <td><b><%= bath.latitude %></b></td>
+                            <th><b><b>Latitude</b></th>
+                            <td><%= bath.latitude %></td>
                         </tr>
 
                         <tr>
-                           <td><%= form_for(bath) do |f| %>
-                                <div class="field">
-                                 <%= f.label :admin_accept, class: 'checkbox' do %>
-                                     <%= f.check_box :admin_accept %>
-                                     Accept
-                                 <% end %>
-                                </div>
-                            <%= f.submit "Submit", class: "button small radius" %>
-                            <% end %></td>
-                        </tr>
+                           <td><%= form_for bath do |t| %>
+                                 <%= t.hidden_field :admin_accept, :value => true %>
+                                 <%= t.submit 'Accept', class: 'btn btn-success' %>
+                               <% end %>
 
-                        <tr>
-                            <th><%= link_to "Destroy", bath, method: :delete, data: { confirm: "You sure?" } %></th>
-                        </tr>
+                            <!--i dont know how to center this-->
+                            <div class="centerize">
+                                <th><%= button_to('Destroy', bath, method: :delete, data: { confirm: "You sure?" }, :class => 'btn btn-danger')  %></th>
+                            </div>
+                        </td>
                     </table>
 
 

@@ -28,7 +28,8 @@ class MainController < ApplicationController
   
   def show
  
-    @user = User.all
+    # @user = User.all
+    @user = User.paginate(page: params[:page], per_page: 5)
   end
   
   def destroy
