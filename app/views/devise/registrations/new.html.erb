@@ -16,11 +16,10 @@
         <%= f.input :role, :collection => [['Male', 'male'], ['Female', 'female']], placeholder: 'Please select your gender' %>
  
         <%= f.button :submit, class: "btn btn-success" %> 
-
+      <% end %><br>
         
     
     <%= render "devise/shared/links" %>
   </div>
 </div>
 
-<% end %>
