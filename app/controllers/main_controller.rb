@@ -13,10 +13,10 @@ class MainController < ApplicationController
   
   def nearme
     if params[:search].present?
-      @baths = Bath.near(params[:search], 50)
-    else
-      @baths = Bath.all
-    end
+      @baths = Bath.near(params[:search], 50).where(:admin_accept => true)
+    end  
+      @baths = Bath.near([current_user.latitude, current_user.longitude], 10).where(:admin_accept => true)
+    
   end
   
   
@@ -28,14 +28,17 @@ class MainController < ApplicationController
   
   def show
  
-    @user = User.all
+    # @user = User.all
+    @user = User.paginate(page: params[:page], per_page: 5)
   end
   
   def destroy
     @user = User.find(params[:id])
-
-
-    if @user.destroy
+    @reviews = @user.reviews.all
+    @reviews.each do |review|
+      review.destroy
+    end
+    if @user.destroy && @reviews.count == 0 
         redirect_to profile_path, notice: "User deleted."
     end
   end

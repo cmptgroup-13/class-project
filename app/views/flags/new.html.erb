@@ -1,0 +1,12 @@
+<h1>Can you please give your reason for reporting this review</h1>
+
+<%= simple_form_for [@review, @flag] do |f| %>
+
+    <div class="container">
+    <div class="field">  
+        <%= f.input :reason, as: :text %>
+    </div>
+
+    <%= f.button :submit, "Submit Complaint", class: "btn btn-success" %> 
+<% end %>
+</div>

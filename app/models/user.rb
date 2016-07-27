@@ -10,6 +10,7 @@ class User < ActiveRecord::Base
 
   has_many :baths
   has_many :reviews
+  has_many :flags
 
   
   geocoded_by :ip_address
@@ -28,6 +29,7 @@ class User < ActiveRecord::Base
       user.name = auth.info.name
       # user.image = auth.info.image
       user.email = auth.info.email
+      # user.role = auth.extra.raw.gender
     end
   end
   
@@ -56,7 +58,7 @@ class User < ActiveRecord::Base
   
 
   validates :name, presence: true, length: { maximum: 50 }, uniqueness: { case_sensitive: false }
-  # validates :role, presence: true
-  # validates_inclusion_of :role,  :in => %w(male female admin), :message => "extension %s is not included in the list"
+  validates :role, presence: true
+  validates_inclusion_of :role,  :in => %w(male female admin), :message => "must be male or female"
   after_validation :id, presence: true
 end

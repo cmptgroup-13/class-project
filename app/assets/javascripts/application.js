@@ -109,7 +109,7 @@ function setGeoCookie(position) {
         var params = {
             // Request parameters
             "q": "Bathroom",
-            "count": "20",
+            "count": "1",
             "offset": "0",
             "mkt": "en-us",
             "safeSearch": "Moderate",
@@ -119,7 +119,7 @@ function setGeoCookie(position) {
             url: "https://api.cognitive.microsoft.com/bing/v5.0/news/search?" + $.param(params),
             beforeSend: function(xhrObj){
                 // Request headers
-                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","496775ab5d2f40229f3f066233cfa459");
+                xhrObj.setRequestHeader("Ocp-Apim-Subscription-Key","78710ec53b0b4566b191e0996d6e8445");
             },
             type: "GET",
             // Request body
@@ -128,7 +128,7 @@ function setGeoCookie(position) {
         .done(function(data) {
      //       var html = data.value[0].image.thumbnail.contentUrl;
             var html = "<table border='1' cellpadding='5' cellspacing='5'><caption>Monthly savings</caption>";
-            for(i=0; i<20; i++)
+            for(i=0; i<1; i++)
             {
               html += "<tr><td><a href='" + data.value[i].url + "'><img src=" + data.value[i].image.thumbnail.contentUrl +" border=3 height=100 width=100></img></a></td>"
               html += "<td><b><a href='" + data.value[i].url +"'>" + data.value[i].name + "</a></b><br>" + data.value[i].description + "</td></tr>";
@@ -142,7 +142,7 @@ function setGeoCookie(position) {
 			  
         })
         .fail(function() {
-            alert("error");
+            // alert("error");
         });
     });
 	
