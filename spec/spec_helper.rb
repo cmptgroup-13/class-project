@@ -105,6 +105,7 @@ RSpec.configure do |config|
   require File.expand_path("../../config/environment", __FILE__)
   require 'rspec/rails'
   require 'capybara/rails' ### ADD THIS LINEAR
+  require 'support/factory_girl'
   
   config.include Capybara::DSL
   
