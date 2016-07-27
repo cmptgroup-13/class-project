@@ -9,8 +9,13 @@ class ReviewsController < ApplicationController
   def create
     @review = @bath.reviews.build(review_params)
     @review.user_id = current_user.id
-    @review.save
-    redirect_to view_path(@bath)
+    if @review.save
+      flash[:success] = "Review created"
+      redirect_to view_path(@bath)
+    else
+      flash[:danger] = "Unable to create review"
+      render 'new'
+    end
   end
 
 
@@ -19,9 +24,14 @@ class ReviewsController < ApplicationController
     @bath = Bath.find(params[:bath_id])
       
   end
+  
+  def reported
+    @reviews = Review.where("flag_count >= 2", params[:flag_count])
+    @baths = Bath.all
+    # Record.count('date', :distinct => true)
+  end
 
   def show
-    
     @reviews = @bath.reviews.all
   end
 
@@ -51,7 +61,8 @@ private
   end
   
   def review_params
-    params.require(:review).permit(:post, :rating)
+    params.require(:review).permit(:post, :rating, :report)
   end
 
 end
+

@@ -30,7 +30,8 @@ class BathsController < ApplicationController
   end
 
   def show
-      @baths = Bath.all
+      # @baths = Bath.all
+        @baths = Bath.paginate(page: params[:page], per_page: 5)
   end  
   
   def showsingle
@@ -41,8 +42,6 @@ class BathsController < ApplicationController
     else
      @avg_rating = @reviews.average(:rating).round(2)
     end
-    
-       
   end
 
     
@@ -59,6 +58,8 @@ class BathsController < ApplicationController
     @bath = Bath.find(params[:id])
     if @bath.update_attributes(bath_params)
     render 'edit'
+    else 
+      render home_path
     end
 
   end
@@ -69,9 +70,15 @@ class BathsController < ApplicationController
   
 
   def destroy
-    Bath.find(params[:id]).destroy
+    @bath = Bath.find(params[:id])
+    @reviews = @bath.reviews.all
+    @reviews.each do |review|
+      review.destroy
+    end
     
-    redirect_to newbath_path, notice: "Bathroom Deleted"
+    if @reviews.count == 0 && @bath.destroy  
+        redirect_to newbath_path, notice: "Bathroom Deleted"
+    end
   end
   private
     

@@ -10,6 +10,8 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
+ *= require bootstrap-social
+ *= require font-awesome
  *= require_tree .
  *= require_self
  */
@@ -246,3 +248,10 @@
   .table>thead>tr>th, .table>thead>tr>td, .table>tbody>tr>th, .table>tbody>tr>td, .table>tfoot>tr>th, .table>tfoot>tr>td
     {border:0px solid #fff;
       border-bottom: 1px solid #eee}
+
+
+.search-img {
+width: 50px;
+height: 50px;
+border: 0 none;
+}

@@ -11,22 +11,13 @@
 
 
 <body> <!--style="	width:100%;height:100%;  "> -->
+  <%= render 'layouts/messages' %>
   <%= render 'layouts/header' %>
 
-    <!--<div class="holdme">-->
-    <!--
-    <% if user_signed_in? %>
-
-      <p>Hello, <%= current_user.name %> - <%= link_to "Sign_out", destroy_user_session_path, :method => 'delete' %></p>
-      
-
-    <% end %>
-  -->
 
       <%= yield %>
       
-      <div class="notice"><%= notice %></div>
-      <div class="alert"><%= alert %></div>
+
       <%= render 'layouts/footer' %>
 
     <!--</div>-->
