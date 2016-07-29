@@ -340,3 +340,11 @@ As the developer of UrineLuck, it is important to ensure the confidentiality of 
 ### Planned Layout
 
 github.com/cmptgroup-13/class-project/tree/master/Draft_For_Site_Design
+
+
+
+
+
+
+
+### ADD AN IMAGE CLASS FOR BATHROOM IF YOU HAVE TIME!!!!!
