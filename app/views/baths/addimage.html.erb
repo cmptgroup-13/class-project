@@ -1,0 +1,11 @@
+<h2>Add your image</h2>
+<div class="row" >
+    <div class="col-md-6 col-md-offset-3" style="min-width: 450px">
+        <%= simple_form_for @bath, html: {multipart: true, class: 'form-horizontal'} do |f| %>
+            <%= f.label :image %><br />
+            <%= f.file_field :image, autofocus: true %>
+            
+            <%= f.button :submit, "Add Image", class: "btn btn-success" %>
+        <% end %>
+    </div>
+</div>

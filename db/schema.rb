@@ -47,16 +47,6 @@ ActiveRecord::Schema.define(version: 20160725170842) do
   add_index "flags", ["user_id", "review_id"], name: "index_flags_on_user_id_and_review_id", unique: true
   add_index "flags", ["user_id"], name: "index_flags_on_user_id"
 
-  create_table "identities", force: :cascade do |t|
-    t.string   "provider"
-    t.string   "uid"
-    t.integer  "user_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  add_index "identities", ["user_id"], name: "index_identities_on_user_id"
-
   create_table "reviews", force: :cascade do |t|
     t.text     "post"
     t.integer  "rating"
