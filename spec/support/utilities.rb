@@ -32,6 +32,6 @@ include ApplicationHelper
         click_on("Log in")
     end
     
-    def current_user
-        @current_user ||= user_from_remember_token
-    end
+    # def current_user
+    #     @current_user ||= user_from_remember_token
+    # end
