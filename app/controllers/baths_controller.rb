@@ -43,8 +43,7 @@ class BathsController < ApplicationController
      @avg_rating = @reviews.average(:rating).round(2)
     end
   end
-
-    
+  
   def edit
     if isAdmin?
       @baths = Bath.where(:admin_accept => false)
@@ -85,7 +84,11 @@ class BathsController < ApplicationController
   def bath_params
     params.require(:bath).permit(:city, :address, :province,
                                    :country, :latitude, :longitude, :admin_accept, :apartment, :image)
-  end 
+  end
+  
+  def image_param
+    params.require(:bath).permit(:image)
+  end
   
 
   
