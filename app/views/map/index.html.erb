@@ -16,12 +16,11 @@
 
 
 <script type="text/javascript">
-  // Bounds for Canada
-  var strictBounds = new google.maps.LatLngBounds(
-    new google.maps.LatLng(41.45, -141),
-    new google.maps.LatLng(72, -65.55));
-
-
+ // Bounds for North America
+ var strictBounds = new google.maps.LatLngBounds(
+ new google.maps.LatLng(28.70, -127.50),
+ new google.maps.LatLng(48.85, -55.90));
+ 
   var mapOptions =
   {
     maxZoom:19,
@@ -36,12 +35,30 @@
     handler.bounds.extendWith(markers);
     handler.bounds.extendWith(markers_two);
     handler.fitMapToBounds();
-  });
-  
+    handler.getMap().setZoom(9);
+    
+    if (strictBounds.contains(handler.getMap().getCenter())) return;
+    var c = handler.getMap().getCenter(),
+        x = c.lng(),
+        y = c.lat(),
+        maxX = strictBounds.getNorthEast().lng(),
+        maxY = strictBounds.getNorthEast().lat(),
+        minX = strictBounds.getSouthWest().lng(),
+        minY = strictBounds.getSouthWest().lat();
 
-  
-   google.maps.event.addListener(map, 'dragend', function () {
+    if (x < minX) x = minX;
+    if (x > maxX) x = maxX;
+    if (y < minY) y = minY;
+    if (y > maxY) y = maxY;
+
+    handler.getMap().setCenter(new google.maps.LatLng(y, x));
+  });
+
+ // Listen for the dragend event
+ google.maps.event.addListener(map, 'dragend', function () {
      if (strictBounds.contains(map.getCenter())) return;
+
+     // We're out of bounds - Move the map back within the bounds
 
      var c = map.getCenter(),
          x = c.lng(),
@@ -58,6 +75,5 @@
 
      map.setCenter(new google.maps.LatLng(y, x));
  });
-
 
 </script>
