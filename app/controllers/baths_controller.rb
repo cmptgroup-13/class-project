@@ -2,7 +2,6 @@ class BathsController < ApplicationController
   before_action :authenticate_user!, :set_long_lat
   
   def new
-    
     @bath = Bath.new
   end
 
@@ -56,7 +55,7 @@ class BathsController < ApplicationController
     @baths = Bath.where(:admin_accept => false)
     @bath = Bath.find(params[:id])
     if @bath.update_attributes(bath_params)
-    render 'edit'
+      render 'edit'
     else 
       render home_path
     end
@@ -83,15 +82,9 @@ class BathsController < ApplicationController
     
   def bath_params
     params.require(:bath).permit(:city, :address, :province,
-                                   :country, :latitude, :longitude, :admin_accept, :apartment, :image)
+                                   :country, :latitude, :longitude, :admin_accept, :apartment)
   end
-  
-  def image_param
-    params.require(:bath).permit(:image)
-  end
-  
 
-  
   def count_state_match?
     current_baths.country == "CAN"
   end

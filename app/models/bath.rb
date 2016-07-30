@@ -2,8 +2,9 @@ class Bath < ActiveRecord::Base
 
 belongs_to :user
 has_many :reviews
-has_attached_file :image, styles: { large: "600x600>", medium: "300x300>", thumb: "150x150#" }
-validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+has_many :bath_images, :dependent => :destroy
+
+accepts_nested_attributes_for :bath_images, :reject_if => lambda { |t| t['bath_image'].nil? }
 
 validates :user_id, presence: true
 geocoded_by :location

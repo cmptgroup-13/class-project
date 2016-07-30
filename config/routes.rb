@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
 
+ 
   get 'news/index'
 
   get 'baths/new'
@@ -53,6 +54,9 @@ Rails.application.routes.draw do
     resources :flags
   end
   
+  resources :baths do 
+    resources :bath_images
+  end
 
   get 'report' => 'reviews#reported'
   get 'accept' => 'baths#edit'
