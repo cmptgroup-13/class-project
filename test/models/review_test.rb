@@ -25,4 +25,27 @@ class ReviewTest < ActiveSupport::TestCase
     assert_not @review.valid?
   end
   
+  test "review should not exceed 300 characters" do
+    
+    @review.post= ""
+    (0..300).each do |i|
+      @review.post += "c"
+    end
+    assert_not @review.valid?
+  end 
+  
+  test "review rating should not be below 0" do
+    @review.rating = "-1"
+    assert_not @review.valid?
+  end
+  
+  test "review rating should not be above 5" do
+    @review.rating = "6"
+    assert_not @review.valid?
+  end
+  
+  test "review rating should be a number" do
+    @review.rating = "a"
+    assert_not @review.valid?
+  end
 end
