@@ -39,7 +39,7 @@ class ReviewsController < ApplicationController
     @review = Review.find(params[:id])
     @bath = Bath.find(params[:bath_id])
     if @review.update_attributes(review_params)
-      flash[:success] = "Profile updated"
+      flash[:success] = "Review updated"
       redirect_to view_path(@bath)
     else
       render 'edit'

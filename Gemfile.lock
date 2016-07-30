@@ -61,7 +61,7 @@ GEM
     binding_of_caller (0.7.3.pre1)
       debug_inspector (>= 0.0.1)
     bing-search (2.0.0)
-    bootstrap-sass (3.3.6)
+    bootstrap-sass (3.3.7)
       autoprefixer-rails (>= 5.2.1)
       sass (>= 3.3.4)
     bootstrap-social-rails (4.12.0)
@@ -102,6 +102,7 @@ GEM
     concurrent-ruby (1.0.2)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
+    database_cleaner (1.5.3)
     debug_inspector (0.0.2)
     debugger-linecache (1.2.0)
     devise (4.2.0)
@@ -129,7 +130,7 @@ GEM
     formtastic (3.1.4)
       actionpack (>= 3.2.13)
     geocoder (1.3.7)
-    globalid (0.3.6)
+    globalid (0.3.7)
       activesupport (>= 4.1.0)
     gmaps4rails (2.1.2)
     guard (2.14.0)
@@ -193,7 +194,7 @@ GEM
     omniauth (1.3.1)
       hashie (>= 1.2, < 4)
       rack (>= 1.0, < 3)
-    omniauth-facebook (3.0.0)
+    omniauth-facebook (4.0.0)
       omniauth-oauth2 (~> 1.2)
     omniauth-oauth2 (1.4.0)
       oauth2 (~> 1.0)
@@ -257,7 +258,7 @@ GEM
       rspec-core (~> 3.5.0)
       rspec-expectations (~> 3.5.0)
       rspec-mocks (~> 3.5.0)
-    rspec-core (3.5.1)
+    rspec-core (3.5.2)
       rspec-support (~> 3.5.0)
     rspec-expectations (3.5.0)
       diff-lcs (>= 1.2.0, < 2.0)
@@ -342,6 +343,7 @@ DEPENDENCIES
   capybara
   carrierwave
   coffee-rails (= 4.1.0)
+  database_cleaner
   devise
   factory_girl_rails
   figaro
@@ -363,7 +365,7 @@ DEPENDENCIES
   rails_log_stdout!
   ratyrate
   responders
-  rspec-rails
+  rspec-rails (~> 3.0)
   sass-rails (= 5.0.2)
   sdoc (= 0.4.0)
   searchbing

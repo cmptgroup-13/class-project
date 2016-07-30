@@ -3,50 +3,46 @@
 <div id="motto">
     <p>Please fill in all required fields to add your bathroom</p>
 </div>
-
-<%= simple_form_for @bath, html: {multipart: true, class: 'form-horizontal'} do |f| %>
-
-  <% if @bath.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@bath.errors.count, "error") %> prohibited this post from being saved:</h2>
-      <ul>
-        <% @bath.errors.full_messages.each do |message| %>
-          <li><%= message %></li>
-        <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="row">
-    <div class="col-md-6 col-md-offset-3 well">
-
-        <%= f.input :country, label: "Country" do %>
-          <%= f.select "country", options_for_select(countries_list) %>
-        <% end %>
-
-          <%= f.input :province, label: "Province/State" do %>
-            <%= f.select :province, options_for_select(us_states) %>
-          <% end %>
-        
-          <%= f.input :city, autofocus: true %>
-
-          <%= f.input :apartment, placeholder: "Apartment/Suite number if applicable" %>
-
-          <%= f.input :address, autofocus: true %>
-
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 well">
+    <%= simple_form_for @bath, html: {multipart: true, class: 'form-horizontal'} do |f| %>
+      <% if @bath.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@bath.errors.count, "error") %> prohibited this post from being saved:</h2>
+          <ul>
+            <% @bath.errors.full_messages.each do |message| %>
+              <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+  
+      <%= f.input :country, label: "Country" do %>
+        <%= f.select "country", options_for_select(countries_list) %>
+      <% end %>
+  
+      <%= f.input :province, label: "Province/State" do %>
+        <%= f.select :province, options_for_select(us_states) %>
+      <% end %>
+    
+      <%= f.input :city, autofocus: true %>
+  
+      <%= f.input :apartment, placeholder: "Apartment/Suite number if applicable" %>
+  
+      <%= f.input :address, autofocus: true %>
+  
       <div class="field">
           <%= f.label :image %><br />
           <%= f.file_field :image, autofocus: true %>
       </div><br>
-
-
-  <% if isAdmin? %>
-    <%= f.button :submit, "Create my bathroom", class: "btn btn-success" %>
-  <% else %>
-    <%=  f.button :submit, "Send bathroom request", class: "btn btn-success" %>
-  <% end %>
-
-    </div>
+  
+      <% if isAdmin? %>
+        <%= f.button :submit, "Create my bathroom", class: "btn btn-success" %>
+      <% else %>
+        <%=  f.button :submit, "Send bathroom request", class: "btn btn-success" %>
+      <% end %>
+    <% end %>
   </div>
+</div>
 
-<% end %>
+
