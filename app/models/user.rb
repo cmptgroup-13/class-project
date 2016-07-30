@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   has_many :baths
   has_many :reviews
   has_many :flags
+  has_many :bath_images
 
   
   geocoded_by :ip_address

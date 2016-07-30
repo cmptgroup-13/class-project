@@ -1,0 +1,14 @@
+<h1>Add your own photo</h1>
+<div class="row">
+    <div class="col-md-6 col-md-offset-3 well">
+        <%= simple_form_for [@bath, @bath_image] do |f| %>
+            <div class="field">
+                <%= f.label :photo %><br />
+                <%= f.file_field :photo, autofocus: true %>
+            </div><br>
+            
+            
+            <%=  f.button :submit, "Submit photo", class: "btn btn-success" %>
+        <% end %>
+    </div>
+</div>
