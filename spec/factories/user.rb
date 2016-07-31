@@ -16,4 +16,13 @@ FactoryGirl.define do
         role    "female"
         ip_address  "142.58.35.86"
     end
+    
+     factory :male, class: User do
+        name "Drizzy Drake"
+        email   "ovo@sfu.ca"                
+        password    "dallan"
+        password_confirmation   "dallan"
+        role    "male"
+        ip_address  "142.58.35.86"
+    end
 end

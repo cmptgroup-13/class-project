@@ -14,9 +14,6 @@ RSpec.describe Bath, type: :model do
     it "should have a matching province"do
         expect(@bath.province).to eq("BC")
     end
-    it "should have a matching image_file_name"do
-        expect(@bath.image_file_name).to eq("poop.png")
-    end
     it "should have a matching id"do
         expect(@bath.user_id).to eq(@user.id)
     end
