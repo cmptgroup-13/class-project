@@ -18,10 +18,23 @@ class MapController < ApplicationController
       marker.lng bath.longitude
       marker.infowindow "<b>#{location_link}</b>"
       #<b>#{@avg_rating}</b>
+      bob = "/images/toiletg.png"
+      if(bath.reviews.count ==0)
+        image = "images/toiletmain.png"
+      elsif(bath.reviews.average(:rating).round(2)>=4)
+          image = "/images/toiletg.png"
+      elsif(bath.reviews.average(:rating).round(2)>=3)
+          image = "/images/toilety.png"
+      elsif(bath.reviews.average(:rating).round(2)>=2)
+          image = "/images/toileto.png"
+      elsif(bath.reviews.average(:rating).round(2)>=1)
+          image = "/images/toiletr.png"
+      end
       marker.picture({
-      :url => "http://chart.apis.google.com/chart?chst=d_map_pin_letter&chld=A|FF0000|000000", # up to you to pass the proper parameters in the url, I guess with a method from device
-      :width   => 32,
-      :height  => 32
+
+        :url => image, # up to you to pass the proper parameters in the url, I guess with a method from device
+        :width   => 50,
+        :height  => 50
       })
     end
     @me = Gmaps4rails.build_markers(current_user) do |current_user, marker|
