@@ -6,13 +6,13 @@
 #navbox-container {
   margin-left: auto;
 	margin-right: auto;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: #74CCF4;
   display: flex;
 }
 
 .navbox {
   border-style: solid;
-  border-color: #f4f5f0;
+  border-color: #85DAF7;
   border-width: 2px;
   display: inline-block;
   flex: 1;
@@ -22,17 +22,17 @@
 }
 
 .navbox h2 {
-  color: black;
-  text-shadow: 2px 2px #f4f5f0;
+  color: white;
+  // text-shadow: 2px 2px #f4f5f0;
   margin: none;
-  font-family: play;
+  font-family: 'Montserrat';
 }
 
 .navbox p {
-  color: black;
+  color: white;
   margin: none;
-  font-family: play;
-  text-shadow: 1px 1px 4px #f4f5f0;
+  font-family: 'Montserrat';
+  // text-shadow: 1px 1px 4px #f4f5f0;
 }
 
 /* Begin about us page */

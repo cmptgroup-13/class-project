@@ -7,10 +7,13 @@
   <%= csrf_meta_tags %>
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Play" />
   <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Jura" />
+  <link href='https://fonts.googleapis.com/css?family=Bree+Serif' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 </head>
 
 
-<body> <!--style="	width:100%;height:100%;  "> -->
+<body> 
   <%= render 'layouts/messages' %>
   <%= render 'layouts/header' %>
 
@@ -20,7 +23,7 @@
 
       <%= render 'layouts/footer' %>
 
-    <!--</div>-->
+    <!--this javascript looks ugly but it has to be here sadly-->
     <script>
     $('.star-rating').raty({
       path: '/assets',

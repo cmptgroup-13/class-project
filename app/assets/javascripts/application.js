@@ -145,6 +145,7 @@ function setGeoCookie(position) {
             // alert("error");
         });
     });
+    
 	
 
 

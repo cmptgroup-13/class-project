@@ -44,10 +44,10 @@
           <div class = "myNavElementsLeft"> <li> <%= link_to 'UrineLuck', '#' %>  </li>                  </div>
       -->
 
-          <div class= "TopRightElementsSpecial"> <li><%= link_to 'CAREERS', newbath_path %></li>         </div>
-          <div class= "TopRightElements"> <li><%= link_to 'CONTACT US', profile_path %></li>                </div>
-          <div class= "TopRightElements"> <li><%= link_to 'NEWS', news_path %></li>                      </div>
-          <div class= "TopRightElements"> <%= link_to 'ABOUT US', about_path %> </li>                    </div>
+          <div class= "TopRightElementsSpecial"> <li><%= link_to 'Careers', newbath_path %></li>         </div>
+          <div class= "TopRightElements"> <li><%= link_to 'Contact Us', profile_path %></li>                </div>
+          <div class= "TopRightElements"> <li><%= link_to 'News', news_path %></li>                      </div>
+          <div class= "TopRightElements"> <%= link_to 'About Us', about_path %> </li>                    </div>
 
 </ul>
 
@@ -68,13 +68,13 @@
         -->
 
 
-                    <div class= "myNavElementsRight"> <li><%= link_to 'HOME', home_path %></li>                      </div>
+                    <div class= "myNavElementsRight"> <li><%= link_to 'Home', home_path %></li>                      </div>
 
 
                     <div class= "myNavElementsRight">
                     <li>
                     <div class="dropdown">
-                      <button class="dropbtn"> <li><%= link_to 'MAP', showmap_path %> </button>
+                      <button class="dropbtn"> <li><%= link_to 'Map', showmap_path %> </button>
                       <div class="dropdown-content">
                          <!--alex i put this in because single was deleted-->
                         <%= link_to 'Locate Me', showmap_path %>
@@ -86,7 +86,7 @@
                     <div class= "myNavElementsRight">
                     <li>
                     <div class="dropdown">
-                      <button class="dropbtn"> <li><%= link_to 'BATHROOM', newbath_path %> </button>
+                      <button class="dropbtn"> <li><%= link_to 'Bathroom', newbath_path %> </button>
                       <div class="dropdown-content">
                         <% if user_signed_in? %>
                             <% if !isAdmin? %>

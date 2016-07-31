@@ -10,6 +10,7 @@ html, body, div, a {
   text-shadow: none;
   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
   font-size: 18px;
+  //background-color:#DCF3FF;
 }
 
 body {
@@ -24,12 +25,20 @@ h1, h2 {
   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
 }
 
+h3 {
+  text-decoration: none;
+  text-shadow: none;
+  font-family: "Montserrat";    
+  text-align: center;
+  color: white
+}
+
 /* Motto */
 #motto {
 	width:100%;
 	padding: 0.3rem;
 	margin: auto;
-	background-color: rgba(0, 0, 0, 0.8);
+	background-color: #1CA3EC;
 	text-align: center;
 }
 
