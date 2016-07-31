@@ -6,18 +6,18 @@
 <!--  <%= link_to "Sign up", new_registration_path(resource_name) %><br />-->
 <!--<% end -%>-->
 
+<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
+  <br><%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn btn-info", style:"display:block;margin: auto;" %><br />
+<% end -%>
+
 <%- if devise_mapping.omniauthable? %>
-  <%- resource_class.omniauth_providers.each do |provider| %>
-    <br><%= link_to user_facebook_omniauth_authorize_path, class: "btn btn-block btn-social btn-facebook" do %>
+  <%- resource_class.omniauth_providers.each do |provider| %><br>
+    <%= link_to user_facebook_omniauth_authorize_path, class: "btn btn-block btn-social btn-facebook" do %>
    <div class="fa fa-facebook"></div> Sign in with Facebook
     <% end %>      
   <% end -%>
 <% end -%>
 
-
-<%- if devise_mapping.recoverable? && controller_name != 'passwords' && controller_name != 'registrations' %>
-  <br><%= link_to "Forgot your password?", new_password_path(resource_name), class: "btn btn-info", margin:"auto" %><br />
-<% end -%>
 
 <%- if devise_mapping.confirmable? && controller_name != 'confirmations' %>
   <%= link_to "Didn't receive confirmation instructions?", new_confirmation_path(resource_name) %><br />
