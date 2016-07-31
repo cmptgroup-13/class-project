@@ -12,11 +12,30 @@ class MapController < ApplicationController
     #     @avg_rating = @reviews.average(:rating).round(2)
     #   end
     # end  
-    @hash = Gmaps4rails.build_markers(@baths) do |bath, marker|
+
+    @me = Gmaps4rails.build_markers(current_user) do |current_user, marker|
+      # location_link = view_context.link_to  bath.address, showbath_path(bath)
+      marker.lat current_user.latitude
+      marker.lng current_user.longitude
+      marker.infowindow "<b>#{current_user.name}</b>"
+      marker.picture({
+      #"url" => current_user.image.url(:mini), # up to you to pass the proper parameters in the url, I guess with a method from device
+      :url => "http://emojistatic.github.io/images/32/1f4a9.png", # up to you to pass the proper parameters in the url, I guess with a method from device
+      :width   => 32,
+      :height  => 32
+      })
+    end
+      @hash = Gmaps4rails.build_markers(@baths) do |bath, marker|
+      # contentString = '<span class = "star-rating"' + ' data-score= ' + (bath.reviews.average(:rating).round(2)).to_s + '</span>'
+      # contentStringer = 
+        # if bath.bath_images.count>0
+        #   bath.bath_images.first.photo.url(:thumb)
+        # end
       location_link = view_context.link_to  bath.address, view_path(bath)
+      directions_link = view_context.link_to "Directions", direction_path(bath)
       marker.lat bath.latitude
       marker.lng bath.longitude
-      marker.infowindow "<b>#{location_link}</b>"
+      marker.infowindow "<b>#{location_link}</b></br><b>#{directions_link}</b>"
       #<b>#{@avg_rating}</b>
       bob = "/images/toiletg.png"
       if(bath.reviews.count ==0)
@@ -35,18 +54,6 @@ class MapController < ApplicationController
         :url => image, # up to you to pass the proper parameters in the url, I guess with a method from device
         :width   => 50,
         :height  => 50
-      })
-    end
-    @me = Gmaps4rails.build_markers(current_user) do |current_user, marker|
-      # location_link = view_context.link_to  bath.address, showbath_path(bath)
-      marker.lat current_user.latitude
-      marker.lng current_user.longitude
-      marker.infowindow "<b>#{current_user.name}</b>"
-      marker.picture({
-      #"url" => current_user.image.url(:mini), # up to you to pass the proper parameters in the url, I guess with a method from device
-      :url => "http://emojistatic.github.io/images/32/1f4a9.png", # up to you to pass the proper parameters in the url, I guess with a method from device
-      :width   => 32,
-      :height  => 32
       })
     end
     
