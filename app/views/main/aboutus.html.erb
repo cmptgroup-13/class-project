@@ -1,5 +1,17 @@
 <!-- Begin about us page -->
 
+<script>
+var slides = document.querySelectorAll('#slides .slide');
+var currentSlide = 0;
+var slideInterval = setInterval(nextSlide,2000);
+
+function nextSlide() {
+	slides[currentSlide].className = "slide";
+	currentSlide = (currentSlide+1)%slides.length;
+	slides[currentSlide].className = 'slide showing';
+}
+</script>
+
 <!--
 IMAGE DIMENSIONS ARE 99px by 99px, or 3.49cm by 3.49cm
 -->
@@ -24,11 +36,11 @@ IMAGE DIMENSIONS ARE 99px by 99px, or 3.49cm by 3.49cm
   <p class="nameProfile">Dallan Bhatti</p>
   <p class ="titleProfile">Your Title</p>
   <p>
-   Dallan co-founded UrineLuck in 2016. He acts as a loving father, sister,
-   cousin, singer and songwriter. Before creating UrineLuck, Dallan spent
+   Dallan co-founded UrineLuck in 2016. He acts as a loving father, sister, 
+   cousin, singer and songwriter. Before creating UrineLuck, Dallan spent 
    several years as a Regional Manager at Dunder-Mifflin is Scranton, PA.
-   At Dunder-Mifflin he maintained the highest sales average of any branch
-   despite weak economy and obselete product. His career goals include
+   At Dunder-Mifflin he maintained the highest sales average of any branch 
+   despite weak economy and obselete product. His career goals include 
    eventually getting back into the paper sales game.
     <br/> <br/>
     Alex holds a PhD in Mathematics from Stanford University and a BA in
