@@ -3,28 +3,21 @@
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
-<div id="motto">
-    <p>A glance of toilets?</p>
-</div>
+<h1>Map view of bathrooms</h1>
 
 
 <div style="width: 100%; margin: auto">
   <div id="map" style="height: 500px"></div>
 </div>
 
-
-
-
+<!-- Map won't load if we move this to app/assets/javascripts/map.js
+      or to app/assets/javascripts/application.js -->
 <script type="text/javascript">
-
-
   var mapOptions =
   {
     maxZoom:19,
     minZoom:2,
-
   };
-
   handler = Gmaps.build('Google');
   handler.buildMap({ provider: mapOptions, internal: {id: 'map'}}, function(){
     markers = handler.addMarkers( <%=raw @me.to_json %>);
@@ -33,6 +26,4 @@
     handler.bounds.extendWith(markers_two);
     handler.fitMapToBounds();
   });
-
-
 </script>

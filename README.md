@@ -12,23 +12,23 @@ Username: myuser@sfu.ca</br>
 Password: password</br>
 
 # UrineLuck
+     
 
 
-
-We will be attempting to solve a problem nearly every person has faced in their life one time or another. UrineLuck is a web application that helps users locate clean, public bathroom’s while they are out and about. Users of the app will give their current location and the app will locate public bathroom’s in their immediate area and will feature a rating out of 5 stars on each bathroom. Users also are given the option to browse our CrapMap™ and plan they’re conquest in advance so they do not find themselves prairie dogging while they are shopping with friends or lawn bowling at the park. The customer will also see a list of reviews and ratings left by us or other users who have visited the bathroom and wish to inform others of their experiences using said bathroom. Currently we plan to make use of Google Maps API for the geographical components and Yelp API for the review components. 
+We will be attempting to solve a problem nearly every person has faced in their life one time or another. UrineLuck is a web application that helps users locate clean, public bathroom’s while they are out and about. Users of the app will give their current location and the app will locate public bathroom’s in their immediate area and will feature a rating out of 5 stars on each bathroom. Users also are given the option to browse our CrapMap™ and plan they’re conquest in advance so they do not find themselves prairie dogging while they are shopping with friends or lawn bowling at the park. The customer will also see a list of reviews and ratings left by us or other users who have visited the bathroom and wish to inform others of their experiences using said bathroom. Currently we plan to make use of Google Maps API for the geographical components and Yelp API for the review components.
 
 If time permits we may attempt to develop the app for mobile devices and also add a basic game to the app so people may occupy themselves while “taking care of business”. Users will also be able to upload images of the bathroom location. We encourge selfies.
 
-We will have two types of users Admin and Normal users. Normal users can request to add bathrooms and also report bathrooms (although these reports will likely stay hidden). Admin users will be able to add bathrooms and also remove them (Admins will be able to see reports). We are also considering adding genders to each type of user. 
+We will have two types of users Admin and Normal users. Normal users can request to add bathrooms and also report bathrooms (although these reports will likely stay hidden). Admin users will be able to add bathrooms and also remove them (Admins will be able to see reports). We are also considering adding genders to each type of user.
 
 
 ## Competitive Analysis
 
-#### SitorSquat 
+#### SitorSquat
 
 As described by the app, “SitOrSquat by Charmin can help you find public restrooms near you or where you’re planning to travel. Install SitOrSquat and search, view, rate and add public restrooms to help you, your family and others enjoy the go, on the go” (https://itunes.apple.com/ca/app/sitorsquat-restroom-finder/id511855507?mt=8).
 
-#### Flushd 
+#### Flushd
 
 As described by the app, “The Bathroom. A hallowed yet infrequently talked about room of critical and daily importance to the lives of every human being inhabiting the non-3rd world. A room where it is safe to be at our worst. Where acts that would normally be embarrassing or humiliating by societal standards are welcomed and encouraged. A place where some of us seek refuge in an otherwise over-stimulated daily existence in order to seek some peace, tranquility and well…relief. We all hope that we walk out of the bathroom feeling a little bit better then when we walked in. We at Flushd feel that we should not take this transformation for granted. Our goal is to shine a bright light into the world of bathrooms to help increase the quality of the bathroom experience globally” (https://itunes.apple.com/ca/app/flushd/id691150346?mt=8).
 
@@ -45,11 +45,11 @@ As described by the app, “The Bathroom. A hallowed yet infrequently talked abo
 
 ## Customers
 
-#### Sally (Customer 1): 
+#### Sally (Customer 1):
 
 Sally is a female who lives an active life, working in Vancouver. Her work involves her to do a lot of driving and making quick stops. Due to the nature of her job she often finds herself in a pickle when it comes to looking for a public bathroom during the day in her immediate area. On top of this struggle Sally knows that if she does find a bathroom, there is a decent chance it is dimly lit, the door doesn’t lock on the stall, and the toilet paper is out. She needs a better way to find clean bathrooms in her area, where she can be confident these are sanitary and well maintained.
 
-#### Bob (Customer 2): 
+#### Bob (Customer 2):
 
 Bob is a male who attends Simon Fraser University as a computer science student. Bob has been mentally and physically scarred from 3 years of usage of the men’s CSIL bathroom. As much as he loves the moist atmosphere combined with the fish market smell, Bob wants change! Bob has always dreamed of the day he could venture out and find a different bathroom at SFU that doesn’t require a post-use daily hepatitis shot. If only he had a web app that could help him locate a bathroom which suits his needs.
 
@@ -81,7 +81,7 @@ It should have an option to add the entry to the database.
 The request should be removed from the request page after destroying or adding
 
 Tests:
-Tests are done to check if the bathroom has been added to the databse. If it 
+Tests are done to check if the bathroom has been added to the databse. If it
 has passed the test the bathroom has been added.
 
 
@@ -134,11 +134,11 @@ Tests are done to ensure the reviews added are valid. If the tests passes the da
 
 On the page for viewing many bathrooms there should be an option beside each bathroom to view the
 specific bathroom.
-When on the the page to view a specific bathroom there should be reviews 
+When on the the page to view a specific bathroom there should be reviews
 left by other users underneath the map on the page.
 As an admin there should be an option to delete each review. (Implemented in Iteration 3)
 
-Tests: A test is done to ensure te data populating reviews is the same as added in the database. 
+Tests: A test is done to ensure te data populating reviews is the same as added in the database.
 If the tests passes the data matches.
 
 ##Epic: As a user, I can do operations with Google Maps
@@ -181,7 +181,7 @@ It should show users that have not been destroyed or have been deleted by the us
 Beside each user there should be an option to destroy the account.
 When the destroy button is clicked there should be a notifcation asking to confirm the deletion.
 When the notification is closed and ok is not selected the user should remain in the database and not deleted.
-When ok is selected the user should be removed from the database and no longer be able to login. 
+When ok is selected the user should be removed from the database and no longer be able to login.
 The user should no longer be listed on the profiles page.
 
 Tests:
@@ -190,7 +190,7 @@ Specific tests are carried out by the devise gem to make sure the user is remove
 In the edit my profile page there should be an option to delete my account.
 When the destroy button is clicked there should be a notifcation asking to 	confirm the deletion.
 When the notification is closed and ok is not selected the user should remain in the database and not deleted.
-When ok is selected the user should be removed from the database and no longer be able to login. 
+When ok is selected the user should be removed from the database and no longer be able to login.
 The user should be taken to the login screen.
 
 Tests:
@@ -210,7 +210,7 @@ When the above fields are correct and create is clicked the user should be added
 Admins cannot be created from this page they mut be created from the console with the role 'admin'
 
 Tests:
-Specific tests are done with the devise gem that test to make sure the users are successfully added to the database and for validation on the fields and that users arent entered with inappopriate fields. 
+Specific tests are done with the devise gem that test to make sure the users are successfully added to the database and for validation on the fields and that users arent entered with inappopriate fields.
 When it passes these tests a user can be added to the database.
 
 ####As a user I want to be able to login and sign out (2)
@@ -218,7 +218,7 @@ When accessing the site a user must be logged in in order to view the other page
 To login the user must enter a name and password that is attached to an exisitng account.
 If the above is not met an error should be thrown describing the error.
 If the above is met the user should be logged in.
-Signing out should take the user back to the login page where they can sign on as a different user. 
+Signing out should take the user back to the login page where they can sign on as a different user.
 The user should not be edited upon signing out or signing in.
 
 Tests:
@@ -230,7 +230,7 @@ When it passes these tests a user can be added to the database.
 ##*NO EPIC STORIES
 
 ####As a regular user or admin I would like to play a secret flappy tissue game (3)
-When the user clicks the screen the game starts. 
+When the user clicks the screen the game starts.
 Pipes are generated at random height and the tissue starts flying forward.
  The user should be able to control the tissue by mouse clicking in order to avoid collision with the pipes.
  When the tissue hits any pipe, game is over and both this-time score and best score is shown on the screen.
@@ -242,10 +242,10 @@ Tests:
 The contact page should contain a bio for each member of our group.
 For each member there should be an image of with a short decription.
 	Tests: This is a static page that needs to load.
-	
+
 ####note: to play the game go to https://sheltered-anchorage-78577.herokuapp.com/game.html
-	
-####Future: 
+
+####Future:
 -as a regular user or admin I would like to have a working remember me button on login
 -as a regular user or admin I would like to have a working forgot my password button on login
 -as an admin I would like to have a working delete for reviews
@@ -264,11 +264,11 @@ For each member there should be an image of with a short decription.
 
 #### Story 1: Logging in
 
-Logging is important as it prevents non-users from accessing the app and potentially ruining the experience for signed up members. It also helps user (male or female or admin) maintain their own personal account and allow them to have personalized interactions with UrineLuck. Display login page upon entering the web app through routing. 
+Logging is important as it prevents non-users from accessing the app and potentially ruining the experience for signed up members. It also helps user (male or female or admin) maintain their own personal account and allow them to have personalized interactions with UrineLuck. Display login page upon entering the web app through routing.
 
 In the database each member who has signed up has there information stored, which includes name, email, password, and role. Given that a recognized email and password are entered in the correct fields, when “log in” is clicked the user should be logged in. The system will check if these fields match those which are stored in the database from signup.
 
-Given that an unrecognized email and/or password is entered in the fields, when “log in” is clicked no one should be logged in and an error message should be given. This error message will be displayed in a red box about the form stating “Invalid email/password combination”. Also if the users’ login is invalid they will be not be redirected to any other page, instead they will remain on the login page. The error message should not clear the screen until the user has visited another page or they are successfully logged in. 
+Given that an unrecognized email and/or password is entered in the fields, when “log in” is clicked no one should be logged in and an error message should be given. This error message will be displayed in a red box about the form stating “Invalid email/password combination”. Also if the users’ login is invalid they will be not be redirected to any other page, instead they will remain on the login page. The error message should not clear the screen until the user has visited another page or they are successfully logged in.
 
 It is not necessary to re-enter your name when logging in because names may be repeated but we will not allow repeat emails for obvious reasons. It is also not necessary to include role again as it is stored with the Users information at signup and has no importance in the context of simply logging in.
 
@@ -276,25 +276,25 @@ Upon logging in, given that I have logged in as a user (male or female), when I 
 
 User is given the option to log out which will guide them back to the login page.
 
-Tests are done to see if the proper error message is displayed on the screen when the user enters wrong information. 
+Tests are done to see if the proper error message is displayed on the screen when the user enters wrong information.
 
 #### Story 2: Signing Up
 
-As a user of UrineLuck signing up is important because it allows UrineLuck to expand its database of users and allows users to create a unique individualized experience for themselves. As a user I want to be able to sign up an account which will give me access to the bathroom searching features provided by the web app. 
+As a user of UrineLuck signing up is important because it allows UrineLuck to expand its database of users and allows users to create a unique individualized experience for themselves. As a user I want to be able to sign up an account which will give me access to the bathroom searching features provided by the web app.
 
 Given that I want to sign up, when I click “sign up” I should be taken to a form with my needed credentials. Or I will have the ability from the login page to be asked if I am a new user and would like to sign up for the app.
 
-On the form itself it will feature the necessary fields which are 'Name', 'Email', 'Password', 'Password Confirmation' and 'Role'. Name and Email are to help distinguish between the users and in the future will allow the app to email users if information is lost, a password reset is needed, or to email users of UrineLuck promotions/newsletter. Password and Password Confirmation are highly necessary because the user will keep their account secured using their own personally created encrypted password. The Password conformation is vital because often in creating accounts you miss type the password the first time and forever are unable to log in. Also the password field will display black bullets instead of the characters themselves to help maintain privacy. The user will be given the option of identifying themselves as a male or female. Admin’s will be created by system engineers through the console. 
+On the form itself it will feature the necessary fields which are 'Name', 'Email', 'Password', 'Password Confirmation' and 'Role'. Name and Email are to help distinguish between the users and in the future will allow the app to email users if information is lost, a password reset is needed, or to email users of UrineLuck promotions/newsletter. Password and Password Confirmation are highly necessary because the user will keep their account secured using their own personally created encrypted password. The Password conformation is vital because often in creating accounts you miss type the password the first time and forever are unable to log in. Also the password field will display black bullets instead of the characters themselves to help maintain privacy. The user will be given the option of identifying themselves as a male or female. Admin’s will be created by system engineers through the console.
 
 Given that all the fields have correct info, when I click “sign up” an account should be created with those credentials. The credentials will successfully be stored in the database for later access by other functions. The user will be routed to the profile page.
 
 Given that the fields have inappropriate info, when I click “sign up” an account should not be created and an error should be displayed saying what fields are incorrect. This error will display how many errors the user has made in creation of their account. Error messages that are displayed include “Name can’t be blank”, “Role can’t be blank” and “Password is too short” among many others. The fields specifically themselves should include Names of any type (we don’t judge), Email’s with proper email formatting and Passwords that are at least 6 characters long.
 
-Upon signing up when the user clicks “create my account” a notification should tell user that they have successfully signed up. 
+Upon signing up when the user clicks “create my account” a notification should tell user that they have successfully signed up.
 Testing will be done to see if it works when all fields are filled out. However, we will also test for when the user does not properly fill in the fields. Including but not limited to, if 'password' has a length too short what happens, if 'user' is assigned admin what happens, if 'role' is left unassigned what happens, if 'email' format is incorrect what happens, if 'email' is not unique what happens, if an invalid 'form' is submitted, if 'password' fields are not matching, and if 'name' is missing.
 
 #### Story 3: Profile
-As a user it is important that I can see my information is displayed accordingly to my account. Initially, what I want to see displayed as a regular user (regardless of gender) is my Name, Email and Role. This will help me identify my information later as the app progresses and you would like to use your account to add bathrooms, make a review and/or display your name on the leaderboard. 
+As a user it is important that I can see my information is displayed accordingly to my account. Initially, what I want to see displayed as a regular user (regardless of gender) is my Name, Email and Role. This will help me identify my information later as the app progresses and you would like to use your account to add bathrooms, make a review and/or display your name on the leaderboard.
 
 If user is an admin than they will be able to see all other users that have created an account in their personal profile page. Their credentials will be bolded to help distinguish between other regular accounts. In future iterations these admin users will be able to delete regular users from this screen and will also be able to promote regular users to admins from this screen.
 

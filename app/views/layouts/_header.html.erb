@@ -1,4 +1,8 @@
 <style>
+/*
+THIS STYLE NEEDS TO STAY IN THE HEADER
+OTHERWISE IT LOOKS DIFFERENT ON DIFFERENT BROWSERS
+*/
 .dropbtn {
     padding: 0px 0px 0px 0px;
     margin: 0px 0px 0px 0px;
@@ -34,93 +38,75 @@
 .dropdown:hover .dropbtn {
       border: none;
 }
-
+/*
+THIS STYLE NEEDS TO STAY IN THE HEADER
+OTHERWISE IT LOOKS DIFFERENT ON DIFFERENT BROWSERS
+*/
 </style>
 
-
-<br>
+</br>
 <ul class="TopRight">
-      <!--
-          <div class = "myNavElementsLeft"> <li> <%= link_to 'UrineLuck', '#' %>  </li>                  </div>
-      -->
-
-          <div class= "TopRightElementsSpecial"> <li><%= link_to 'Careers', newbath_path %></li>         </div>
-          <div class= "TopRightElements"> <li><%= link_to 'Contact Us', profile_path %></li>                </div>
-          <div class= "TopRightElements"> <li><%= link_to 'News', news_path %></li>                      </div>
-          <div class= "TopRightElements"> <%= link_to 'About Us', about_path %> </li>                    </div>
+          <div class= "TopRightElementsSpecial"> <li><%= link_to 'CAREERS', newbath_path %></li>         </div>
+          <div class= "TopRightElements"> <li><%= link_to 'CONTACT US', profile_path %></li>                </div>
+          <div class= "TopRightElements"> <li><%= link_to 'NEWS', news_path %></li>                      </div>
+          <div class= "TopRightElements"> <%= link_to 'ABOUT US', about_path %> </li>                    </div>
 
 </ul>
-
-
 <br>
 <p></p>
-
-
-
-
-
-
 <div id="logo"><%= link_to image_tag('logo.PNG', :size => "163x100"), home_path %></div>
 
   <ul class="myNav">
-        <!--
-            <div class = "myNavElementsLeft"> <li> <%= link_to 'UrineLuck', '#' %>  </li>                  </div>
-        -->
-
-
-                    <div class= "myNavElementsRight"> <li><%= link_to 'Home', home_path %></li>                      </div>
-
-
+                    <div class= "myNavElementsRight"> <li><%= link_to 'HOME', home_path %></li>                      </div>
                     <div class= "myNavElementsRight">
-                    <li>
-                    <div class="dropdown">
-                      <button class="dropbtn"> <li><%= link_to 'Map', showmap_path %> </button>
-                      <div class="dropdown-content">
+                      <li>
+                        <div class="dropdown">
+                          <button class="dropbtn"><li><%= link_to 'MAP', showmap_path %></li> </button>
+                            <div class="dropdown-content">
                          <!--alex i put this in because single was deleted-->
-                        <%= link_to 'Locate Me', showmap_path %>
-                      </div>
-                    </div>
-                    </li>
+                              <%= link_to 'Locate Me', showmap_path %>
+                            </div>
+                        </div>
+                      </li>
                     </div>
 
                     <div class= "myNavElementsRight">
-                    <li>
-                    <div class="dropdown">
-                      <button class="dropbtn"> <li><%= link_to 'Bathroom', newbath_path %> </button>
-                      <div class="dropdown-content">
-                        <% if user_signed_in? %>
-                            <% if !isAdmin? %>
+                      <li>
+                        <div class="dropdown">
+                          <button class="dropbtn"> <li><%= link_to 'BATHROOM', newbath_path %></li> </button>
+                          <div class="dropdown-content">
+                            <% if user_signed_in? %>
+                              <% if !isAdmin? %>
                                 <%= link_to 'Request to Add A Bathroom', createbath_path %>
                                 <%= link_to 'Your Requested Bathroom', request_path %>
-                            <% else %>
+                              <% else %>
                                 <%= link_to 'Add A Bathroom', createbath_path %>
                                 <%= link_to 'View Bath Requests', accept_path %>
                                 <%= link_to 'Reported Reviews', report_path %>
-                            <% end %>
+                              <% end %>
                             <%= link_to "All Bathrooms", showbath_path %>
-                        <% end %>
-                      </div>
-                    </div>
-                    </li>
+                            <% end %>
+                         </div>
+                        </div>
+                      </li>
                     </div>
 
 
                     <% if !user_signed_in? %>
-                    <div class= "myNavElementsLeftRight"> <li><%= link_to 'Log In', new_user_session_path%></li>         </div>
-                    <div class= "myNavElementsLeftRight"> <li><%= link_to 'Sign Up', new_user_registration_path %></li>  </div>
+                      <div class= "myNavElementsLeftRight"> <li><%= link_to 'LOG IN', new_user_session_path%></li>         </div>
+                      <div class= "myNavElementsLeftRight"> <li><%= link_to 'SIGN UP', new_user_registration_path %></li>  </div>
                     <% else %>
-                    <div class= "myNavElementsLeftRight"><li><%= link_to 'Log out', destroy_user_session_path, method: :delete %></li></div>
-
-                    <div class= "myNavElementsLeftRight">
-                    <li>
-                    <div class="dropdown">
-                      <button class="dropbtn"> <li><%= link_to 'Profile', profile_path %> </button>
-                      <div class="dropdown-content">
-                        <%= link_to 'Edit your profile', edit_user_registration_path %>
+                      <div class= "myNavElementsLeftRight"><li><%= link_to 'LOG OUT', destroy_user_session_path, method: :delete %></li></div>
+                      <div class= "myNavElementsLeftRight">
+                        <li>
+                          <div class="dropdown">
+                            <button class="dropbtn"> <li><%= link_to 'PROFILE', profile_path %></li> </button>
+                            <div class="dropdown-content">
+                              <%= link_to 'Edit your profile', edit_user_registration_path %>
+                            </div>
+                          </div>
+                        </li>
                       </div>
-                    </div>
-                    </li>
-                    </div>
 
 
                     <% end %>
