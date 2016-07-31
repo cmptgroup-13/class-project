@@ -31,11 +31,6 @@
   
       <%= f.input :address, autofocus: true %>
   
-      <div class="field">
-          <%= f.label :image %><br />
-          <%= f.file_field :image, autofocus: true %>
-      </div><br>
-  
       <% if isAdmin? %>
         <%= f.button :submit, "Create my bathroom", class: "btn btn-success" %>
       <% else %>

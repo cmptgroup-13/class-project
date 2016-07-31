@@ -28,11 +28,18 @@
 
                         <tr>
                             <th><b>Images</b></th>
-                            <% if @bath.image_file_name != nil %>
-                                <td><%= image_tag @bath.image.url(:thumb) %></td>
-                            <% else %>
-                                <td>No images added yet!</td>
-                            <% end %>
+                                <% if @bath.bath_images.count == 0 %>
+                                    <td>No images added yet!</td> <td><%= link_to "Add photo", new_bath_bath_image_path(@bath.id), :class => "btn btn-primary" %> </td>
+                                <% else %>
+                                    <td><% @bath.bath_images.each do |bath_image|%>
+                                            <%= image_tag bath_image.photo.url(:thumb) %>
+                                        <% end %>
+                                    </td>
+                                    <td>
+                                        <%= link_to "Add photo", new_bath_bath_image_path(@bath.id), :class => "btn btn-primary" %>
+                                        <%= link_to "View all photos", bath_bath_images_path(@bath), :class => "btn btn-info" %>
+                                    </td>
+                                <% end %>
                         </tr>
   </table>
 

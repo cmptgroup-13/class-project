@@ -61,8 +61,8 @@
                         <td><%= bath.latitude %></td>
                     </tr>
                     <tr>
-                        <th><b>Bath ID</b></th>
-                        <td><%= bath.id %></td>
+                        <th><b>Bath creator</b></th>
+                        <td><%= User.find_by_id(bath.user_id).name %></td>
                     </tr>
                     <tr>
                         <th><b>Review Count</b></th>
