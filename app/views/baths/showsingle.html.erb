@@ -29,7 +29,7 @@
                         <tr>
                             <th><b>Images</b></th>
                                 <% if @bath.bath_images.count == 0 %>
-                                    <td>No images added yet!</td> <td><%= link_to "Add photo", new_bath_bath_image_path(@bath.id) %> </td>
+                                    <td>No images added yet!</td> <td><%= link_to "Add photo", new_bath_bath_image_path(@bath.id), :class => "btn btn-primary" %> </td>
                                 <% else %>
                                     <td><% @bath.bath_images.each do |bath_image|%>
                                             <%= image_tag bath_image.photo.url(:thumb) %>
