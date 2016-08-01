@@ -15,7 +15,8 @@
           </ul>
         </div>
       <% end %>
-  
+      <%= f.input :name, label: "Bathroom Name",  autofocus: true %>
+      
       <%= f.input :country, label: "Country" do %>
         <%= f.select "country", options_for_select(countries_list) %>
       <% end %>

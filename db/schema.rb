@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160730052206) do
+ActiveRecord::Schema.define(version: 20160801211823) do
 
   create_table "bath_images", force: :cascade do |t|
     t.integer  "bath_id"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20160730052206) do
     t.float    "latitude"
     t.float    "longitude"
     t.string   "apartment"
+    t.string   "name"
   end
 
   add_index "baths", ["user_id", "created_at"], name: "index_baths_on_user_id_and_created_at"

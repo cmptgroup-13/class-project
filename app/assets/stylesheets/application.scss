@@ -275,7 +275,9 @@ html, body{
 
   .table>thead>tr>th, .table>thead>tr>td, .table>tbody>tr>th, .table>tbody>tr>td, .table>tfoot>tr>th, .table>tfoot>tr>td
     {border:0px solid black;
-      border-bottom: .5px solid  #EEEEEE}
+      border-bottom: .5px solid  #EEEEEE;
+     text-align: center;
+    }
 
 
 .search-img {
