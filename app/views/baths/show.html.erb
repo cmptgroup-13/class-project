@@ -31,6 +31,12 @@
                                     <div style="text-align:right; width:30%; float: left;"><%= link_to "View", view_path(bath), :class => 'btn btn-primary' %></div>
                                   </td>
                                 </tr>
+                                <tr><%=  simple_form_for @bath do |f| %>
+                                              <%= f.input :name, label: "Bathroom Name",  autofocus: true %>
+                                             <%= f.button :submit, "Create my bathroom", class: "btn btn-success" %>
+                                    <% end %>
+
+                                        </tr>
         
         
                             </table>
@@ -68,7 +74,6 @@
                         <th><b>Review Count</b></th>
                         <td><%= bath.reviews.count %></td>
                     </tr>
-
 
 
                     <tr style="border-bottom: 1px solid #fff">

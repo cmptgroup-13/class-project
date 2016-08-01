@@ -8,9 +8,9 @@ class User < ActiveRecord::Base
 
          
 
-  has_many :baths
-  has_many :reviews
-  has_many :flags
+  has_many :baths, :dependent => :destroy
+  has_many :reviews, :dependent => :destroy
+  has_many :flags, :dependent => :destroy
   has_many :bath_images
 
   

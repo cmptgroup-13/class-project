@@ -37,77 +37,94 @@
  }
  .Logo a {
    color: #080808;
-   text-shadow: -1px 0 #F8F8F8, 0 1px #F8F8F8, 1px 0 #F8F8F8, 0 -1px #F8F8F8;
+   text-shadow: -1px 0 #1CA3EC, 0 1px #1CA3EC, 1px 0 #1CA3EC, 0 -1px #1CA3EC;
    font-size: 125%;
    text-decoration: none;
  }
  .Logo a:hover:not(.active) {
      color: #080808;
-     text-shadow: -1px 0 #F8F8F8, 0 1px #F8F8F8, 1px 0 #F8F8F8, 0 -1px #F8F8F8;
+     text-shadow: -1px 0 #1CA3EC, 0 1px #1CA3EC, 1px 0 #1CA3EC, 0 -1px #1CA3EC;
      font-size: 125%;
      background-color: #FFFFFF;
  }
 */
 
+html, body{
+ background-color: #DCF3FF;
 
+}
 
  .myNavElementsLeftRight{
    float: right;
-   color: #202020;
-   background-color: #F8F8F8;
+   max-height: 52px;
+   border-style: solid;
+   border-width: 1px;
+   border-color:  #c0dae7;
  }
  .myNavElementsLeftRight a {
    padding: 15px 15px 15px 15px;
    display: block;
-   color: #202020;
-   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+   color: white;
+   font-family: "Montserrat";
+   text-align: center;
    text-decoration: none;
    font-size: 15px;
    font-weight: 100;
-   background-color: #F8F8F8;
+   background-color: #1CA3EC;
+   /*
    border-style: solid;
    border-width: 1px;
    border-color: #FFFFFF;
-   border-bottom: solid #E8E8E8 ;
+   border-bottom: solid #c0dae7 ;
+   */
    padding: 15px 15px 15px 15px;
  }
  .myNavElementsLeftRight a:hover:not(.active) {
-   color: #202020;
-   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
-   background-color: #F8F8F8;
-   border-top: solid #E8E8E8 ;
-   border-bottom: solid #E8E8E8 ;
+   color: white;
+   font-family: "Montserrat";
+   background-color: #1593d6;
+   /*
+   background-color: #1CA3EC;
+   border-top: solid #c0dae7 ;
+   border-bottom: solid #c0dae7 ;
+   */
  }
 
 
 
  .myNavElementsRight{
    float: left;
-   color: #202020;
-   background-color: #F8F8F8;
    max-height: 52px;
+   border-style: solid;
+   border-width: 1px;
+   border-color:  #c0dae7;
  }
  .myNavElementsRight a {
    padding: 15px 15px 15px 15px;
    display: block;
-   color: #202020;
-   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+   color: white;
+   font-family: "Montserrat";
+   text-align: center;
    text-decoration: none;
    font-size: 15px;
    font-weight: 100;
-   background-color: #F8F8F8;
+   background-color: #1CA3EC;
+   /*
    border-style: solid;
    border-width: 1px;
    border-color: #FFFFFF;
-   border-bottom: solid #E8E8E8 ;
+   border-bottom: solid #c0dae7 ;
+   */
    padding: 15px 15px 15px 15px;
  }
  .myNavElementsRight a:hover:not(.active) {
-   color: #202020;
-   font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
-   background-color: #F8F8F8;
-   border-top: solid #E8E8E8 ;
-   border-bottom: solid #E8E8E8 ;
+   color: white;
+   font-family: "Montserrat";
+   background-color: #1593d6;
+   /*
+   border-top: solid #c0dae7 ;
+   border-bottom: solid #c0dae7 ;
+   */
  }
 
 
@@ -116,47 +133,48 @@
    list-style-type: none;
    padding: 0px 0px 52px 0px;
    margin: 0px 0px 0px 0px;
-   background-color: #F8F8F8 	;
+   background-color: #d6f0fd; //c0dae7
  }
 
-
+//THIS IS THE BREAKPOINT BEFORE FKING SHIT UP
 
  .TopRight{
    list-style-type: none;
    margin: -20px 0px 20px 0px;
-   background-color: #FFFFFF;
+   // background-color: #1CA3EC;
  }
 
 
  .TopRightElements{
    float: right;
-   color: #202020;
+   color: black;
  }
 
 
  .TopRightElements a {
      padding: 15px 15px 15px 15px;
      display: block;
-     color: #202020;
-     text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
-     font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+     color: black;
+     // text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
+     font-family: "Montserrat";
+     text-align: center;
      text-decoration: none;
      font-size: 15px;
      font-weight: 100;
-     background-color: #FFFFFF;
-     border-style: solid;
-     border-width: 1px;
-     border-color: #FFFFFF;
+     // background-color: #74CCF4;
+     // border-style: solid;
+     // border-width: 1px;
+     // border-color: black;
      border-right: solid #686868 ;
-     background-color: #FFFFFF;
+     // background-color: #1CA3EC;
      line-height: 2px;
      font-weight: 100;
  }
  .TopRightElements a:hover:not(.active) {
      color: #808080;
-     text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
-     font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
-     background-color: #FFFFFF;
+     // text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
+     font-family: "Montserrat";
+     // background-color: #1CA3EC;
  }
 
 
@@ -166,29 +184,37 @@
 
  .TopRightElementsSpecial{
    float: right;
-   color: #202020;
+   color: black;
  }
 
  .TopRightElementsSpecial a {
      padding: 15px 15px 15px 15px;
      display: block;
-     color: #202020;
-     text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
-     font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;    text-align: center;
+     color: black;
+     // text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
+     font-family: "Montserrat";
+     text-align: center;
      text-decoration: none;
      font-size: 15px;
      font-weight: 100;
-     background-color: #FFFFFF;
-     background-color: #FFFFFF;
+     // background-color: #1CA3EC;
      line-height: 2px;
      font-weight: 100;
  }
  .TopRightElementsSpecial a:hover:not(.active) {
      color: #808080;
-     text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
-     font-family: Optima, Segoe, "Segoe UI", Candara, Calibri, Arial, sans-serif;
-     background-color: #FFFFFF;
+     // text-shadow: -1px 0 #FFFFFF, 0 1px #FFFFFF, 1px 0 #FFFFFF, 0 -1px #FFFFFF;
+     font-family: "Montserrat";;
+     // background-color: #1CA3EC;
  }
+
+
+//for header
+
+
+//end for header
+
+
 
 
  .row{
@@ -234,20 +260,24 @@
 
 
   .table{ border-collapse:separate;
-            border:solid  #eee 2px;
+            border:solid   #EEEEEE 2px;
             /* Safari 3-4, iOS 1-3.2, Android 1.6- */
             -webkit-border-radius: 13px;
             /* Firefox 1-3.6 */
             -moz-border-radius:   13px;
             /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
             border-radius: 13px;
+            background-color: white;
+            color: black;
           }
 
 
 
   .table>thead>tr>th, .table>thead>tr>td, .table>tbody>tr>th, .table>tbody>tr>td, .table>tfoot>tr>th, .table>tfoot>tr>td
-    {border:0px solid #fff;
-      border-bottom: 1px solid #eee}
+    {border:0px solid black;
+      border-bottom: .5px solid  #EEEEEE;
+     text-align: center;
+    }
 
 
 .search-img {
@@ -255,3 +285,5 @@ width: 50px;
 height: 50px;
 border: 0 none;
 }
+
+.clear { clear:both; }

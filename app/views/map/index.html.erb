@@ -3,35 +3,27 @@
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
-<div id="motto">
-    <p>A glance of toilets?</p>
-</div>
+<h1>Map view of bathrooms</h1>
 
 
 <div style="width: 100%; margin: auto">
   <div id="map" style="height: 500px"></div>
 </div>
 
-
-
-
+<!-- Map won't load if we move this to app/assets/javascripts/map.js
+      or to app/assets/javascripts/application.js -->
 <script type="text/javascript">
- // Bounds for North America
- var strictBounds = new google.maps.LatLngBounds(
- new google.maps.LatLng(28.70, -127.50),
- new google.maps.LatLng(48.85, -55.90));
- 
+
   var mapOptions =
   {
     maxZoom:19,
     minZoom:2,
-    bounds: strictBounds,
-  };
 
+  };
   handler = Gmaps.build('Google');
   handler.buildMap({ provider: mapOptions, internal: {id: 'map'}}, function(){
-    markers = handler.addMarkers( <%=raw @me.to_json %>);
     markers_two = handler.addMarkers( <%=raw @hash.to_json %>);
+    markers = handler.addMarkers( <%=raw @me.to_json %>);
     handler.bounds.extendWith(markers);
     handler.bounds.extendWith(markers_two);
     handler.fitMapToBounds();
@@ -53,27 +45,5 @@
 
     handler.getMap().setCenter(new google.maps.LatLng(y, x));
   });
-
- // Listen for the dragend event
- google.maps.event.addListener(map, 'dragend', function () {
-     if (strictBounds.contains(map.getCenter())) return;
-
-     // We're out of bounds - Move the map back within the bounds
-
-     var c = map.getCenter(),
-         x = c.lng(),
-         y = c.lat(),
-         maxX = strictBounds.getNorthEast().lng(),
-         maxY = strictBounds.getNorthEast().lat(),
-         minX = strictBounds.getSouthWest().lng(),
-         minY = strictBounds.getSouthWest().lat();
-
-     if (x < minX) x = minX;
-     if (x > maxX) x = maxX;
-     if (y < minY) y = minY;
-     if (y > maxY) y = maxY;
-
-     map.setCenter(new google.maps.LatLng(y, x));
- });
 
 </script>

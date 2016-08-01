@@ -4,7 +4,7 @@ FactoryGirl.define do
         province   "BC"                
         city    "North Vancouver"
         address   "1400 Riverside Drive"
-        image_file_name   "poop.png"
+        admin_accept true
         user_id 1
     end
 end

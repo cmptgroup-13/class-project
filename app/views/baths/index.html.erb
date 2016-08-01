@@ -1,65 +1,128 @@
+<style>
+/*
+Moving this to main.scss ruins the slideshow
+*/
+#slides{
+  margin: 0px 0px 0px 0px;
+	position: relative;
+	height: 100%;
+  width: 100%;
+	padding: 0px;
+  background-color: #DCF3FF;
+	list-style-type: none;
+}
 
-<p>
-<% if isAdmin? %>
-    <%= link_to "View bathroom requests", accept_path %>
-<% end %>
+.slide{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%
+	height: 100%;
+	opacity: 0;
+	z-index: 1;
+  background-color: #DCF3FF;
 
-<div class = "hold" style="height:100%">
-<br/>
-</p>
 
-<div class="moveToLeft" style="width:50%; float:left;">
-<h2>You can prevent Bathroom Injuries!</h2>
+	-webkit-transition: opacity 1s;
+	-moz-transition: opacity 1s;
+	-o-transition: opacity 1s;
+	transition: opacity 1s;
+}
 
-<p>
-  Smaller children run the risk of drowning if they fall headfirst into the
-  toilet bowl. Injuries to adults include bruised buttocks, tail bones, and
-  dislocated hips from unsuspectingly sitting on the toilet bowl rim because the
-  seat is up or loose. Injuries can also be caused by pinching due to splits in
-  plastic seats or by splinters from wooden seats, or if the toilet itself
-  collapses under the weight of the user. Older high tank cast iron cisterns
-  have been known to detach from the wall when the chain is pulled to flush,
-  causing injuries to the user.
-</p>
-<p>
-  Toilet related injuries are also surprisingly common, with some estimates
-  ranging up to 40,000 injuries in the US every year. In 2012, 2.3 million
-  toilets in the United States, and about 9,400 in Canada, were recalled due to faulty
-  pressure-assist flush mechanisms which put users at risk of the fixture
-  exploding.
-  <a href="https://en.wikipedia.org/wiki/Toilet-related_injuries_and_deaths#Accidental_injuries">(Wikipedia)</a>
-</p>
-<br/>
+.showing{
+	opacity: 1;
+	z-index: 2;
+}
+
+
+
+/*
+non-essential styles:
+just for appearance; change whatever you want
+*/
+
+.slide{
+	font-size: 40px;
+	padding: 1px;
+	box-sizing: border-box;
+	background: #DCF3FF; /*DCF3FF*/
+	color: #DCF3FF;
+}
+
+.slide:nth-of-type(1){
+}
+.slide:nth-of-type(2){
+}
+.slide:nth-of-type(3){
+}
+.slide:nth-of-type(4){
+}
+.slide:nth-of-type(5){
+}
+</style>
+
+<div id="motto">
+    <h3>You can prevent Bathroom Injuries!</h3>
 </div>
 
-<div class="moveToRight" style="width:50%; float:right; height:100%">
-  <h2>Choosing The Right Bathroom Is Important!</h2>
+<div id="navbox-container">
+    <div class="navbox" style="text-align: left;">
+        <p>
+          Smaller children run the risk of drowning if they fall headfirst into the
+          toilet bowl. Injuries to adults include bruised buttocks, tail bones, and
+          dislocated hips from unsuspectingly sitting on the toilet bowl rim because the
+          seat is up or loose. Injuries can also be caused by pinching due to splits in
+          plastic seats or by splinters from wooden seats, or if the toilet itself
+          collapses under the weight of the user. Older high tank cast iron cisterns
+          have been known to detach from the wall when the chain is pulled to flush,
+          causing injuries to the user.
+        </p>
+        <p>
+          Toilet related injuries are also surprisingly common, with some estimates
+          ranging up to 40,000 injuries in the US every year. In 2012, 2.3 million
+          toilets in the United States, and about 9,400 in Canada, were recalled due to faulty
+          pressure-assist flush mechanisms which put users at risk of the fixture
+          exploding.
+          <a href="https://en.wikipedia.org/wiki/Toilet-related_injuries_and_deaths#Accidental_injuries">(Wikipedia)</a>
+        </p>
 
-<ul id="slides">
-	<li class="slide showing">
-       <img src="images/image1.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
-	<li class="slide">
-       <img src="images/image2.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
-	<li class="slide">
-       <img src="images/image3.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:left; position:relative; text-align:left"> </li>
+    </div>
+    <div class="navbox">
+
+
 
 <!--
-	<li class="slide">
-       <img src="landscape.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:right; position:relative; right:45%; text-align:left"> </li>
-	<li class="slide">
-       <img src="landscape.png" alt="FirstImage" id="itemImg" style="max-width:100%; max-height: 100%; float:right; position:relative; right:45%; text-align:left"> </li>
+388 x 504 images pls
 -->
-</ul>
+      <ul id="slides">
+      	<li class="slide showing">
+             <img src="images/bathroom1.jpg" alt="FirstImage" id="itemImg1" style="max-width:100%; max-height: 100%; position:relative; text-align:left"> </li>
+      	<li class="slide">
+             <img src="images/bathroom2.jpg" alt="FirstImage" id="itemImg2" style="max-width:100%; max-height: 100%; position:relative; text-align:left"> </li>
+      	<li class="slide">
+             <img src="images/bathroom3.jpg" alt="FirstImage" id="itemImg3" style="max-width:100%; max-height: 100%; position:relative; text-align:left"> </li>
+        <li class="slide">
+             <img src="images/bathroom4.jpg" alt="FirstImage" id="itemImg3" style="max-width:100%; max-height: 100%; position:relative; text-align:left"> </li>
+
+      </ul>
+
+
+  </div>
 </div>
 
-</div>
+
 <script>
+/*
+Moving this to main.js ruins the slideshow
+*/
 var slides = document.querySelectorAll('#slides .slide');
 var currentSlide = 0;
-var slideInterval = setInterval(nextSlide,2000);
-function nextSlide(){
-	slides[currentSlide].className = 'slide';
+var slideInterval = setInterval(nextSlide,20000);
+
+function nextSlide() {
+	slides[currentSlide].className = "slide";
 	currentSlide = (currentSlide+1)%slides.length;
 	slides[currentSlide].className = 'slide showing';
 }
+
 </script>
