@@ -51,45 +51,53 @@
 
 html, body{
  background-color: #DCF3FF;
- 
+
 }
 
  .myNavElementsLeftRight{
    float: right;
-   color: white;
-   background-color: #1CA3EC;
+   max-height: 52px;
+   border-style: solid;
+   border-width: 1px;
+   border-color:  #c0dae7;
  }
  .myNavElementsLeftRight a {
    padding: 15px 15px 15px 15px;
    display: block;
    color: white;
-   font-family: "Montserrat";    
+   font-family: "Montserrat";
    text-align: center;
    text-decoration: none;
    font-size: 15px;
    font-weight: 100;
    background-color: #1CA3EC;
+   /*
    border-style: solid;
    border-width: 1px;
    border-color: #FFFFFF;
-   border-bottom: solid #E8E8E8 ;
+   border-bottom: solid #c0dae7 ;
+   */
    padding: 15px 15px 15px 15px;
  }
  .myNavElementsLeftRight a:hover:not(.active) {
    color: white;
    font-family: "Montserrat";
+   background-color: #1593d6;
+   /*
    background-color: #1CA3EC;
-   border-top: solid #E8E8E8 ;
-   border-bottom: solid #E8E8E8 ;
+   border-top: solid #c0dae7 ;
+   border-bottom: solid #c0dae7 ;
+   */
  }
 
 
 
  .myNavElementsRight{
    float: left;
-   color: white;
-   background-color: #1CA3EC;
    max-height: 52px;
+   border-style: solid;
+   border-width: 1px;
+   border-color:  #c0dae7;
  }
  .myNavElementsRight a {
    padding: 15px 15px 15px 15px;
@@ -101,18 +109,22 @@ html, body{
    font-size: 15px;
    font-weight: 100;
    background-color: #1CA3EC;
+   /*
    border-style: solid;
    border-width: 1px;
    border-color: #FFFFFF;
-   border-bottom: solid #E8E8E8 ;
+   border-bottom: solid #c0dae7 ;
+   */
    padding: 15px 15px 15px 15px;
  }
  .myNavElementsRight a:hover:not(.active) {
    color: white;
    font-family: "Montserrat";
-   background-color: #1CA3EC;
-   border-top: solid #E8E8E8 ;
-   border-bottom: solid #E8E8E8 ;
+   background-color: #1593d6;
+   /*
+   border-top: solid #c0dae7 ;
+   border-bottom: solid #c0dae7 ;
+   */
  }
 
 
@@ -121,10 +133,10 @@ html, body{
    list-style-type: none;
    padding: 0px 0px 52px 0px;
    margin: 0px 0px 0px 0px;
-   background-color: #1CA3EC 	;
+   background-color: #d6f0fd; //c0dae7
  }
 
-
+//THIS IS THE BREAKPOINT BEFORE FKING SHIT UP
 
  .TopRight{
    list-style-type: none;

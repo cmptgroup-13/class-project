@@ -53,3 +53,35 @@
 </div>
 
 </div>
+
+
+
+
+<!--
+<div id="navbox-container">
+    <div class="navbox">
+        <h2>Find Nearest Toilet</h2><br>
+        <p>Having trouble with your urine? Or plan before something awkward happens? You can search for the nearest toilet or a toilet near any location</p><br>
+        <%= form_tag locations_path, :method => :get do %>
+            <p>
+                <%= text_field_tag :search, params[:search], placeholder: "address, city, province/state", :required => true %>
+                <%= submit_tag "Search", :name => nil, class: "btn btn-success" %>
+            </p>
+        <% end %>
+
+        <p>
+            or
+        </p>
+
+        <p>Find bathrooms near your current location</p>
+        <%= link_to(image_tag("cross.png", class: "search-img", :name => "find_me"), locations_path)%>
+
+    </div>
+    <div class="navbox">
+        <h2>Suggest Toilet</h2><br>
+        <p>If you find a toilet which is not in our database, feel free to suggest by clicking the button below. However, you must be signed in before suggesting</p>
+        <div style="margin:2rem; height:2rem"></div>
+        <%= link_to(image_tag("plus-sign.png", :size => "120x120"), createbath_path) %>
+    </div>
+</div>
+-->
