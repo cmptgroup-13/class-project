@@ -1,7 +1,7 @@
 class Bath < ActiveRecord::Base
 
 belongs_to :user
-has_many :reviews
+has_many :reviews, :dependent => :destroy
 has_many :bath_images, :dependent => :destroy
 
 accepts_nested_attributes_for :bath_images, :reject_if => lambda { |t| t['bath_image'].nil? }

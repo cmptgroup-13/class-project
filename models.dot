@@ -1,0 +1,15 @@
+digraph models_diagram {
+	graph[overlap=false, splines=true, bgcolor="none"]
+	"Flag" [shape=Mrecord, label="{Flag|id :INTEGER\lreview_id :integer\luser_id :integer\lreason :varchar\lcount :integer\lcreated_at :datetime\lupdated_at :datetime\l}"]
+	"User" [shape=Mrecord, label="{User|id :INTEGER\lname :varchar\lemail :varchar\lencrypted_password :varchar\lreset_password_token :varchar\lreset_password_sent_at :datetime\lremember_created_at :datetime\lsign_in_count :integer\lcurrent_sign_in_at :datetime\llast_sign_in_at :datetime\lcurrent_sign_in_ip :varchar\llast_sign_in_ip :varchar\lcreated_at :datetime\lupdated_at :datetime\lrole :varchar\llatitude :float\llongitude :float\lip_address :varchar\limage_file_name :varchar\limage_content_type :varchar\limage_file_size :integer\limage_updated_at :datetime\lprovider :varchar\luid :varchar\l}"]
+	"BathImage" [shape=Mrecord, label="{BathImage|id :INTEGER\lbath_id :integer\luser_id :integer\lcreated_at :datetime\lupdated_at :datetime\lphoto_file_name :varchar\lphoto_content_type :varchar\lphoto_file_size :integer\lphoto_updated_at :datetime\l}"]
+	"Review" [shape=Mrecord, label="{Review|id :INTEGER\lpost :text\lrating :integer\luser_id :integer\lbath_id :integer\lcreated_at :datetime\lupdated_at :datetime\lflag_count :integer\l}"]
+	"Bath" [shape=Mrecord, label="{Bath|id :INTEGER\laddress :varchar\lcity :varchar\lprovince :varchar\lcountry :varchar\lhours :time\ladmin_accept :boolean\luser_id :integer\lcreated_at :datetime\lupdated_at :datetime\llatitude :float\llongitude :float\lapartment :varchar\l}"]
+	"User" -> "Bath" [arrowtail=odot, arrowhead=crow, dir=both color="#853E67"]
+	"User" -> "Review" [arrowtail=odot, arrowhead=crow, dir=both color="#E65E7B"]
+	"User" -> "Flag" [arrowtail=odot, arrowhead=crow, dir=both color="#928E98"]
+	"User" -> "BathImage" [arrowtail=odot, arrowhead=crow, dir=both color="#5096D3"]
+	"Review" -> "Flag" [arrowtail=odot, arrowhead=crow, dir=both color="#1EC642"]
+	"Bath" -> "Review" [arrowtail=odot, arrowhead=crow, dir=both color="#F6D932"]
+	"Bath" -> "BathImage" [arrowtail=odot, arrowhead=crow, dir=both color="#D36265"]
+}
