@@ -75,7 +75,7 @@ class BathsController < ApplicationController
     end
     
     if @reviews.count == 0 && @bath.destroy  
-        redirect_to newbath_path, notice: "Bathroom Deleted"
+        redirect_to :back, notice: "Bathroom Deleted"
     end
   end
   private

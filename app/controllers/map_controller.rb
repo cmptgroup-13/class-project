@@ -35,7 +35,7 @@ class MapController < ApplicationController
       directions_link = view_context.link_to "Directions", direction_path(bath)
       marker.lat bath.latitude
       marker.lng bath.longitude
-      marker.infowindow "<b>#{location_link}</b></br><b>#{directions_link}</b>"
+      marker.infowindow "<b>#{bath.name}</b><br><b>#{location_link}</b></br><b>#{directions_link}</b>"
       #<b>#{@avg_rating}</b>
       bob = "/images/toiletg.png"
       if(bath.reviews.count ==0)

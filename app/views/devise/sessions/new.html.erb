@@ -1,10 +1,11 @@
-<div class="smallmotto">
-    <h2>Log In</h2>
+<div id="motto">
+    <h1 style="color: white">Log In</h1>
 </div>
-<div class="container-fluid">
+
 <div class="row">
-  <div class="col-md-6 col-md-offset-3 well">
+  <div class="col-md-12 well">
     <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+    <div class= "col-md-6 col-md-offset-3">
       <%= devise_error_messages! %>
         <%= f.input :email, placeholder: 'user@domain.com' %>
 
@@ -14,10 +15,10 @@
         <%= f.input :remember_me,:as => :boolean, :label => false, :inline_label => true if devise_mapping.rememberable? %>
 
       <%= f.button :submit, "Log in", class: "btn btn-success" %>
-
+    
     <% end %>
 
-    <%= render "devise/shared/links" %>
+    <br><%= render "devise/shared/links" %>
 
   </div>
 </div>

@@ -35,6 +35,7 @@ validates :latitude, inclusion: { in: 21..84 }, presence: false
 validates :longitude, inclusion: { in: -177..-53}, :uniqueness => {:scope => :latitude, :message => "and latitude data show this location is already taken"}, presence: false 
 after_validation :id, presence: true
 after_validation :admin_accept, presence: true, length: { maximum: 40 }
+validates :name, presence: true, length: {maximum: 70}
 
 
 

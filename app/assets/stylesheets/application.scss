@@ -50,29 +50,31 @@
 */
 
 html, body{
- background-color: #F2FBFF;
- text-color: #2E2E2E;
+  background-color:#DCF3FF;
+
 }
 
 
  .myNavElementsLeftRight{
+   color: white;
    float: right;
    max-height: 52px;
    border-style: solid;
    border-width: 1px;
    border-color:  #c0dae7;
+   background-color: #74CCF4;
  }
  .myNavElementsLeftRight a {
+   color: white;
    padding: 15px 15px 15px 15px;
    display: block;
-   color: #2E2E2E;
+   // color: #2E2E2E;
    font-family: "Montserrat";
    text-align: center;
    text-decoration: none;
    font-size: 15px;
    font-weight: 100;
-   background-color: #6FC4F3;
-   /*
+   background-color: #1CA3EC;   /*
    border-style: solid;
    border-width: 1px;
    border-color: #FFFFFF;
@@ -81,11 +83,12 @@ html, body{
    padding: 15px 15px 15px 15px;
  }
  .myNavElementsLeftRight a:hover:not(.active) {
-   color: #000000;
+   // color: #000000;
+   color: white;
    font-family: "Montserrat";
-   background-color: #1994D7; //1CA3EC
-   /*
-   background-color: #1CA3EC;
+   // background-color: #5CB85C;
+   
+   background-color: #1C8EEC;/*
    border-top: solid #c0dae7 ;
    border-bottom: solid #c0dae7 ;
    */
@@ -101,15 +104,17 @@ html, body{
    border-color:  #c0dae7;
  }
  .myNavElementsRight a {
+   color: white;
    padding: 15px 15px 15px 15px;
    display: block;
-   color: #2E2E2E;
+   // color: #2E2E2E;
    font-family: "Montserrat";
    text-align: center;
    text-decoration: none;
    font-size: 15px;
    font-weight: 100;
-   background-color: #6FC4F3;
+   // background-color: #5CB85C;
+   background-color: #1CA3EC;
    /*
    border-style: solid;
    border-width: 1px;
@@ -119,9 +124,10 @@ html, body{
    padding: 15px 15px 15px 15px;
  }
  .myNavElementsRight a:hover:not(.active) {
-   color: #000000;
+   // color: #000000;
+   color: white;
    font-family: "Montserrat";
-   background-color: #1994D7;
+   background-color: #1C8EEC;
    /*
    border-top: solid #c0dae7 ;
    border-bottom: solid #c0dae7 ;
@@ -134,7 +140,7 @@ html, body{
    list-style-type: none;
    padding: 0px 0px 52px 0px;
    margin: 0px 0px 0px 0px;
-   background-color: #C3E4F5; //c0dae7
+   // background-color: #C0DAE7; //c0dae7
  }
 
 //THIS IS THE BREAKPOINT BEFORE FKING SHIT UP
@@ -268,7 +274,7 @@ html, body{
             -moz-border-radius:   13px;
             /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
             border-radius: 13px;
-            background-color: white;
+            background-color: #f5f5f5;
             color: black;
           }
 
@@ -289,6 +295,6 @@ border: 0 none;
 
 .clear { clear:both; }
 
-.container-fluid{
-  background-color: #EBF8FF;
-}
+// .container-fluid{
+//   background-color: #EBF8FF;
+// }

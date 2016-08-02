@@ -6,7 +6,7 @@
 #navbox-container {
   margin-left: auto;
 	margin-right: auto;
-  background-color: #CBECFD;
+  background-color: #f5f5f5;
   display: flex;
 }
 
@@ -20,17 +20,18 @@
   text-align: center;
   position: relative;
   min-height: 616px;
+  color: black;
 }
 
 .navbox h2 {
-  /*color: white;*/
+  color: black;
   // text-shadow: 2px 2px #f4f5f0;
   margin: none;
   font-family: 'Montserrat';
 }
 
 .navbox p {
-  /*color: white;*/
+  color: black;
   margin: none;
   font-family: 'Montserrat';
   // text-shadow: 1px 1px 4px #f4f5f0;

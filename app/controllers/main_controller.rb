@@ -34,6 +34,7 @@ class MainController < ApplicationController
         redirect_to profile_path, notice: "User deleted."
     end
   end
+  
 
   private
 
