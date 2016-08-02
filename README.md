@@ -20,6 +20,10 @@ If time permits we may attempt to develop the app for mobile devices and also ad
 
 We will have two types of users Admin and Normal users. Normal users can request to add bathrooms and also report bathrooms (although these reports will likely stay hidden). Admin users will be able to add bathrooms and also remove them (Admins will be able to see reports). We are also considering adding genders to each type of user.
 
+##MODELS
+
+Please view [/_models_for_iteration2](_models_for_iteration2) and [/_models_for_iteration2](_models_for_iteration3) for models we have used.
+
 
 ## Competitive Analysis
 
