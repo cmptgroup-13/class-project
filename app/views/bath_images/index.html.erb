@@ -1,4 +1,4 @@
-<h1>All the images for bathroom: <font color="green"><%= @bath.address %>, <%= @bath.city %></font></h1>
+<h1>All the images for <font color="green"><%= @bath.name %></font></h1>
 <% @bath.bath_images.each do |bath_image|%>
     <%= image_tag bath_image.photo.url(:large) %>
 <% end %>
