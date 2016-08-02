@@ -1,7 +1,10 @@
 <!-- Begin edit user information page -->
 
 
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+<div class="smallmotto">
+    <h2>Edit</h2>
+</div>
+<div class="container-fluid">
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3 well">
@@ -16,14 +19,14 @@
         <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
       <% end %>
 
-        <%= f.input :password, placeholder: "leave blank if you don't want to change it" %> 
+        <%= f.input :password, placeholder: "leave blank if you don't want to change it" %>
 
         <%= f.input :password_confirmation %>
 
       <% if f.object.encrypted_password.present? %>
-          <%= f.input :current_password, placeholder: "we need your current password to confirm your changes" %> 
+          <%= f.input :current_password, placeholder: "we need your current password to confirm your changes" %>
       <% end %>
-      
+
       <div class="field">
           <% if current_user.image == nil %>
             <%= f.label :image, "Add a Profile Picture" %><br />
@@ -33,7 +36,7 @@
           <%= f.file_field :image, autofocus: true %>
       </div><br>
 
-              <%= f.button :submit, class: "btn btn-success" %> 
+              <%= f.button :submit, class: "btn btn-success" %>
 
     <% end %>
 
@@ -44,4 +47,5 @@
 
     <%= link_to "Back", :back %>
   </div>
+</div>
 </div>

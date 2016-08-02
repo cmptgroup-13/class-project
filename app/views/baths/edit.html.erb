@@ -1,6 +1,8 @@
-<h1>Hello Admin</h1>
-<h2>This is the place where you choose to accept or deny bathroom requests</h2>
-
+<div class="smallmotto">
+    <h2>Hello Admin</h2>
+    <h3>Here You Can Accept Or Deny Bathroom Requests</h3>
+</div>
+<div class="container-fluid">
 <!--this will be a potential problem when our database gets full so make sure you change it-->
 
         <div class="row" >
@@ -38,9 +40,6 @@
                             <td><%= bath.latitude %></td>
                         </tr>
 
-                        
-                        
-                        
                         <tr>
                            <td><%= form_for bath do |t| %>
                                  <%= t.hidden_field :admin_accept, :value => true %>
@@ -56,3 +55,5 @@
                 <% end %>
             </div>
         </div>
+
+</div>

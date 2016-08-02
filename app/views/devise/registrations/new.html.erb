@@ -1,4 +1,7 @@
-<h2>Sign up</h2>
+<div class="smallmotto">
+    <h2>Sign Up</h2>
+</div>
+<div class="container-fluid">
 
 <div class="row">
   <div class="col-md-6 col-md-offset-3 well">
@@ -6,20 +9,20 @@
       <%= devise_error_messages! %>
         <% if f.object.password_required? %>
         <%= f.input :name %>
-    
+
         <%= f.input :email, placeholder: 'user@domain.com' %>
-    
+
         <%= f.input :password %>
 
         <%= f.input :password_confirmation %>
         <% end %>
         <%= f.input :role, :collection => [['Male', 'male'], ['Female', 'female']], placeholder: 'Please select your gender' %>
- 
-        <%= f.button :submit, class: "btn btn-success" %> 
+
+        <%= f.button :submit, class: "btn btn-success" %>
       <% end %><br>
-        
-    
+
+
     <%= render "devise/shared/links" %>
   </div>
 </div>
-
+</div>

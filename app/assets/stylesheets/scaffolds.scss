@@ -28,9 +28,9 @@ h1, h2 {
 h3 {
   text-decoration: none;
   text-shadow: none;
-  font-family: "Montserrat";    
+  font-family: "Montserrat";
   text-align: center;
-  color: white
+  /*color: white*/
 }
 
 /* Motto */
@@ -38,7 +38,7 @@ h3 {
 	width:100%;
 	padding: 0.3rem;
 	margin: auto;
-	background-color: #1CA3EC;
+	background-color: #6FC4F3; //1CA3EC 73C7F5
 	text-align: center;
 }
 
@@ -46,10 +46,17 @@ h3 {
   font-family: "Montserrat";
 	font-size: 1.5rem;
 	text-shadow: none;
-	color: white;
+	/*color: white;*/
 }
 
 
+.smallmotto {
+	width:100%;
+	padding: 0.3rem;
+	margin: auto;
+	background-color: #EBF8FF;
+	text-align: center;
+}
 /*body {
   background-color: #fff;
   color: #333;
