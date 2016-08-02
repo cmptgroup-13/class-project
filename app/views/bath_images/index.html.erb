@@ -1,6 +1,8 @@
 <div id="motto">
     <h1 style="color:white">All the images for <font color="#32CD32"><%= @bath.name %> at <%= @bath.address %></font></h1>
 </div>
+
 <% @bath.bath_images.each do |bath_image|%>
-    <%= image_tag bath_image.photo.url(:large) %>
+    <%= image_tag bath_image.photo.url(:large) %></br>
 <% end %>
+
