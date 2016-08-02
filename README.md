@@ -52,9 +52,177 @@ Sally is a female who lives an active life, working in Vancouver. Her work invol
 
 Bob is a male who attends Simon Fraser University as a computer science student. Bob has been mentally and physically scarred from 3 years of usage of the men’s CSIL bathroom. As much as he loves the moist atmosphere combined with the fish market smell, Bob wants change! Bob has always dreamed of the day he could venture out and find a different bathroom at SFU that doesn’t require a post-use daily hepatitis shot. If only he had a web app that could help him locate a bathroom which suits his needs.
 
+##User Stories/Epics Iteration 3
+
+##Epic 1: As a user, I would like to have control with login process and my profile
+
+####Story 1: As a user, I would like to have a “Remember me” option on login page (1)
+ •	When the “Remember me” option is chosen, the browser should save user’s email and password.
+ •	The user should be automatically logged in the next time he opens the app.
+
+ Test: 
+ 
+ The devise gem handles specific tests to ensure user is automatically logged in.
+
+####Story 2: As a user, I would like to have a “Forgot your password” button on login page (2)
+ •	Users should be able to reset their passwords. 
+ •	After clicking the “Forgot your password” button, users should be directed to a page that request them to enter their registered email.
+ •	If the entered email is not registered in the database, an error message should be shown to the user. 
+ •	When a valid email is entered, an automatic email should be sent to user’s email address.
+ •	Password can be reset following the instructions sent.
+ •	When users open the link in their email, they should be directed to a page that request them to set new password.
+ •	When new password and confirm password matches, user’s password is changed and the user is logged in.
+
+ Test: 
+ 
+ ¬Specific tests are carried out by the devise gem to recovering the password for an account and sign in the user automatically after a password reset.
+
+###Story 3: As a user, I want to be able to login using my Facebook account (2)
+ •	When user chooses to login using Facebook account, they should be directed to their Facebook page.
+ •	The Facebook page should ask user’s permission to link the app with their account.
+ •	If it is the first time that the user login with Facebook account, they should be asked to choose their role as male or female.
+ •	When Facebook account and the app is linked, users should be automatically logged in and the app’s login email is Facebook account’s login email.
+
+ Test:
+ 
+ Specific tests are carried out by the devise gem to make sure the user is logged in with Facebook account.
+
+####Story 4: As a user, I would like to upload profile picture (1)
+
+ •	In the edit my profile page, there should be an option to upload or change profile picture.
+ •	Users can choose a picture from their own computer as their profile picture.
+ •	An error message should be thrown to the user if no picture has been chosen.
+ •	Users must enter their current password to make change to the profile.
+ •	When confirmed, the picture should be uploaded and user’s profile picture should be changed. 
+
+ Test:
+ 
+ The devise gem handles specific tests to ensure the picture is in valid format and is correctly uploaded.
+
+##Epic 2: As a user or administrator, I am able to edit reviews
+
+####Story 5: As a user, I would like to rate bathrooms (2)
+ •	When adding reviews to a bathroom, users should be asked to choose a rating for that bathroom.
+ •	Rating starts from 1, which represents worst, to 5, which represents best.
+ •	Average of the rating will be calculated.
+ •	A row of stars will show the average rating of each bathroom.
+
+ Test:
+ 
+ Tests are done to check if the rating is within valid range. If it passes the test, the rating is added.
+	
+####Story 6: As a user, I would like to be able to edit my reviews (2)
+ •	When viewing bathrooms, users should be able to edit their own reviews.
+ •	When users choose to edit one review, they should be directed to a page that request them to re-enter rating and review.
+ •	If the rating or the review is blank, an error message should be thrown describing the error and the review should not be changed.
+ •	When all fields are correct the review should be changed.
+ 
+ Test: 
+ 
+ Tests are done to make sure both the new review and rating are valid. If it passes the test, the review is edited.
+ 
+####Story 7: As a user, I would like to be able to report inappropriate reviews (2)
+ •	Users should have an option to report inappropriate reviews.
+ •	When choosing to report one review, users should be asked for reasons for reporting that particular review.
+ •	If the reason field is blank, and error message should be thrown.
+ •	The inappropriate review should be reported to admin.
+ Test: 
+ 
+ Tests are done to make sure flags that are attached to user ID and reviews are valid. If it passes the test, the review is reported.
+ 
+####Story 8: As an admin, I can delete inappropriate user reviews (2)
+ •	When a review is reported for multiple times by users, there should be an option for admin to delete that particular review. ¬
+ •	After selecting to delete the review, a notification should show up to confirm the deletion. 
+ •	¬If the delete request is cancelled, the review should not be deleted. 
+ •	¬If ok is selected, the review should be deleted.
+ ¬Test:
+ 
+ Specific tests are carried out by the devise gem to make sure the review is deleted from the database.
+ 
+##Epic 3: As a user, I would like to view detailed bathroom information
+
+####Story 10: As a user, I would like to locate myself on the map and see nearby bathrooms (2)
+ •	The map should show user’s current location.
+ •	All bathrooms in the database will be shown on the map by icons.
+ •	When clicking an icon which represents one particular bathroom, users should see the address of that bathroom.
+ •	Clicking the address should direct users to the page that has a map, rating, and reviews of that bathroom.
+ 
+ Test:
+ 
+ ¬The google maps API tests that the map loads correctly and we test that the user’s current location loads correctly.
+ 
+####Story 11: As a user, I would like to get directions from current location to any bathroom in the database (2)
+ •	When browsing bathrooms, users should have an option to get direction from current location to any bathroom in the database.
+ •	Users should be directed to a page that has both a map and the directions beside the map.
+ •	Users can choose any travel mode including driving, transit, walking and cycling. 
+ 
+ Test:
+ 
+ ¬Google maps API tests that both the map and the direction loads correctly.
+ 
+####Story 12: As a user, I would like to see distance between current location and any bathroom in the database (1)
+ •	When browsing bathrooms, the distance between user’s current location and one particular bathroom should be shown with bathroom’s address.
+ 
+ Test:
+ 
+ ¬The google maps API tests that the distance loads correctly.
+ 
+####Story 13: As a user, I would like to search for nearby bathrooms by entering an address (2)
+ •	On the home page of the app, users should be able to enter a location and search for nearby bathrooms.
+ •	It accepts address, city, province or state.
+ •	A list of bathrooms should be shown from nearest to furthest.
+ 
+ ¬Test:
+ 
+ ¬The google maps API tests that the distance loads correctly.
+ 
+####Story 14: As a user, I would like to upload pictures for bathrooms (3)
+ •	There should be an option to let users upload pictures for bathrooms.
+ •	When users choose to upload photos for a bathroom, they should be able to choose one picture from their computer.
+ •	If no picture is chosen, an error message should be thrown.
+ •	The picture uploaded should be shown with that particular bathroom.
+ •	Users can upload multiple pictures to one bathroom.
+ 
+ ¬Test:
+ 
+ Specific tests are carried out by the devise gem to make sure the picture is in valid format and is correctly uploaded.
+ 
+####Story 15: As a user, I would like to easily see the rating of the bathroom by different icon colors
+ •	The bathroom icon on the map should tell the average rating of the bathroom by different colors.
+ •	If the bathroom is rated below 3 stars, the icon should be in red. 
+ •	If the bathroom is rated above 3 stars, the icon should be in green. 
+ •	3 stars will make the icon yellow.
+ 
+ Test:
+ 
+ Tests are done to ensure proper color is displayed. If it passes the test, the color is correct.
+ 
+####Stories without epics
+##Story 15: As a user, I would like to be able to share or like this app on Facebook (1)
+ •	Users should be given options to like or share the app with Facebook account.
+ •	When clicking ‘like’, the app is liked by the user.
+ •	When clicking ‘share’, a Facebook page will pop up to ask user’s permission to post the share on their Facebook.
+ •	If user chooses to post on Facebook, the app will be shared.
+ 
+ Test:
+ 
+ Specific tests are carried out by the devise gem to make sure the user can like and share the app on Facebook.
+ 
+####Story 16: As a user I want to be able to read bathroom related stories on the app using Bing API (3)
+ •	The news page should list a number of news articles relating to bathrooms.
+ •	Each article should contain a title, a brief description, and an image relating to the article.
+ •	The title and image should take you to the full written article when clicked on.
+ •	Each article should be listed in a table containing a certain number of entries.
+ •	The table should be scrollable in the event large number of entries are displayed.
+ 
+ Tests: 
+ 
+ Tests are done to ensure that the JQuery done to retrieve the news article information goes through successfully. If there is no alert on the news page the query was successfully. Bing has their own set of tests to ensure they are sending the right information
+ 
+ 
 
 
-##User Stories/Epics
+##User Stories/Epics Iteration 2
 
 ##Epic: As a user, I can do operations with bathrooms
 Stories:
@@ -336,6 +504,11 @@ As the developer of UrineLuck, it is important to ensure the confidentiality of 
 
 
 
+
+
+
+
+
 ### Planned Layout
 
 github.com/cmptgroup-13/class-project/tree/master/Draft_For_Site_Design
@@ -343,7 +516,3 @@ github.com/cmptgroup-13/class-project/tree/master/Draft_For_Site_Design
 
 
 
-
-
-
-### ADD AN IMAGE CLASS FOR BATHROOM IF YOU HAVE TIME!!!!!
