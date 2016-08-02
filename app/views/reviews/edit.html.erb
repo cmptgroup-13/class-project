@@ -1,9 +1,10 @@
-<div class="smallmotto">
-    <h2>Edit Your Review</h2>
+<div id="motto">
+    <h1 style="color:white">Edit Your Review</h1>
 </div>
-<div class="container-fluid"><div class="row">
-    <div class="col-md-6 col-md-offset-3 well">
+<div class="row">
+    <div class="col-md-12 well">
         <%= simple_form_for [@bath, @review] do |f| %>
+        <div class= "col-md-6 col-md-offset-3">
             <div class="field">
                 <%= f.input :rating, :collection => 1..5, placeholder: 'Rate this bathroom from 1-5' %>
             </div>
