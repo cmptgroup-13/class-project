@@ -75,9 +75,9 @@ Bob is a male who attends Simon Fraser University as a computer science student.
 
  Test: 
  
- ¬Specific tests are carried out by the devise gem to recovering the password for an account and sign in the user automatically after a password reset.
+ Specific tests are carried out by the devise gem to recovering the password for an account and sign in the user automatically after a password reset.
 
-###Story 3: As a user, I want to be able to login using my Facebook account (2)
+####Story 3: As a user, I want to be able to login using my Facebook account (2)
  •	When user chooses to login using Facebook account, they should be directed to their Facebook page.
  •	The Facebook page should ask user’s permission to link the app with their account.
  •	If it is the first time that the user login with Facebook account, they should be asked to choose their role as male or female.
@@ -131,11 +131,11 @@ Bob is a male who attends Simon Fraser University as a computer science student.
  Tests are done to make sure flags that are attached to user ID and reviews are valid. If it passes the test, the review is reported.
  
 ####Story 8: As an admin, I can delete inappropriate user reviews (2)
- •	When a review is reported for multiple times by users, there should be an option for admin to delete that particular review. ¬
+ •	When a review is reported for multiple times by users, there should be an option for admin to delete that particular review. 
  •	After selecting to delete the review, a notification should show up to confirm the deletion. 
- •	¬If the delete request is cancelled, the review should not be deleted. 
- •	¬If ok is selected, the review should be deleted.
- ¬Test:
+ •	If the delete request is cancelled, the review should not be deleted. 
+ •	If ok is selected, the review should be deleted.
+ Test:
  
  Specific tests are carried out by the devise gem to make sure the review is deleted from the database.
  
@@ -149,7 +149,7 @@ Bob is a male who attends Simon Fraser University as a computer science student.
  
  Test:
  
- ¬The google maps API tests that the map loads correctly and we test that the user’s current location loads correctly.
+ The google maps API tests that the map loads correctly and we test that the user’s current location loads correctly.
  
 ####Story 11: As a user, I would like to get directions from current location to any bathroom in the database (2)
  •	When browsing bathrooms, users should have an option to get direction from current location to any bathroom in the database.
@@ -158,23 +158,23 @@ Bob is a male who attends Simon Fraser University as a computer science student.
  
  Test:
  
- ¬Google maps API tests that both the map and the direction loads correctly.
+ Google maps API tests that both the map and the direction loads correctly.
  
 ####Story 12: As a user, I would like to see distance between current location and any bathroom in the database (1)
  •	When browsing bathrooms, the distance between user’s current location and one particular bathroom should be shown with bathroom’s address.
  
  Test:
  
- ¬The google maps API tests that the distance loads correctly.
+ The google maps API tests that the distance loads correctly.
  
 ####Story 13: As a user, I would like to search for nearby bathrooms by entering an address (2)
  •	On the home page of the app, users should be able to enter a location and search for nearby bathrooms.
  •	It accepts address, city, province or state.
  •	A list of bathrooms should be shown from nearest to furthest.
  
- ¬Test:
+ Test:
  
- ¬The google maps API tests that the distance loads correctly.
+ The google maps API tests that the distance loads correctly.
  
 ####Story 14: As a user, I would like to upload pictures for bathrooms (3)
  •	There should be an option to let users upload pictures for bathrooms.
@@ -183,7 +183,7 @@ Bob is a male who attends Simon Fraser University as a computer science student.
  •	The picture uploaded should be shown with that particular bathroom.
  •	Users can upload multiple pictures to one bathroom.
  
- ¬Test:
+ Test:
  
  Specific tests are carried out by the devise gem to make sure the picture is in valid format and is correctly uploaded.
  
@@ -197,8 +197,8 @@ Bob is a male who attends Simon Fraser University as a computer science student.
  
  Tests are done to ensure proper color is displayed. If it passes the test, the color is correct.
  
-####Stories without epics
-##Story 15: As a user, I would like to be able to share or like this app on Facebook (1)
+##Stories without epics
+####Story 15: As a user, I would like to be able to share or like this app on Facebook (1)
  •	Users should be given options to like or share the app with Facebook account.
  •	When clicking ‘like’, the app is liked by the user.
  •	When clicking ‘share’, a Facebook page will pop up to ask user’s permission to post the share on their Facebook.
