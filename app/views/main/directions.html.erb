@@ -45,6 +45,12 @@
   padding-left: 10px;
 }
 </style>
+
+<div class="smallmotto">
+    <h2>Directions To <%= @bath.name %></h2>
+</div>
+<div class="container-fluid">
+
 <div id="floating-panel">
 <b>Mode of Travel: </b>
 <select id="mode">
@@ -61,7 +67,7 @@
 </div>
 
 <div class="clear"></div>
-
+</div>
 <script type="text/javascript">
   function initMap() {
     var map = new google.maps.Map(document.getElementById('map'), {

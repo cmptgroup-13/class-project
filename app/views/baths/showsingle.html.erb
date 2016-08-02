@@ -3,7 +3,9 @@
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
 <h1><%= @bath.name %></h1>
+<div class="container-fluid">
 <table class="table" style="width:80%; float:left; margin-right: 5%;">
+
                         <tr>
                             <th><b>Location</b></th>
                             <td><b><%= @bath.city %>, <%= @bath.address %></b></td>
@@ -16,7 +18,7 @@
                             <% else %>
                                 <td>No reviews yet</td>
                             <% end %>
-
+                            <td><%= link_to "Directions", direction_path(@bath), :class => 'btn btn-info' %></td>
                         </tr>
 
                         <tr>
@@ -36,10 +38,10 @@
                         </tr>
   </table>
 
-
+<!--
   <img src="images/image1.png" alt="FirstImage"
   style="max-width:100%; height: 137px; float:left;" </img>
-
+-->
 
 
 
@@ -130,7 +132,7 @@
 
             <% end %>
         <b><%= link_to "Leave A Review", new_bath_review_path(@bath), :class => 'btn btn-primary' %> </b>
-        
+</div>
 <script type="text/javascript">
 //showsingle below
 myLatLng = new google.maps.LatLng({lat: <%= @bath.latitude %>, lng: <%= @bath.longitude %>});
@@ -145,7 +147,7 @@ markers = handler.addMarkers([
                 "url": "http://megaicons.net/static/img/icons_sizes/105/244/32/toilet-paper-icon.png",
                  "width":  32,
                  "height": 32
-        
+
         },
         "infowindow": "hello!"
     }

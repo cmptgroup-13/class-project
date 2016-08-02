@@ -56,7 +56,7 @@ OTHERWISE IT LOOKS DIFFERENT ON DIFFERENT BROWSERS
 
 </br>
 <ul class="TopRight">
-          <div class= "TopRightElementsSpecial"> <li><%= link_to 'CAREERS', newbath_path %></li>         </div>
+          <div class= "TopRightElementsSpecial"> <li><%= link_to 'GAME', game_path %></li>         </div>
           <div class= "TopRightElements"> <li><%= link_to 'CONTACT US', profile_path %></li>                </div>
           <div class= "TopRightElements"> <li><%= link_to 'NEWS', news_path %></li>                      </div>
           <div class= "TopRightElements"> <%= link_to 'ABOUT US', about_path %> </li>                    </div>
@@ -121,7 +121,6 @@ OTHERWISE IT LOOKS DIFFERENT ON DIFFERENT BROWSERS
 
                     <% end %>
   </ul>
-<p> </p>
 
 
 
@@ -150,9 +149,9 @@ OTHERWISE IT LOOKS DIFFERENT ON DIFFERENT BROWSERS
         <div class="effect"></div>
     </ul>
 </div>
-
--->
 <div class="clear"></div>
+-->
+
 <%- unless @lat_lng %>
         <script type="text/javascript">
             getGeoLocation();
