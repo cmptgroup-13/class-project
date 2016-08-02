@@ -1,14 +1,18 @@
-<h1>Create Review</h1>
+<div class="smallmotto">
+    <h2>Add A Review</h2>
+</div>
+<div class="container-fluid">
 <%= simple_form_for [@bath, @review] do |f| %>
     <div class="container">
-    <div class="field">  
+    <div class="field">
         <%= f.input :rating, :collection => 1..5, placeholder: 'Rate this bathroom from 1-5' %>
     </div>
-    
-    <div class="field">  
+
+    <div class="field">
         <%= f.input :post, as: :text %>
     </div>
-     <br> 
-        <%= f.button :submit, class: "btn btn-success" %> 
+     <br>
+        <%= f.button :submit, class: "btn btn-success" %>
 <% end %>
+</div>
 </div>

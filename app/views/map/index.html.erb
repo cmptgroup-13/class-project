@@ -3,7 +3,9 @@
 <script src="//cdn.rawgit.com/mahnunchik/markerclustererplus/master/dist/markerclusterer.min.js"></script>
 <script src='//cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js' type='text/javascript'></script> <!-- only if you need custom infoboxes -->
 
-<h1>Map view of bathrooms</h1>
+<div id="motto">
+    <h3>Map view of bathrooms</h3>
+</div>
 
 
 <div style="width: 100%; margin: auto">
@@ -13,12 +15,10 @@
 <!-- Map won't load if we move this to app/assets/javascripts/map.js
       or to app/assets/javascripts/application.js -->
 <script type="text/javascript">
-
   var mapOptions =
   {
     maxZoom:19,
     minZoom:2,
-
   };
   handler = Gmaps.build('Google');
   handler.buildMap({ provider: mapOptions, internal: {id: 'map'}}, function(){
@@ -27,23 +27,5 @@
     handler.bounds.extendWith(markers);
     handler.bounds.extendWith(markers_two);
     handler.fitMapToBounds();
-    handler.getMap().setZoom(9);
-    
-    if (strictBounds.contains(handler.getMap().getCenter())) return;
-    var c = handler.getMap().getCenter(),
-        x = c.lng(),
-        y = c.lat(),
-        maxX = strictBounds.getNorthEast().lng(),
-        maxY = strictBounds.getNorthEast().lat(),
-        minX = strictBounds.getSouthWest().lng(),
-        minY = strictBounds.getSouthWest().lat();
-
-    if (x < minX) x = minX;
-    if (x > maxX) x = maxX;
-    if (y < minY) y = minY;
-    if (y > maxY) y = maxY;
-
-    handler.getMap().setCenter(new google.maps.LatLng(y, x));
   });
-
 </script>
