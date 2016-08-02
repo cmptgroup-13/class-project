@@ -1,8 +1,8 @@
 <!-- Begin index file -->
 
 <div id="motto">
-    <p>Bathroom Connoissuer? You're In Luck!</p>
-    <%= link_to"Browse all bathrooms", showbath_path, {:style=>"text-decoration:none"} %>
+    <h3>Bathroom Connoissuer? You're In Luck!</h3>
+    <%= link_to"Browse all bathrooms", showbath_path, class: "btn btn-success" %>
 </div>
 
 <div id="navbox-container">
@@ -12,7 +12,7 @@
         <%= form_tag locations_path, :method => :get do %>
             <p>
                 <%= text_field_tag :search, params[:search], placeholder: "address, city, province/state", :required => true %>
-                <%= submit_tag "Search", :name => nil %>
+                <%= submit_tag "Search", :name => nil, class: "btn btn-success" %>
             </p>
         <% end %>
 

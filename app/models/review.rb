@@ -2,7 +2,7 @@ class Review < ActiveRecord::Base
 
 belongs_to :user
 belongs_to :bath
-has_many :flags
+has_many :flags, :dependent => :destroy
 
 validates :post, presence: true, length: { maximum: 300 }
 validates :rating, presence: true, inclusion: { in: 0..5, :message => "must be between 0-5" }

@@ -45,6 +45,10 @@
                 <% if user == current_user %>
                     <table class="table">
                         <tr>
+                            <th><b>Profile Picture</b></th>
+                            <td><%= image_tag current_user.image.url(:mini) %></td>
+                        </tr>
+                        <tr>
                             <th><b>Name</b></th>
                             <td><b><%= user.name %></b></td>
                         </tr>
@@ -60,6 +64,7 @@
                     </table>
                 <% else %>
                     <table class="table">
+                        
                         <tr>
                             <th>Name</th>
                             <td><%= user.name %></td>

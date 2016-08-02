@@ -1,8 +1,5 @@
 <!-- Begin edit user information page -->
 
-<div id="motto">
-    <p>Here you will mutate for a tougher urine</p>
-</div>
 
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
@@ -21,7 +18,7 @@
 
         <%= f.input :password, placeholder: "leave blank if you don't want to change it" %> 
 
-        <%= f.input :password_confirmation %><br />
+        <%= f.input :password_confirmation %>
 
       <% if f.object.encrypted_password.present? %>
           <%= f.input :current_password, placeholder: "we need your current password to confirm your changes" %> 
@@ -34,16 +31,16 @@
             <%= f.label :image, "Change Your Profile Picture" %><br />
           <% end %>
           <%= f.file_field :image, autofocus: true %>
-      </div>
+      </div><br>
 
               <%= f.button :submit, class: "btn btn-success" %> 
 
     <% end %>
 
 
-    <h3>Cancel my account</h3>
+    <h2>Cancel my account</h2>
 
-    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+    <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete, class: "btn btn-danger" %></p>
 
     <%= link_to "Back", :back %>
   </div>
