@@ -3,7 +3,7 @@
         var params = {
             // Request parameters
             "q": "Bathroom",
-            "count": "1",
+            "count": "15",
             "offset": "0",
             "mkt": "en-us",
             "safeSearch": "Moderate",
@@ -22,7 +22,7 @@
         .done(function(data) {
      //       var html = data.value[0].image.thumbnail.contentUrl;
             var html = "<table border='1' cellpadding='5' cellspacing='5'><caption>Monthly savings</caption>";
-            for(i=0; i<1; i++)
+            for(i=0; i<15; i++)
             {
               html += "<tr><td><a href='" + data.value[i].url + "'><img src=" + data.value[i].image.thumbnail.contentUrl +" border=3 height=100 width=100></img></a></td>"
               html += "<td><b><a href='" + data.value[i].url +"'>" + data.value[i].name + "</a></b><br>" + data.value[i].description + "</td></tr>";
