@@ -64,6 +64,7 @@ Rails.application.routes.draw do
   # get 'review_destroy' => 'reviews#delete'
   get 'baths/showsingle/:id' => 'baths#showsingle', :as => :view
   get 'main/directions/:id' => 'main#directions', :as => :direction
+  get 'game' => 'game#game'
   
  
 
