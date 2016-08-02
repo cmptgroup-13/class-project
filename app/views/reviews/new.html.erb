@@ -1,9 +1,9 @@
 <div id="motto">
     <h1 style="color: white">Add A Review</h1>
 </div>
-<div class="col-md-12 well" style="color: black; background-color: white>
+<div class="col-md-12 well">
 <%= simple_form_for [@bath, @review] do |f| %>
-    <div class="container">
+    <div class= "col-md-6 col-md-offset-3">
     <div class="field">
         <%= f.input :rating, :collection => 1..5, placeholder: 'Rate this bathroom from 1-5' %>
     </div>
@@ -13,6 +13,7 @@
     </div>
      <br>
         <%= f.button :submit, class: "btn btn-success" %>
-<% end %>
 </div>
+<% end %>
+
 </div><br>
