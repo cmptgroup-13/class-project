@@ -8,6 +8,10 @@
                 <% @baths.each do |bath| %>
 
                     <table class="table">
+                      <tr>
+                        <th> </th>
+                        <td style="font-size:25px; float:left;"><b><%= bath.name %></b></td>
+                      </tr>
                         <tr>
                             <th><b></b>Address</b></th>
                             <td><%= bath.address %></td>
@@ -52,5 +56,3 @@
                 <% end %>
             </div>
         </div>
-        
-
