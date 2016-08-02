@@ -50,7 +50,7 @@ class ReviewsController < ApplicationController
     @bath = Bath.find_by_id(params[:bath_id])
     @review= Review.find(params[:id])
     @review.destroy
-    redirect_to view_path(@bath), notice: "Review Deleted"
+    redirect_to :back, notice: "Review Deleted"
   end
 
 
