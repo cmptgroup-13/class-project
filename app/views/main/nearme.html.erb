@@ -17,7 +17,7 @@
 
                       <tr>
                           <th><b>Distance from me</b></th>
-                          <td><%= bath.distance_from([current_user.latitude, current_user.longitude]) %> miles away</td>
+                          <td><%= ((bath.distance_from([current_user.latitude, current_user.longitude]))*1.60934).round(2) %> kilometers away</td>
                       </tr>
 
                       <tr style="border-bottom: 1px solid #fff">
