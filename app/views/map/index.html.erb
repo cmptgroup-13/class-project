@@ -15,10 +15,12 @@
 <!-- Map won't load if we move this to app/assets/javascripts/map.js
       or to app/assets/javascripts/application.js -->
 <script type="text/javascript">
+
   var mapOptions =
   {
     maxZoom:19,
     minZoom:2,
+
   };
   handler = Gmaps.build('Google');
   handler.buildMap({ provider: mapOptions, internal: {id: 'map'}}, function(){
@@ -28,4 +30,5 @@
     handler.bounds.extendWith(markers_two);
     handler.fitMapToBounds();
   });
+
 </script>
