@@ -22,7 +22,7 @@ We will have two types of users Admin and Normal users. Normal users can request
 
 ##Models
 
-Please view [/_models_for_iteration2](_models_for_iteration2) and [/_models_for_iteration2](_models_for_iteration3) for models we have used.
+Please view [/_models_for_iteration2](_models_for_iteration2) and [/_models_for_iteration3](_models_for_iteration3) for models we have used.
 
 
 ## Competitive Analysis
